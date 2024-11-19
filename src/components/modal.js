@@ -1,6 +1,6 @@
 
-const SERVER_URL = 'http://localhost:300';
-// const SERVER_URL = 'https://salesprojectb23.netlify.app/api';
+// const SERVER_URL = 'http://localhost:300';
+const SERVER_URL = 'https://salesprojectb23.netlify.app/api';
 
 export const addNewCustomer = async function (newCustomer) {
   try {

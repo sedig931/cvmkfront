@@ -543,8 +543,8 @@ export default {
   props: ["lng", "resumeValues", "photoName", "justPrint"],
   data() {
     return {
-      SERVER_URL: "http://localhost:300/uploads",
-      // SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
+      // SERVER_URL: "http://localhost:300/uploads",
+      SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
     };
   },
   methods: {

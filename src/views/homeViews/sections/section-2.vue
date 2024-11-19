@@ -114,7 +114,7 @@
           <img
             class="const-img"
             v-if="this.lng.name === '中文'"
-            src="http://localhost:300/uploads/consFrames/frame7.jpg"
+            :src="`${this.SERVER_URL}/consFrames/frame7.jpg`"
             alt=""
           />
         </div>
@@ -130,7 +130,7 @@
           /><img
             class="const-img"
             v-if="this.lng.name === '中文'"
-            src="http://localhost:300/uploads/consFrames/frame16.jpg"
+            :src="`${this.SERVER_URL}/consFrames/frame16.jpg`"
             alt=""
           />
         </div>
@@ -186,7 +186,7 @@
           <img
             class="const-img"
             v-if="this.lng.name === '中文'"
-            src="http://localhost:300/uploads/consFrames/frame10.jpg"
+            :src="`${this.SERVER_URL}/consFrames/frame10.jpg`"
             alt=""
           />
         </div>
@@ -224,7 +224,7 @@
           /> -->
           <img
             class="const-img"
-            src="http://localhost:300/uploads/consFrames/frame17.jpg"
+            :src="`${this.SERVER_URL}/consFrames/frame17.jpg`"
             alt=""
           />
         </div>
@@ -236,7 +236,7 @@
           <!-- <Frame18 :resumeValues="this.resumeValues" :lng="this.lng" /> -->
           <img
             class="const-img"
-            src="http://localhost:300/uploads/consFrames/frame18.jpg"
+            :src="`${this.SERVER_URL}/consFrames/frame18.jpg`"
             alt=""
           />
         </div>
@@ -350,6 +350,8 @@ export default {
   },
   data() {
     return {
+      // SERVER_URL: "http://localhost:300/uploads",
+      SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
       showHideFramesContainer: false,
       fixSizingProblemTick: true,
     };

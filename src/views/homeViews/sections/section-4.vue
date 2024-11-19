@@ -44,7 +44,7 @@
         </div>
         <div class="single-contact-span single-service-contact-terms-span">
           <i class="bi bi-whatsapp ms-2 me-2"></i>
-          <span>+249 925735354</span>
+          <span>+249 962992439</span>
         </div>
         <!-- <div class="single-contact-span single-service-contact-terms-span">
           <i class="bi bi-facebook m-2"></i>

@@ -20,8 +20,8 @@
               alt=""
               :src="
                 this.photoName
-                  ? `http://localhost:300/uploads/${this.photoName}`
-                  : 'http://localhost:300/uploads/const-pic-cv-maker-cv-profile-4.png'
+                  ? `${this.SERVER_URL}/${this.photoName}`
+                  : `${this.SERVER_URL}/const-pic-cv-maker-cv-profile-4.png`
               "
             />
           </div>
@@ -542,7 +542,10 @@
 export default {
   props: ["lng", "resumeValues", "photoName", "justPrint"],
   data() {
-    return {};
+    return {
+      SERVER_URL: "http://localhost:300/uploads",
+      // SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
+    };
   },
   methods: {
     checkContainersSize() {

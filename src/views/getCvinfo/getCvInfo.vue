@@ -948,7 +948,7 @@ import Frame21 from "../cvsViews/cvView-21/cvView-21.vue";
 import Frame22 from "../cvsViews/cvView-22/cvView-22.vue";
 
 import EduForm from "./eduForm.vue";
-import SkillsForm from "../../trashmy/skillsForm.vue";
+import SkillsForm from "./skillsForm.vue";
 import LangsSkillsForm from "./langsSkillsForm.vue";
 import addInfo from "./addInfo.vue";
 import workExForm from "./workExForm.vue";

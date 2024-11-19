@@ -737,6 +737,38 @@
                   ></i>
                 </div>
               </div>
+              <div
+                class="single-user-frame-div"
+                :class="this.setActiveClass('frame_22')"
+                v-if="
+                  frame.frameName === 'frame_22' &&
+                  this.hideOtherFrames('frame_22')
+                "
+                :dir="frame.frameInfo.currentLng === 'arabic' ? 'rtl' : 'ltr'"
+              >
+                <Frame21
+                  :lng="this.setSingleFrameLang(frame.frameInfo.currentLng)"
+                  :resumeValues="frame.frameInfo"
+                  :photoName="this.setPhotoFrame(22)"
+                />
+                <div
+                  class="print-edit-div flex-row"
+                  v-if="this.setFotterEditor('frame_22')"
+                >
+                  <i
+                    class="bi bi-printer-fill print-icon m-2"
+                    @click="this.printFrame(22)"
+                  ></i>
+                  <i
+                    class="bi bi-pencil-square edit-icon m-2"
+                    @click="this.editFrameInfo(22)"
+                  ></i>
+                  <i
+                    class="bi bi-trash3-fill delete-icon m-2"
+                    @click="this.deleteFrame(22)"
+                  ></i>
+                </div>
+              </div>
             </div>
           </div>
           <!-- /////////////////////////////////////////////////////////////////////// -->
@@ -1065,7 +1097,7 @@ export default {
             (frame) => frame.frameName === frameName
           ) === 1
         ) {
-          return "active-frame";
+          return "active-frame active-frame-hidden";
         } else {
           return "not-active-frame";
         }
@@ -1075,7 +1107,7 @@ export default {
             (frame) => frame.frameName === frameName
           ) === 0
         )
-          return "active-frame";
+          return "active-frame active-frame-hidden";
         else return "second-active-frame";
       }
     },
@@ -1109,6 +1141,12 @@ export default {
       const firstFrame = this.customer.frames[0];
       this.customer.frames = this.customer.frames.filter((frame, i) => i !== 0);
       this.customer.frames.push(firstFrame);
+
+      setTimeout(() => {
+        document
+          .querySelector(".active-frame")
+          .classList.remove("active-frame-hidden");
+      }, 100);
     },
     goLeft() {
       let timerArray = this.customer.frames;
@@ -1120,6 +1158,12 @@ export default {
       for (let i = 0; i < timerArray.length; i++) {
         this.customer.frames.push(timerArray[i]);
       }
+
+      setTimeout(() => {
+        document
+          .querySelector(".active-frame")
+          .classList.remove("active-frame-hidden");
+      }, 100);
     },
     editFrameInfo(frameNum) {
       this.$router.push({
@@ -1225,6 +1269,13 @@ export default {
     this.getCustomerInfo();
     localStorage.removeItem("photo");
     sessionStorage.removeItem("photoName");
+    setTimeout(() => {
+      if (document.querySelector(".active-frame")) {
+        document
+          .querySelector(".active-frame")
+          .classList.remove("active-frame-hidden");
+      }
+    }, 100);
   },
 };
 </script>
@@ -1322,6 +1373,7 @@ export default {
   margin: 5px;
   border-radius: 15px;
 }
+
 .print-edit-div {
   position: absolute;
   bottom: 0;
@@ -1335,7 +1387,6 @@ export default {
 .goLR-div {
   height: 40px;
   width: 100%;
-
   /* background-color: red; */
 }
 .goLR-second-div {
@@ -1355,7 +1406,13 @@ export default {
 .active-frame {
   height: 420px;
   width: 300px;
+  transition: transform 0.5s, opacity 1.5s;
 }
+.active-frame-hidden {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
 .second-active-frame {
   height: 420px;
   width: 300px;

@@ -1,21 +1,21 @@
 <template>
-  <div class="window-container-div-10 flex-row">
+  <div class="window-container-div-22">
     <div
-      class="cv-container-div-10 flex-column"
+      class="cv-container-div-22 flex-column"
       :class="
-        this.lng.name === 'arabic' ? 'arabic-font' : 'cv-container-div-10-font'
+        this.lng.name === 'arabic' ? 'arabic-font' : 'cv-container-div-22-font'
       "
     >
-      <div class="sections-container-div flex-column">
+      <div class="section-div-22 name-job-title-section flex-row">
         <div
-          class="section-div-10 name-job-title-section-10 flex-column"
+          class="inner-section-div-22 inner-name-job-title-section flex-column"
           :class="
             this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
           "
         >
           <span
-            class="name-span-10 element-body-txt-10"
-            style="font-size: 23px"
+            class="name-span-22 element-body-txt-22"
+            style="font-size: 25px"
           >
             {{
               this.resumeValues.fullName
@@ -24,8 +24,8 @@
             }}&nbsp;
           </span>
           <span
-            class="job-title-span-10 element-body-txt-10"
-            style="font-size: 18px"
+            class="job-title-span-22 element-body-txt-22"
+            style="font-size: 20px"
           >
             {{
               this.resumeValues.jobTitle
@@ -34,9 +34,18 @@
             }}&nbsp;
           </span>
         </div>
-        <div class="section-div-10 details-section flex-column">
+      </div>
+
+      <div class="section-div-22 flex-row">
+        <div class="left-right-border-div"></div>
+        <div
+          class="inner-section-div-22 details-section flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
+        >
           <span
-            class="section-title-txt element-body-txt-10"
+            class="section-title-txt element-body-txt-22"
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
             "
@@ -47,7 +56,7 @@
             }}&nbsp;:&nbsp;
           </span>
           <div
-            class="body-element-div flex-column element-body-txt-10"
+            class="body-element-div flex-column element-body-txt-22"
             style="font-size: 14px"
           >
             <p class="m-0 p-0">
@@ -71,7 +80,7 @@
                         ? this.resumeValues.nationality
                         : this.lng.lang.section2.getCvInfo.frame.nationality
                     }`
-                  }}</span
+                  }}&nbsp;</span
                 >
                 <span>
                   <span>
@@ -155,9 +164,17 @@
             </div>
           </div>
         </div>
-        <div class="section-div-10 education-section flex-column">
+      </div>
+      <div class="section-div-22 flex-row">
+        <div class="left-right-border-div"></div>
+        <div
+          class="inner-section-div-22 education-section flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
+        >
           <span
-            class="section-title-txt element-body-txt-10"
+            class="section-title-txt element-body-txt-22"
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
             "
@@ -168,13 +185,13 @@
             }}&nbsp;:&nbsp;
           </span>
           <div
-            class="body-element-div flex-column element-body-txt-10"
+            class="body-element-div flex-column element-body-txt-22"
             style="font-size: 14px"
           >
             <div>
-              <span>{{
-                this.lng.lang.section2.getCvInfo.frame.degreeOf + " "
-              }}</span>
+              <span
+                >{{ this.lng.lang.section2.getCvInfo.frame.degreeOf + " " }}
+              </span>
               <span class="txt-bolder">
                 {{
                   this.resumeValues.eduForm.eduDegree
@@ -258,15 +275,17 @@
             </div>
           </div>
         </div>
-        <!-- +
-                  `${
-                    i + 1 === this.resumeValues.coursesForm.length
-                      ? "."
-                      : this.lng.lang.section2.getCvInfo.frame.comma + " "
-                  }` -->
-        <div class="section-div-10 skills-section flex-column">
+      </div>
+      <div class="section-div-22 flex-row">
+        <div class="left-right-border-div"></div>
+        <div
+          class="inner-section-div-22 skills-section flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
+        >
           <span
-            class="section-title-txt element-body-txt-10"
+            class="section-title-txt element-body-txt-22"
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
             "
@@ -277,11 +296,11 @@
             }}&nbsp;:&nbsp;
           </span>
           <div
-            class="body-element-div flex-column element-body-txt-10"
+            class="body-element-div flex-column element-body-txt-22"
             style="font-size: 14px"
           >
             <div class="skills-outer-div flex-row">
-              <div class="skills-columns-grid-div element-body-txt-10">
+              <div class="skills-columns-grid-div element-body-txt-22">
                 <div>
                   <span>- </span>
                   <span>
@@ -303,12 +322,18 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-div-22 flex-row">
+        <div class="left-right-border-div"></div>
         <div
-          class="section-div-10 exeperince-section flex-column"
+          class="inner-section-div-22 exeperince-section flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
           v-if="this.resumeValues.workExpForm[0].jobTitle"
         >
           <span
-            class="section-title-txt element-body-txt-10"
+            class="section-title-txt element-body-txt-22"
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
             "
@@ -327,16 +352,16 @@
                   :key="i"
                 >
                   <i
-                    class="bi bi-briefcase-fill m-1 element-body-txt-10"
+                    class="bi bi-briefcase-fill m-1 element-body-txt-22"
                     style="font-size: 15px"
                   ></i>
                   <span
-                    class="tranlate-me-10 txt-bolder element-body-txt-10"
+                    class="tranlate-me-22 txt-bolder element-body-txt-22"
                     style="font-size: 15px"
                     >{{ work.jobTitle }}&nbsp;</span
                   >
                   <div
-                    class="work-body-div element-body-txt-10"
+                    class="work-body-div ms-2 me-2 element-body-txt-22"
                     style="font-size: 14px"
                   >
                     <div>
@@ -367,12 +392,18 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-div-22 flex-row">
+        <div class="left-right-border-div"></div>
         <div
-          class="section-div-10 links-section flex-column"
+          class="inner-section-div-22 flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
           v-if="this.resumeValues.webLinks.princ.webTitle"
         >
           <span
-            class="section-title-txt element-body-txt-10"
+            class="section-title-txt element-body-txt-22"
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
             "
@@ -384,7 +415,7 @@
             }}&nbsp;:&nbsp;
           </span>
           <div
-            class="body-element-div flex-column element-body-txt-10"
+            class="body-element-div flex-column element-body-txt-22"
             style="font-size: 14px"
           >
             <div class="links-outer-div flex-row">
@@ -405,9 +436,17 @@
             </div>
           </div>
         </div>
-        <div class="section-div-10 languages-section flex-column">
+      </div>
+      <div class="section-div-22 flex-row">
+        <div class="left-right-border-div"></div>
+        <div
+          class="inner-section-div-22 flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
+        >
           <span
-            class="section-title-txt element-body-txt-10"
+            class="section-title-txt element-body-txt-22"
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
             "
@@ -417,11 +456,11 @@
               this.lng.lang.section2.getCvInfo.frame.mainTitle.languages + " "
             }}&nbsp;:&nbsp;
           </span>
-          <div class="body-element-div language-body-element-div flex-column">
+          <div class="body-element-div flex-column">
             <div class="languages-outer-div flex-row">
               <div class="columns-grid-div">
                 <div>
-                  <span class="element-body-txt-10" style="font-size: 14px">
+                  <span class="element-body-txt-22" style="font-size: 14px">
                     {{
                       this.resumeValues.langsForm.princ.name
                         ? this.resumeValues.langsForm.princ.name
@@ -429,12 +468,12 @@
                     }}&nbsp;
                   </span>
                   <span
-                    class="dots-span element-body-txt-10"
+                    class="dots-span element-body-txt-22"
                     style="font-size: 11px"
                   >
                     ---------
                   </span>
-                  <span class="element-body-txt-10" style="font-size: 14px">
+                  <span class="element-body-txt-22" style="font-size: 14px">
                     {{
                       this.resumeValues.langsForm.princ.level
                         ? this.resumeValues.langsForm.princ.level
@@ -447,22 +486,16 @@
                   v-for="(lang, i) in this.resumeValues.langsForm.childs"
                   :key="i"
                 >
-                  <span
-                    class="dots-span element-body-txt-10"
-                    style="font-size: 14px"
-                  >
+                  <span class="element-body-txt-22" style="font-size: 14px">
                     {{ lang.name }}&nbsp;
                   </span>
                   <span
-                    class="dots-span element-body-txt-10"
+                    class="dots-span element-body-txt-22"
                     style="font-size: 11px"
                   >
                     ---------
                   </span>
-                  <span
-                    class="dots-span element-body-txt-10"
-                    style="font-size: 14px"
-                  >
+                  <span class="element-body-txt-22" style="font-size: 14px">
                     {{ lang.level }}&nbsp;
                   </span>
                 </div>
@@ -471,42 +504,65 @@
           </div>
         </div>
       </div>
-      <div
-        class="section-div-10 contacts-section-div flex-row element-body-txt-10"
-        style="font-size: 14px"
-      >
-        <div class="single-contact flex-row">
-          <i class="bi bi-geo-alt-fill m-1"></i>
-          <span class="tranlate-me-10">
-            <span>
-              {{
-                `${
-                  this.resumeValues.address.country
-                    ? this.resumeValues.address.country
-                    : this.lng.lang.section2.getCvInfo.frame.country
-                }` + " - "
-              }}&nbsp;
-            </span>
-            {{
-              `${
-                this.resumeValues.address.city
-                  ? this.resumeValues.address.city
-                  : this.lng.lang.section2.getCvInfo.frame.city
-              }`
-            }}&nbsp;</span
+      <div class="section-div-22 contacts-section flex-row">
+        <div class="left-right-border-div"></div>
+        <div
+          class="inner-section-div-22 flex-column"
+          :class="
+            this.lng.name === 'arabic' ? 'inner-section-div-padding-arabic' : ''
+          "
+        >
+          <span
+            class="section-title-txt element-body-txt-22"
+            :class="
+              this.lng.name === 'arabic' ? 'arabic-font' : 'name-job-title-font'
+            "
+            style="font-size: 16px"
           >
-        </div>
-        <div class="single-contact flex-row">
-          <i class="bi bi-envelope-at-fill m-1"></i>
-          <span class="tranlate-me-10">{{
-            this.resumeValues.email ? this.resumeValues.email : "email@mail.com"
-          }}</span>
-        </div>
-        <div class="single-contact flex-row">
-          <i class="bi bi-telephone-fill m-1"></i>
-          <span class="tranlate-me-10">{{
-            this.resumeValues.phone ? this.resumeValues.phone : "0123456789"
-          }}</span>
+            {{
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.contacts + " "
+            }}&nbsp;:&nbsp;
+          </span>
+          <div
+            class="contacts-body-element flex-row element-body-txt-22"
+            style="font-size: 14px"
+          >
+            <div class="single-contact flex-row">
+              <i class="bi bi-geo-alt-fill ms-1 me-1"></i>
+              <span class="tranlate-me-22">
+                <span>
+                  {{
+                    `${
+                      this.resumeValues.address.country
+                        ? this.resumeValues.address.country
+                        : this.lng.lang.section2.getCvInfo.frame.country
+                    }` + " - "
+                  }}&nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.address.city
+                      ? this.resumeValues.address.city
+                      : this.lng.lang.section2.getCvInfo.frame.city
+                  }`
+                }}&nbsp;</span
+              >
+            </div>
+            <div class="single-contact flex-row">
+              <i class="bi bi-envelope-at-fill ms-1 me-1"></i>
+              <span class="tranlate-me-22">{{
+                this.resumeValues.email
+                  ? this.resumeValues.email
+                  : "email@mail.com"
+              }}</span>
+            </div>
+            <div class="single-contact flex-row">
+              <i class="bi bi-telephone-fill ms-1 me-1"></i>
+              <span class="tranlate-me-22">{{
+                this.resumeValues.phone ? this.resumeValues.phone : "0123456789"
+              }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -522,10 +578,10 @@ export default {
   methods: {
     checkContainersSize() {
       const cvContainerHeight = document
-        .querySelector(".cv-container-div-10")
+        .querySelector(".cv-container-div-22")
         .getBoundingClientRect().height;
 
-      let sectionsHeights = document.querySelectorAll(".section-div-10");
+      let sectionsHeights = document.querySelectorAll(".section-div-22");
 
       let sectionsHeightsArray = [];
       sectionsHeights.forEach((element) => {
@@ -537,7 +593,6 @@ export default {
         0
       );
 
-      sectionsHeightsSum = sectionsHeightsSum + 8;
       let fontSizeHere = 15;
 
       while (sectionsHeightsSum > cvContainerHeight) {
@@ -545,7 +600,7 @@ export default {
         if (fontSizeHere === 1) {
           break;
         }
-        document.querySelectorAll(".element-body-txt-10").forEach((el) => {
+        document.querySelectorAll(".element-body-txt-22").forEach((el) => {
           if (
             Number(
               el.style.fontSize.split("")[0] + el.style.fontSize.split("")[1]
@@ -558,7 +613,7 @@ export default {
             }px`;
           } else {
             if (Number(el.style.fontSize.split("")[0]) === 1) {
-              //   console.log("enphe");
+              // console.log("enphe");
             } else {
               el.style.fontSize = `${
                 Number(el.style.fontSize.split("")[0]) - 1
@@ -567,7 +622,7 @@ export default {
           }
         });
 
-        sectionsHeights = document.querySelectorAll(".section-div-10");
+        sectionsHeights = document.querySelectorAll(".section-div-22");
         sectionsHeightsArray = [];
         sectionsHeights.forEach((element) => {
           sectionsHeightsArray.push(element.getBoundingClientRect().height);
@@ -576,16 +631,15 @@ export default {
           (sum, el) => sum + el,
           0
         );
-        sectionsHeightsSum = sectionsHeightsSum + 8;
       }
     },
   },
   mounted() {
     this.checkContainersSize();
     if (this.justPrint && this.lng.name === "arabic") {
-      const allSectionsTitle = document.querySelectorAll(".tranlate-me-10");
+      const allSectionsTitle = document.querySelectorAll(".tranlate-me-22");
       allSectionsTitle.forEach((title) => {
-        title.classList.add("section-title-txt-10-translate");
+        title.classList.add("section-title-txt-22-translate");
       });
     }
   },
@@ -593,7 +647,7 @@ export default {
 </script>
 
 <style scoped>
-.section-title-txt-10-translate {
+.section-title-txt-22-translate {
   transform: translateY(-3px);
 }
 .flex-row {
@@ -610,52 +664,63 @@ export default {
 .arabic-font {
   font-family: "Noto Kufi Arabic", sans-serif;
 }
-.window-container-div-10 {
+.window-container-div-22 {
   width: 100%;
   height: 100%;
+  /* height: 100vh; */
   /* height: 1122px; */
   /* padding: 5px; */
 }
-.cv-container-div-10 {
+.cv-container-div-22 {
   height: 100%;
   width: 100%;
-  padding: 0 25px 0 25px;
-  color: rgb(40, 44, 75);
-  /* background-color: rgba(233, 233, 233, 0.5); */
+  padding: 0 10px 0 10px;
+  color: rgb(67, 67, 102);
 }
-.cv-container-div-10-font {
+.cv-container-div-22-font {
   font-family: "Tauri";
 }
-.sections-container-div {
+.section-div-22 {
   flex: 1;
+  height: 100%;
   width: 100%;
-  border-radius: 0 0 25px 25px;
-  margin-bottom: 4px;
-  background-color: rgb(238, 193, 109);
+  padding: 0px 5px 5px 5px;
 }
-.section-div-10 {
-  flex: 1;
+.inner-section-div-22 {
+  height: 100%;
   width: 100%;
-  padding: 3px 10px 3px 10px;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  /* background-color: rgba(117, 158, 230, 0.5); */
+  padding: 0 0 0 1px;
 }
-.name-job-title-section-10 {
-  flex: 0;
+.inner-section-div-padding-arabic {
+  padding: 0 1px 0 0;
+}
+.name-job-title-section {
+  flex: 0.4;
+}
+.inner-name-job-title-section {
   align-items: center;
 }
-
 .name-job-title-font {
   font-family: "Tilt Warp";
 }
 .body-element-div {
   width: 100%;
   height: 100%;
-  padding: 1px 10px 1px 10px;
-  margin: 2.5px 0px 0px 0px;
+  padding: 0px 5px 0px 5px;
+  /* margin: 2.5px 0 0 10px; */
   align-items: start;
   justify-content: space-evenly;
-  border-bottom: 0.5px solid rgba(58, 61, 80, 0.5);
 }
+.left-right-border-div {
+  height: 100%;
+  width: 2px;
+  background-color: rgb(165, 165, 183);
+  border-radius: 5px;
+}
+
 .general-info-div,
 .skills-outer-div,
 .workExp-outer-div,
@@ -672,7 +737,7 @@ export default {
 .workExep-columns-div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  width: 90%;
   row-gap: 3px;
 }
 .txt-bolder {
@@ -680,27 +745,55 @@ export default {
 }
 .work-body-div {
   align-items: start;
-  width: 100%;
   padding: 0 20px 0 20px;
 }
-.links-section,
-.languages-section {
+.links-section {
   flex: 0.5;
 }
-.language-body-element-div {
-  border-bottom: none;
-}
-.anchors {
-  color: rgb(40, 44, 75);
-}
-
-.contacts-section-div {
+.contacts-section {
   flex: 0;
+  /* padding: 0; */
+}
+.contacts-body-element {
   width: 100%;
   justify-content: space-evenly;
-  align-items: center;
-  border-radius: 25px 25px 0 0;
-  margin-top: 4px;
-  background-color: rgb(238, 193, 109);
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
 }
+.single-contact {
+  height: 100%;
+  color: rgb(67, 67, 102);
+  /* border-radius: 15px; */
+  padding: 0px 10px 0px 10px;
+  /* border: 1px solid rgb(197, 197, 197); */
+}
+/* .anchors {
+  color: rgb(110, 110, 236);
+} */
+.markerd {
+  background-color: rgb(67, 67, 102);
+  color: white;
+  opacity: 0.8;
+  padding: 0 5px 0 5px;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+}
+/* .markerd {
+  position: relative;
+  padding: 0 5px 0 5px;
+  color: rgb(255, 255, 255);
+} */
+
+/* .markerd::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-primary);
+} */
 </style>

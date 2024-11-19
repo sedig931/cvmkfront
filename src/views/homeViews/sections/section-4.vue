@@ -9,8 +9,10 @@
     <div class="top-home-section-body flex-row">
       <div class="inner-top-home-section-body"></div>
     </div>
-    <div class="home-section-body">
-      <div class="left-home-body-div left-midle-right-body flex-column">
+    <div class="home-section-body text-center">
+      <div
+        class="left-home-body-div left-midle-right-body flex-column ps-1 pe-1"
+      >
         <span class="titles-body-span">
           {{ this.lng.lang.section4.services.title }}</span
         >
@@ -73,7 +75,9 @@
           </div>
         </div>
       </div>
-      <div class="right-home-body-div left-midle-right-body flex-column">
+      <div
+        class="right-home-body-div left-midle-right-body flex-column ps-1 pe-1"
+      >
         <span class="titles-body-span">
           {{ this.lng.lang.section4.termsPolicy.title }}
         </span>
@@ -95,7 +99,7 @@
       </div>
     </div>
     <div class="copy-rights-div flex-row">
-      <span class="copy-rights-span">&copy; 2023</span>
+      <span class="copy-rights-span">&copy; 2023 samdtc</span>
     </div>
   </div>
 </template>
@@ -124,6 +128,8 @@ export default {
 .home-section-4 {
   min-height: 50vh;
   width: 100%;
+
+  transition: transform 1s, opacity 1s;
 }
 .top-home-section-body {
   height: 60px;

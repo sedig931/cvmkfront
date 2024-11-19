@@ -70,7 +70,7 @@
           </div>
           <div class="more-than-20-div">
             <span>
-              {{ this.lng.lang.section1.ready4u }}
+              {{ this.ready4u }}
             </span>
           </div>
         </div>
@@ -99,10 +99,22 @@
           :id="i"
           >{{ lngname[0].toUpperCase() + lngname.slice("1") }}</span
         >
+        <span
+          class="lang-warry text-muted text-center"
+          :class="
+            this.lng.name === 'arabic' ? 'arabic-font' : 'lang-warry-font'
+          "
+        >
+          {{ this.lng.lang.section1.langWarning }}
+        </span>
       </div>
     </div>
     <Section2 :lng="this.lng" :resumeValues="this.resumeValues" />
-    <Section3 :lng="this.lng" />
+    <Section3
+      :lng="this.lng"
+      :activeCustomer="this.customer"
+      @logoutNow="this.loginLogout"
+    />
     <Section4
       :lng="this.lng"
       @showTermsWindow="this.showAllTermsPolicy = true"
@@ -303,6 +315,7 @@ export default {
       showAttentionWindow: true,
       showAllTermsPolicy: false,
       userLoggedin: false,
+      ready4u: " ",
     };
   },
   methods: {
@@ -329,10 +342,10 @@ export default {
     setChosenLang(e) {
       if (e.target.classList.contains("change-lngName-span")) {
         localStorage.setItem("cvMaker-lngName", this.langNames[e.target.id]);
-        this.setLanguage(this.langNames[e.target.id]);
-        setTimeout(() => {
-          location.reload();
-        }, 0.5);
+        // this.setLanguage(this.langNames[e.target.id]);
+        location.reload();
+        // setTimeout(() => {
+        // }, 0.5);
         this.chagingLangs = false;
       } else {
         this.chagingLangs = false;
@@ -349,7 +362,6 @@ export default {
         document
           .querySelector(".custome-now-div")
           .classList.add("flex-column-custome-now");
-        console.log("make column");
       }
     },
     async checkActiveCustomer() {
@@ -358,6 +370,8 @@ export default {
         this.userLoggedin = true;
       } catch (err) {
         this.userLoggedin = false;
+        console.log(err.message);
+
         // console.log("no user active..");
       }
     },
@@ -402,6 +416,34 @@ export default {
       });
       doc.save("Document.pdf");
     },
+    playWithText() {
+      const txtPlay = this.lng.lang.section1.ready4u.split("");
+      txtPlay.forEach((char, i) => {
+        setTimeout(() => {
+          this.ready4u += char;
+        }, `${i * 50}`);
+      });
+    },
+    slowSection() {
+      const allSections = document.querySelectorAll(".home-sections");
+
+      const revealSection = function (entries, observer) {
+        const [entry] = entries;
+        //console.log(entry);
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove("section-hidden");
+        observer.unobserve(entry.target);
+      };
+      const sectionObserver = new IntersectionObserver(revealSection, {
+        root: null,
+        threshold: 0.15,
+      });
+
+      allSections.forEach(function (section) {
+        sectionObserver.observe(section);
+        section.classList.add("section-hidden");
+      });
+    },
   },
   mounted() {
     this.checkActiveCustomer();
@@ -417,12 +459,17 @@ export default {
     } else {
       this.showAttentionWindow = true;
     }
-    // this.tryPrintOne();
+    this.playWithText();
+    this.slowSection();
   },
 };
 </script>
 
 <style scoped>
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
 .arabic-font {
   font-family: "Noto Kufi Arabic", sans-serif;
 }
@@ -451,6 +498,8 @@ export default {
   height: 100vh;
   width: 100%;
   background-color: rgb(39, 39, 39);
+
+  transition: transform 1s, opacity 1s;
 }
 .nav-div {
   position: absolute;
@@ -593,6 +642,14 @@ export default {
   right: 10px;
   cursor: pointer;
   font-size: 14px;
+}
+.lang-warry {
+  position: absolute;
+  bottom: -50px;
+  font-size: 12px;
+}
+.lang-warry-font {
+  font-family: "Comfortaa";
 }
 
 /* ---------------------------------------MEDIA QUERY SECTION1--------------------------------------------------- */

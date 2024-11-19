@@ -4,106 +4,133 @@
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '1'"
+      :justPrint="true"
     />
     <Frame2
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '2'"
+      :justPrint="true"
     />
     <Frame3
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '3'"
+      :justPrint="true"
     />
     <Frame4
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '4'"
+      :justPrint="true"
     />
     <Frame5
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '5'"
+      :justPrint="true"
     />
     <Frame6
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '6'"
+      :justPrint="true"
     />
     <Frame7
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '7'"
+      :justPrint="true"
     />
     <Frame8
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '8'"
+      :justPrint="true"
     />
     <Frame9
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '9'"
+      :justPrint="true"
     />
     <Frame10
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '10'"
+      :justPrint="true"
     />
     <Frame11
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '11'"
+      :justPrint="true"
     />
     <Frame12
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '12'"
+      :justPrint="true"
     />
     <Frame13
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '13'"
+      :justPrint="true"
     />
     <Frame14
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '14'"
+      :justPrint="true"
     />
     <Frame15
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '15'"
+      :justPrint="true"
     />
     <Frame16
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '16'"
+      :justPrint="true"
     />
     <Frame17
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '17'"
+      :justPrint="true"
     />
     <Frame18
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '18'"
+      :justPrint="true"
     />
     <Frame19
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '19'"
+      :justPrint="true"
     />
     <Frame20
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '20'"
+      :justPrint="true"
     />
     <Frame21
       :resumeValues="this.resumeValues"
       :lng="this.lng"
       v-if="this.cvNum === '21'"
+      :justPrint="true"
+    />
+    <Frame22
+      :resumeValues="this.resumeValues"
+      :lng="this.lng"
+      v-if="this.cvNum === '22'"
+      :justPrint="true"
     />
   </div>
 </template>
@@ -132,6 +159,7 @@ import Frame18 from "../cvsViews/cvView-18/cvView-18.vue";
 import Frame19 from "../cvsViews/cvView-19/cvView-19.vue";
 import Frame20 from "../cvsViews/cvView-20/cvView-20.vue";
 import Frame21 from "../cvsViews/cvView-21/cvView-21.vue";
+import Frame22 from "../cvsViews/cvView-22/cvView-22.vue";
 export default {
   components: {
     Frame1,
@@ -155,6 +183,7 @@ export default {
     Frame19,
     Frame20,
     Frame21,
+    Frame22,
   },
   props: ["lng", "cvNum", "resumeValues"],
   mounted() {},

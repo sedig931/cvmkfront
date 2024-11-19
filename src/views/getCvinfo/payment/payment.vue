@@ -140,53 +140,63 @@ export default {
     // 0P#LH$us
     async captuerPayment() {
       try {
-        if (JSON.parse(sessionStorage.getItem("customerID"))) {
-          this.customerID = JSON.parse(sessionStorage.getItem("customerID"));
-        }
-
-        this.resumeValues = JSON.parse(sessionStorage.getItem("resumeValues"));
-        this.cvNum = JSON.parse(sessionStorage.getItem("frameNum"));
-        this.lng = JSON.parse(sessionStorage.getItem("lng"));
-
-        if (this.$route.query.token) {
-          const data23 = await payPalCaptcuer(this.$route.query.token);
-          if (this.customerID) {
-            await addFrameToCustomer({
-              framName: "frame_" + this.cvNum,
-              frameInfo: this.resumeValues,
-            });
+        if (JSON.parse(sessionStorage.getItem("frameNum"))) {
+          if (JSON.parse(sessionStorage.getItem("customerID"))) {
+            this.customerID = JSON.parse(sessionStorage.getItem("customerID"));
           }
-        }
-        this.printNow = true;
-        const cvContainer = document.querySelector(".for-print");
-        // await html2pdf().from(cvContainer).save();
-        var opt = {
-          margin: 0,
-          filename: "CVMK24.pdf",
-          image: { type: "jpeg", quality: 1 },
-          html2canvas: { scale: 2 },
-          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-        };
-        await html2pdf().set(opt).from(cvContainer).save();
 
-        this.printNow = false;
+          this.resumeValues = JSON.parse(
+            sessionStorage.getItem("resumeValues")
+          );
+          this.cvNum = JSON.parse(sessionStorage.getItem("frameNum"));
+          this.lng = JSON.parse(sessionStorage.getItem("lng"));
 
-        this.showDownloading = false;
-
-        localStorage.removeItem("photo");
-        setTimeout(() => {
-          if (this.customerID) {
-            this.$router.push({
-              name: "profile",
-              params: { id: this.customerID, lngname: this.lng.name },
-            });
-          } else {
-            this.$router.push({
-              name: "home",
-            });
+          if (this.$route.query.token) {
+            await payPalCaptcuer(this.$route.query.token);
+            if (this.customerID) {
+              await addFrameToCustomer({
+                framName: "frame_" + this.cvNum,
+                frameInfo: this.resumeValues,
+              });
+            }
           }
-        }, 3000);
+          this.printNow = true;
+          const cvContainer = document.querySelector(".for-print");
+          // await html2pdf().from(cvContainer).save();
+          var opt = {
+            margin: 0,
+            filename: "CVMK24.pdf",
+            image: { type: "jpeg", quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+          };
+          await html2pdf().set(opt).from(cvContainer).save();
+
+          this.printNow = false;
+
+          this.showDownloading = false;
+
+          localStorage.removeItem("photo");
+          setTimeout(() => {
+            sessionStorage.clear();
+            if (this.customerID) {
+              this.$router.push({
+                name: "profile",
+                params: { id: this.customerID, lngname: this.lng.name },
+              });
+            } else {
+              this.$router.push({
+                name: "home",
+              });
+            }
+          }, 3000);
+        } else {
+          this.$router.push({
+            name: "home",
+          });
+        }
       } catch (err) {
+        console.log(err);
         console.log(err.message);
       }
     },

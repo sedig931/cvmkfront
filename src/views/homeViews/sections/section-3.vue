@@ -3,10 +3,7 @@
     class="home-sections home-section-3 flex-column"
     :dir="this.lng.name === 'arabic' ? 'rtl' : 'ltr'"
   >
-    <div
-      class="no-user-login-div forms-profile-div flex-column"
-      v-if="!this.userLoggedin"
-    >
+    <div class="no-user-login-div forms-profile-div flex-column">
       <div class="flex-column">
         <div class="section-3-header-div flex-row text-center pe-1 ps-1">
           <span
@@ -54,7 +51,11 @@
             type="email"
             :class="this.loginEmailRedBorder ? 'red-border' : ''"
             class="input-contr form-control"
-            :placeholder="this.lng.lang.section3.formLogin.email"
+            :placeholder="
+              this.activeCustomer.email
+                ? this.activeCustomer.email
+                : this.lng.lang.section3.formLogin.email
+            "
             required
             v-model="this.customer.email"
           />
@@ -78,8 +79,20 @@
               >{{ this.lng.lang.section3.formLogin.forgetPassword }}</span
             >
           </div>
-          <button type="submit" class="login-btn">
+          <button
+            type="submit"
+            class="login-btn"
+            v-if="!this.activeCustomer._id"
+          >
             {{ this.lng.lang.section3.formLogin.loginBtn }}
+          </button>
+          <button
+            type="button"
+            class="login-btn"
+            @click="this.$emit('logoutNow')"
+            v-if="this.activeCustomer._id"
+          >
+            {{ this.lng.lang.section1.nav.logoutBtn }}
           </button>
         </form>
         <!-- ------------------------RRGESTER FORM--------------------------------------------- -->
@@ -247,13 +260,6 @@
         </div>
       </div>
     </div>
-    <div class="user-logged-div forms-profile-div" v-if="this.userLoggedin">
-      <MobileProfile
-        :framePhotoNames="this.activeCustomer.framePhotoNames"
-        :frames="this.activeCustomer.frames"
-        :lng="this.lng"
-      />
-    </div>
   </div>
 </template>
 
@@ -266,12 +272,8 @@ import {
   changeCustomerPassword,
   getActiveCustomer,
 } from "../../../components/modal.js";
-import MobileProfile from "../../profileMobile.vue";
 export default {
-  components: {
-    MobileProfile,
-  },
-  props: ["lng"],
+  props: ["lng", "activeCustomer"],
   data() {
     return {
       userLoggedin: false,
@@ -286,7 +288,6 @@ export default {
       showAccountCreatedLbl: false,
       showEmailAllreadyExist: false,
       loginOutForms: [true, false, false, false, false],
-      activeCustomer: {},
       customer: {
         email: "",
         password: "",
@@ -345,6 +346,7 @@ export default {
         //go to profile page...
       } catch (err) {
         this.showForgetPassword = true;
+        console.log(err.message);
       }
     },
     async checkEmail() {
@@ -455,14 +457,12 @@ export default {
       try {
         this.activeCustomer = await getActiveCustomer();
         this.userLoggedin = true;
+        console.log(this.activeCustomer);
       } catch (err) {
         this.userLoggedin = false;
         // console.log('no user active..');
       }
     },
-  },
-  mounted() {
-    this.setUpActiveCustomer();
   },
 };
 </script>
@@ -485,6 +485,8 @@ export default {
 .home-section-3 {
   height: 70vh;
   width: 100%;
+
+  transition: transform 1s, opacity 1s;
 }
 .section-3-header-div {
   width: 100%;

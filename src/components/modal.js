@@ -1,8 +1,12 @@
+
+const SERVER_URL = 'http://localhost:300';
+// const SERVER_URL = 'https://salesprojectb23.netlify.app/api';
+
 export const addNewCustomer = async function (newCustomer) {
   try {
     newCustomer.email = newCustomer.email.toLowerCase();
     // await fetch(`http://192.168.43.142:300/customer/newCustomer`, {
-    await fetch(`http://localhost:300/customer/newCustomer`, {
+    await fetch(`${SERVER_URL}/customer/newCustomer`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -18,7 +22,7 @@ export const addNewCustomer = async function (newCustomer) {
 export const deleteCustomer = async function (customerID) {
   try {
     // await fetch(`http://192.168.43.142:300/customer/newCustomer`, {
-    await fetch(`http://localhost:300/customer/deleteCustomer`, {
+    await fetch(`${SERVER_URL}/customer/deleteCustomer`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -39,7 +43,7 @@ export const checkLogin = async function (customer) {
     customer.email = customer.email.toLowerCase();
 
     // await fetch(`http://192.168.43.142:300/customer/checkLogin`, {
-    await fetch(`http://localhost:300/customer/checkLogin`, {
+    await fetch(`${SERVER_URL}/customer/checkLogin`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -59,7 +63,7 @@ export const getCustomer = async function (id) {
   try {
     let customer;
     // await fetch(`http://192.168.43.142:300/getCustomer/customer/${id}`, {
-    await fetch(`http://localhost:300/getCustomer/customer/${id}`, {
+    await fetch(`${SERVER_URL}/getCustomer/customer/${id}`, {
       credentials: "include",
       method: "GET",
       headers: {
@@ -79,7 +83,7 @@ export const getCustomerByEmail = async function (email) {
     let customerID;
     email = email.toLowerCase();
     // await fetch(`http://192.168.43.142:300/getCustomer/customer/email`, {
-    await fetch(`http://localhost:300/customer/email`, {
+    await fetch(`${SERVER_URL}/customer/email`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -99,7 +103,7 @@ export const getActiveCustomer = async function () {
   try {
     let customer;
     // await fetch(`http://192.168.43.142:300/getCustomer/activeCustomer`, {
-    await fetch(`http://localhost:300/getCustomer/activeCustomer`, {
+    await fetch(`${SERVER_URL}/getCustomer/activeCustomer`, {
       credentials: "include",
       method: "GET",
       headers: {
@@ -118,7 +122,7 @@ export const addFrameToCustomer = async function (frame) {
   try {
     // await fetch(`http://192.168.43.142:300/getCustomer/addFrame`, {
 
-    await fetch(`http://localhost:300/getCustomer/addFrame`, {
+    await fetch(`${SERVER_URL}/getCustomer/addFrame`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -133,7 +137,7 @@ export const addFrameToCustomer = async function (frame) {
 
 export const deleteFrame = async function (frameNum) {
   try {
-    await fetch(`http://localhost:300/getCustomer/deleteFrame`, {
+    await fetch(`${SERVER_URL}/getCustomer/deleteFrame`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -150,7 +154,7 @@ export const searchFrame = async function (frameName) {
   try {
     // await fetch(`http://192.168.43.142:300/getCustomer/addFrame`, {
     let found;
-    await fetch(`http://localhost:300/getCustomer/searchFrame`, {
+    await fetch(`${SERVER_URL}/getCustomer/searchFrame`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -169,7 +173,7 @@ export const searchFrame = async function (frameName) {
 export const sendVerfNum = async function (receverInfo) {
   receverInfo.receverMail = receverInfo.receverMail.toLowerCase();
   try {
-    await fetch(`http://localhost:300/customer/sendVerfnumber`, {
+    await fetch(`${SERVER_URL}/customer/sendVerfnumber`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -185,7 +189,7 @@ export const sendVerfNum = async function (receverInfo) {
 export const changeCustomerPassword = async function (id, newPassword) {
   try {
     // await fetch(`http://192.168.43.142:300/getCustomer/customer/email`, {
-    await fetch(`http://localhost:300/customer/changePassword`, {
+    await fetch(`${SERVER_URL}/customer/changePassword`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -201,13 +205,13 @@ export const changeCustomerPassword = async function (id, newPassword) {
 export const payPalPayment = async function () {
   try {
     let data1;
-    await fetch(`http://localhost:300/payment/paypal`, {
+    await fetch(`${SERVER_URL}/payment/paypal`, {
       credentials: "include",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ hi: "hi" }),
+      body: JSON.stringify(),
     })
       .then((res) => res.json())
       .then((data) => (data1 = data));
@@ -221,7 +225,7 @@ export const payPalCaptcuer = async function (customerToken) {
   try {
     let data1;
 
-    await fetch(`http://localhost:300/payment/paypalCapture`, {
+    await fetch(`${SERVER_URL}/payment/paypalCapture`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -239,7 +243,7 @@ export const payPalCaptcuer = async function (customerToken) {
 
 export const setPhoto = async function (dataForm) {
   try {
-    await fetch(`http://localhost:300/setPhoto/setUserFramePhoto`, {
+    await fetch(`${SERVER_URL}/setPhoto/setUserFramePhoto`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -254,7 +258,7 @@ export const setPhoto = async function (dataForm) {
 };
 export const logoutNow = async function () {
   try {
-    await fetch(`http://localhost:300/destroy`, {
+    await fetch(`${SERVER_URL}/destroy`, {
       credentials: "include",
       method: "GET",
       headers: {

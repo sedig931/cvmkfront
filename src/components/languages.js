@@ -18,7 +18,8 @@ const english = {
     makeYourTxt: "Make Your",
     yourCV: "Custome CV",
     nowBtn: "Now",
-    ready4u: '20+ creatively-desigend CV templets ready for you'
+    ready4u: "20+ creatively-desigend CV templets ready for you",
+    langWarning: "The chosen language will be used to create the CV file"
   },
   section2: {
     showMoreBtn: "Show More",
@@ -319,6 +320,10 @@ const english = {
         "The data entered by the user for the purpose of creating a CV is data that belongs to the user only. We do not restrict, monitor, or track it, and the user bears full responsibility for writing it on his CV.",
         "The process of paying and receiving money takes place through a reliable financial party. We do not have the right to retain or even view any financial data related to the user for any reason whatsoever.",
         "If the design you obtained does not match the design you chose, or there is a problem with the format, or the data is not clear due to a technical malfunction, you can contact us to review the error.",
+        "Information regarding the payment process will be stored for a temporary period after which it will be deleted",
+        "If we decide to close the site, each subscriber will be notified so that he can print his files if he wishes",
+        "Prices are subject to change and free services are for limited periods"
+
       ],
     close: 'Close'
   },
@@ -353,7 +358,8 @@ const arabic = {
     makeYourTxt: "قـم بإنشــاء",
     yourCV: "سيــرتك الـذاتيـة",
     nowBtn: "الآن",
-    ready4u: "أكثر من 20 نموذجًا للسيرة الذاتية مصممة بشكل إبداعي جاهزة لك"
+    ready4u: "أكثر من 20 نموذجًا للسيرة الذاتية مصممة بشكل إبداعي جاهزة لك",
+    langWarning: "اللغة التي يتم إختيارها ستستخدم لإنشاء ملف السيرة الذاتية"
   },
   section2: {
     showMoreBtn: "رؤية المزيـد",
@@ -493,7 +499,7 @@ const arabic = {
           gender: "ذكر",
           relationship: "اعزب",
           jobTitle: "مدير مشاريع برمجية",
-          introParagraph: `لقد اكتسبت مهارة العمل على مشاريع البرمجيات (العمل الجماعي والفردي). أستطيع التعامل مع الأخطاء ومشاكل البرمجيات والتكيف مع تغييرات الخطة أو تعلم أداة جديدة بسرعة إذا لزم الأمر. في السنوات الأخيرة، ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب (fullstack). لدي بعض الأعمال التي يمكنك الاطلاع عليها.`,
+          introParagraph: `لقد اكتسبت مهارة العمل على مشاريع البرمجيات (العمل الجماعي والفردي). أستطيع التعامل مع الأخطاء ومشاكل البرمجيات والتكيف مع تغييرات الخطة أو تعلم أداة جديدة بسرعة إذا لزم الأمر في السنوات الأخيرة ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب  لدي بعض الأعمال التي يمكنك الاطلاع عليها.`,
           eduForm: {
             eduDegree: "بكالاريوس شرفي تقانة المعلومات",
             uniName: "جامعة الملك فيصل",
@@ -504,7 +510,7 @@ const arabic = {
             },
             thesis: "عمل نظام يقوم بإدارة الشركة من حيث الأمان",
             photo: {},
-            eduDiscreption: `وتتكيف مشكلات البرامج مع تغييرات الخطة أو تتعلم أداة جديدة بسرعة إذا لزم الأمر. في السنوات الأخيرة، ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب`,
+            eduDiscreption: `وتتكيف مشكلات البرامج مع تغييرات الخطة أو تتعلم أداة جديدة بسرعة إذا لزم الأمر. في السنوات الأخيرة ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب`,
           },
           skillsForm: {
             princ: { name: "التواصل" },
@@ -652,7 +658,10 @@ const arabic = {
         "يحق للمستخدم بعد تسجيل الدخول إعادة طباعة سيرته الذاتية التي تم إنشائها مسبقا او التعديل عليها في اي وقت ولأكثر من مرة واحدة مجانا",
         "البيانات المدخلة من المستخدم بغرض إنشاء سيرة ذاتية هي بيانات تخص المستخدم فقط لا نقوم بتقيدها او مراقبتها او تتبعها ويتحمل المستخدم المسؤلية الكاملة بخصوص كتابتها على سيرته الذاتية",
         "عملية الدفع واستلام النقود تتم من خلال جهة مالية موثوقة لا نمتلك أحقية الاحتفاظ او حتى الإتطلاع على اي بيانات مالية متعلقة بالمستخدم لأي سبب كان",
-        "في حال عدم تطابق التصميم الذي تحصلت عليه مع التصميم الذي قمت  بإختياره او وجود مشكلة بالتنسيق او عدم وضوح البيانات بسبب حدوث عطل فني يمكنك التواصل معنا لمراجعة الخطأ"
+        "في حال عدم تطابق التصميم الذي تحصلت عليه مع التصميم الذي قمت  بإختياره او وجود مشكلة بالتنسيق او عدم وضوح البيانات بسبب حدوث عطل فني يمكنك التواصل معنا لمراجعة الخطأ",
+        "سيتم تخزين معلومات بخصوص عملية الدفع لفترة مؤقتة بعدها سوف تحذف",
+        "في حال قررنا إغلاق الموقع سيتم إبلاغ كل مشترك ليتمكن من طباعة ملفاته في حال كان يرغب في ذلك",
+        "الأسعار قابلة للتغير و الخدمات المجانية تكون لفترات محدودة"
       ],
     close: 'خروج'
   },
@@ -687,7 +696,8 @@ const china = {
     makeYourTxt: "让你的",
     yourCV: "定制简历",
     nowBtn: "现在",
-    ready4u: "20多个创意设计的简历模板为您准备好了"
+    ready4u: "20多个创意设计的简历模板为您准备好了",
+    langWarning: '所选语言将用于创建 CV 文件'
   },
   section2: {
     showMoreBtn: "显示更多",
@@ -978,7 +988,10 @@ const china = {
         "登录后，用户有权随时、多次免费重新打印或修改自己之前创建的简历。",
         "用户为创建简历而输入的数据仅属于该用户。我们不限制、监控或跟踪它，用户对将其写入简历承担全部责任。",
         "付款和收款过程是通过可靠的金融机构进行的。我们无权以任何理由保留甚至查看与用户相关的任何财务数据。",
-        "如果您获得的设计与您选择的设计不符，或者格式有问题，或者由于技术故障导致数据不清楚，您可以联系我们查看错误。"
+        "如果您获得的设计与您选择的设计不符，或者格式有问题，或者由于技术故障导致数据不清楚，您可以联系我们查看错误。",
+        "有关付款流程的信息将被暂时存储一段时间，之后将被删除",
+        "如果我们决定关闭该网站，每个订阅者都会收到通知，以便他可以根据需要打印他的文件",
+        "价格可能会发生变化，并且免费服务是有期限的"
 
       ],
     close: '关闭'
@@ -1014,7 +1027,9 @@ const france = {
     makeYourTxt: "Faites votre",
     yourCV: "CV personnalisé",
     nowBtn: "Maintenant",
-    ready4u: "Plus de 20 modèles de CV conçus de manière créative et prêts pour vous"
+    ready4u: "Plus de 20 modèles de CV conçus de manière créative et prêts pour vous",
+    langWarning: "La langue choisie sera utilisée pour créer le fichier CV"
+
   },
   section2: {
     showMoreBtn: "Afficher plus",
@@ -1305,7 +1320,10 @@ const france = {
         "Les données de reprise ne seront pas stockées si l'utilisateur ne se connecte pas et il n'aura pas la possibilité de réimprimer ou de modifier gratuitement",
         "Après s'être connecté, l'utilisateur a le droit de réimprimer ou de modifier à tout moment et plusieurs fois gratuitement son CV précédemment créé.",
         "Les données saisies par l'utilisateur dans le but de créer un CV sont des données qui appartiennent uniquement à l'utilisateur. Nous ne le limitons pas, ne le surveillons pas et ne le suivons pas, et l'utilisateur assume l'entière responsabilité de l'écrire sur son CV.",
-        "Le processus de paiement et de réception d’argent s’effectue par l’intermédiaire d’un organisme financier fiable. Nous n'avons pas le droit de conserver ni même de consulter les données financières relatives à l'utilisateur pour quelque raison que ce soit."
+        "Le processus de paiement et de réception d’argent s’effectue par l’intermédiaire d’un organisme financier fiable. Nous n'avons pas le droit de conserver ni même de consulter les données financières relatives à l'utilisateur pour quelque raison que ce soit.",
+        "Les informations concernant le processus de paiement seront stockées pendant une période temporaire, après quoi elles seront supprimées.",
+        "Si nous décidons de fermer le site, chaque abonné en sera informé afin qu'il puisse imprimer ses fichiers s'il le souhaite",
+        "Les prix sont sujets à changement et les services gratuits sont pour des périodes limitées"
       ],
     close: 'Fermer'
   },
@@ -1340,7 +1358,8 @@ const italy = {
     makeYourTxt: "Fai il tuo",
     yourCV: "CV personalizzato",
     nowBtn: "Ora",
-    ready4u: "Oltre 20 modelli di CV dal design creativo pronti per te"
+    ready4u: "Oltre 20 modelli di CV dal design creativo pronti per te",
+    langWarning: "La lingua scelta verrà utilizzata per creare il file CV"
   },
   section2: {
     showMoreBtn: "Mostra altro",
@@ -1634,6 +1653,9 @@ const italy = {
         "I dati inseriti dall'utente allo scopo di creare un CV sono dati che appartengono solo all'utente. Non li limitiamo, non li monitoriamo o non li tracciamo e l'utente si assume la piena responsabilità di scriverli sul suo CV.",
         "Il processo di pagamento e ricezione di denaro avviene tramite un soggetto finanziario affidabile. Non abbiamo il diritto di conservare o visualizzare alcun dato finanziario relativo all'utente per nessun motivo.",
         "Se il disegno che hai ottenuto non corrisponde al disegno che hai scelto, o c'è un problema con il formato, o i dati non sono chiari a causa di un malfunzionamento tecnico, puoi contattarci per verificare l'errore.",
+        "Le informazioni relative al processo di pagamento verranno conservate per un periodo temporaneo, dopodiché verranno cancellate",
+        "Se decidiamo di chiudere il sito, ogni iscritto verrà avvisato in modo che possa stampare i suoi file se lo desidera",
+        "I prezzi sono soggetti a modifiche e i servizi gratuiti sono per periodi limitati"
       ],
     close: 'Vicina'
   },

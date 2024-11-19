@@ -265,6 +265,17 @@
         <div
           class="single-cv-review-div-2"
           @click="this.selectFrame"
+          id="frame-22"
+        >
+          <Frame22
+            :corner="true"
+            :resumeValues="this.resumeValues"
+            :lng="this.lng"
+          />
+        </div>
+        <div
+          class="single-cv-review-div-2"
+          @click="this.selectFrame"
           id="frame-20"
         >
           <Frame20
@@ -308,6 +319,7 @@ import Frame18 from "../../cvsViews/cvView-18/cvView-18.vue";
 import Frame19 from "../../cvsViews/cvView-19/cvView-19.vue";
 import Frame20 from "../../cvsViews/cvView-20/cvView-20.vue";
 import Frame21 from "../../cvsViews/cvView-21/cvView-21.vue";
+import Frame22 from "../../cvsViews/cvView-22/cvView-22.vue";
 import { languages } from "../../../components/languages.js";
 
 export default {
@@ -334,6 +346,7 @@ export default {
     Frame19,
     Frame20,
     Frame21,
+    Frame22,
   },
   data() {
     return {
@@ -405,6 +418,8 @@ export default {
   /* height: 100%; */
   min-height: 100vh;
   width: 100%;
+
+  transition: transform 1s, opacity 1s;
 }
 .cv-review-container-div {
   width: 100%;

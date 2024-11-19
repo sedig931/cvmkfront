@@ -29,7 +29,7 @@
             this.resumeValues.fullName
               ? this.resumeValues.fullName
               : this.lng.lang.section2.getCvInfo.frame.fullName
-          }}
+          }}&nbsp;
         </span>
         <span
           class="element-body-txt-20 text-center"
@@ -42,7 +42,7 @@
             this.resumeValues.jobTitle
               ? this.resumeValues.jobTitle
               : this.lng.lang.section2.getCvInfo.frame.jobTitle
-          }}
+          }}&nbsp;
         </span>
         <div
           class="element-body-txt-20 flex-column"
@@ -58,7 +58,7 @@
               this.resumeValues.introParagraph
                 ? this.resumeValues.introParagraph
                 : this.lng.lang.section2.getCvInfo.frame.intro
-            }}
+            }}&nbsp;
           </p>
         </div>
       </div>
@@ -78,7 +78,9 @@
             "
             style="font-size: 16px"
           >
-            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.contacts }}
+            {{
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.contacts + " "
+            }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -87,23 +89,29 @@
           >
             <div class="single-contact flex-row">
               <i class="bi bi-geo-alt-fill ms-1 me-1"></i>
-              <span class="phone-address">{{
-                `${
-                  this.resumeValues.address.country
-                    ? this.resumeValues.address.country
-                    : this.lng.lang.section2.getCvInfo.frame.country
-                }` +
-                "," +
-                `${
-                  this.resumeValues.address.city
-                    ? this.resumeValues.address.city
-                    : this.lng.lang.section2.getCvInfo.frame.city
-                }`
-              }}</span>
+              <span class="tranlate-me-20">
+                <span>
+                  {{
+                    `${
+                      this.resumeValues.address.country
+                        ? this.resumeValues.address.country
+                        : this.lng.lang.section2.getCvInfo.frame.country
+                    }` + " - "
+                  }}
+                  &nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.address.city
+                      ? this.resumeValues.address.city
+                      : this.lng.lang.section2.getCvInfo.frame.city
+                  }`
+                }}&nbsp;</span
+              >
             </div>
             <div class="single-contact flex-row">
               <i class="bi bi-envelope-at-fill ms-1 me-1"></i>
-              <span class="phone-email">{{
+              <span class="tranlate-me-20">{{
                 this.resumeValues.email
                   ? this.resumeValues.email
                   : "email@mail.com"
@@ -111,7 +119,7 @@
             </div>
             <div class="single-contact flex-row">
               <i class="bi bi-telephone-fill ms-1 me-1"></i>
-              <span class="phone-span">{{
+              <span class="tranlate-me-20">{{
                 this.resumeValues.phone ? this.resumeValues.phone : "0123456789"
               }}</span>
             </div>
@@ -128,7 +136,10 @@
             "
             style="font-size: 16px"
           >
-            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.websiteLinks }}
+            {{
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.websiteLinks +
+              " "
+            }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -139,14 +150,14 @@
               <a
                 :href="this.resumeValues.webLinks.princ.webHref"
                 class="anchors"
-                >{{ this.resumeValues.webLinks.princ.webTitle }}</a
+                >{{ this.resumeValues.webLinks.princ.webTitle }}&nbsp;</a
               >
               <a
                 v-for="(link, i) in this.resumeValues.webLinks.childs"
                 :key="i"
                 :href="link.webHref"
                 class="anchors"
-                >{{ link.webTitle }}</a
+                >{{ link.webTitle }}&nbsp;</a
               >
             </div>
           </div>
@@ -159,7 +170,9 @@
             "
             style="font-size: 16px"
           >
-            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.languages }}
+            {{
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.languages + " "
+            }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -172,7 +185,7 @@
                   this.resumeValues.langsForm.princ.name
                     ? this.resumeValues.langsForm.princ.name
                     : this.lng.lang.section2.getCvInfo.frame.nativeLanguage
-                }}
+                }}&nbsp;
               </span>
               <span
                 class="dots-span element-body-txt-20"
@@ -185,25 +198,21 @@
                   this.resumeValues.langsForm.princ.level
                     ? this.resumeValues.langsForm.princ.level
                     : this.lng.lang.section2.getCvInfo.frame.linguisticLevel
-                }}
+                }}&nbsp;
               </span>
             </div>
             <div
               v-for="(lang, i) in this.resumeValues.langsForm.childs"
               :key="i"
             >
-              <span>
-                {{ lang.name }}
-              </span>
+              <span> {{ lang.name }}&nbsp; </span>
               <span
                 class="dots-span element-body-txt-20"
                 style="font-size: 11px"
               >
                 _____
               </span>
-              <span>
-                {{ lang.level }}
-              </span>
+              <span> {{ lang.level }}&nbsp; </span>
             </div>
           </div>
         </div>
@@ -217,7 +226,7 @@
             "
             style="font-size: 16px"
           >
-            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.details }}
+            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.details }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -225,63 +234,94 @@
             style="font-size: 14px"
           >
             <div class="columns-grid-div">
-              <span>{{
-                this.lng.lang.section2.getCvInfo.frame.nationality +
-                " : " +
-                `${
-                  this.resumeValues.nationality
-                    ? this.resumeValues.nationality
-                    : this.lng.lang.section2.getCvInfo.frame.nationality
-                }`
-              }}</span>
-              <span>{{
-                this.lng.lang.section2.getCvInfo.frame.placeBirth +
-                " : " +
-                `${
-                  this.resumeValues.placeOfBirth
-                    ? this.resumeValues.placeOfBirth
-                    : this.lng.lang.section2.getCvInfo.frame.placeBirth
-                }`
-              }}</span>
-              <span>{{
-                this.lng.lang.section2.getCvInfo.frame.gender +
-                " : " +
-                `${
-                  this.resumeValues.gender
-                    ? this.resumeValues.gender
-                    : this.lng.lang.section2.getCvInfo.frame.gender
-                }`
-              }}</span>
-              <span>{{
-                this.lng.lang.section2.getCvInfo.frame.birthDate +
-                " : " +
-                `${
-                  this.resumeValues.dateOfBirth.day
-                    ? String(this.resumeValues.dateOfBirth.day).padStart(2, 0)
-                    : "dd"
-                }` +
-                "/" +
-                `${
-                  this.resumeValues.dateOfBirth.month
-                    ? String(this.resumeValues.dateOfBirth.month).padStart(2, 0)
-                    : "mm"
-                }` +
-                "/" +
-                `${
-                  this.resumeValues.dateOfBirth.year
-                    ? String(this.resumeValues.dateOfBirth.year).padStart(2, 0)
-                    : "yy"
-                }`
-              }}</span>
-              <span>{{
-                this.lng.lang.section2.getCvInfo.frame.materialStatus +
-                " : " +
-                `${
-                  this.resumeValues.relationship
-                    ? this.resumeValues.relationship
-                    : this.lng.lang.section2.getCvInfo.frame.materialStatus
-                }`
-              }}</span>
+              <span>
+                <span>
+                  {{
+                    this.lng.lang.section2.getCvInfo.frame.nationality + " "
+                  }}&nbsp;:&nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.nationality
+                      ? this.resumeValues.nationality
+                      : this.lng.lang.section2.getCvInfo.frame.nationality
+                  }`
+                }}&nbsp;</span
+              >
+              <span>
+                <span>
+                  {{
+                    this.lng.lang.section2.getCvInfo.frame.placeBirth + " "
+                  }}&nbsp;:&nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.placeOfBirth
+                      ? this.resumeValues.placeOfBirth
+                      : this.lng.lang.section2.getCvInfo.frame.placeBirth
+                  }`
+                }}</span
+              >
+              <span>
+                <span>
+                  {{
+                    this.lng.lang.section2.getCvInfo.frame.gender + " "
+                  }}&nbsp;:&nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.gender
+                      ? this.resumeValues.gender
+                      : this.lng.lang.section2.getCvInfo.frame.gender
+                  }`
+                }}</span
+              >
+              <span>
+                <span>
+                  {{
+                    this.lng.lang.section2.getCvInfo.frame.birthDate + " "
+                  }}&nbsp;:&nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.dateOfBirth.day
+                      ? String(this.resumeValues.dateOfBirth.day).padStart(2, 0)
+                      : "dd"
+                  }` +
+                  "/" +
+                  `${
+                    this.resumeValues.dateOfBirth.month
+                      ? String(this.resumeValues.dateOfBirth.month).padStart(
+                          2,
+                          0
+                        )
+                      : "mm"
+                  }` +
+                  "/" +
+                  `${
+                    this.resumeValues.dateOfBirth.year
+                      ? String(this.resumeValues.dateOfBirth.year).padStart(
+                          2,
+                          0
+                        )
+                      : "yy"
+                  }`
+                }}</span
+              >
+              <span>
+                <span>
+                  {{
+                    this.lng.lang.section2.getCvInfo.frame.materialStatus + " "
+                  }}&nbsp;:&nbsp;
+                </span>
+                {{
+                  `${
+                    this.resumeValues.relationship
+                      ? this.resumeValues.relationship
+                      : this.lng.lang.section2.getCvInfo.frame.materialStatus
+                  }`
+                }}</span
+              >
             </div>
           </div>
         </div>
@@ -293,7 +333,9 @@
             "
             style="font-size: 16px"
           >
-            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.education }}
+            {{
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.education + " "
+            }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -309,17 +351,19 @@
                   this.resumeValues.eduForm.eduDegree
                     ? this.resumeValues.eduForm.eduDegree
                     : this.lng.lang.section2.getCvInfo.frame.educationDegree
-                }}
+                }}&nbsp;
               </span>
-              <span>{{
-                " " +
-                `${
-                  this.resumeValues.eduForm.uniName
-                    ? this.resumeValues.eduForm.uniName
-                    : this.lng.lang.section2.getCvInfo.frame.universityName +
-                      "."
-                }`
-              }}</span>
+              <span
+                >{{
+                  " " +
+                  `${
+                    this.resumeValues.eduForm.uniName
+                      ? this.resumeValues.eduForm.uniName + " "
+                      : this.lng.lang.section2.getCvInfo.frame.universityName +
+                        " "
+                  }`
+                }}&nbsp;.</span
+              >
             </div>
             <div class="txt-bolder">
               <span>{{
@@ -350,20 +394,24 @@
             </div>
             <div v-if="this.resumeValues.eduForm.eduDiscreption">
               <p class="m-0 p-0">
-                {{ this.resumeValues.eduForm.eduDiscreption }}
+                {{ this.resumeValues.eduForm.eduDiscreption }}&nbsp;
               </p>
             </div>
             <div v-if="this.resumeValues.eduForm.thesis">
               <p class="m-0 p-0">
-                <span class="txt-bolder">{{
-                  this.lng.lang.section2.getCvInfo.frame.thesisTopic + " : "
-                }}</span>
-                {{ this.resumeValues.eduForm.thesis }}
+                <span class="txt-bolder"
+                  >{{
+                    this.lng.lang.section2.getCvInfo.frame.thesisTopic + " "
+                  }}&nbsp;:&nbsp;</span
+                >
+                {{ this.resumeValues.eduForm.thesis }}&nbsp;
               </p>
             </div>
             <div v-if="this.resumeValues.coursesForm[0].courseTitle">
               <span class="txt-bolder">
-                {{ this.lng.lang.section2.getCvInfo.frame.courses + " : " }}
+                {{
+                  this.lng.lang.section2.getCvInfo.frame.courses + " "
+                }}&nbsp;:&nbsp;
               </span>
               <span
                 v-for="(course, i) in this.resumeValues.coursesForm"
@@ -375,12 +423,8 @@
                   this.lng.lang.section2.getCvInfo.frame.courseFrom +
                   " " +
                   course.institution +
-                  `${
-                    i + 1 === this.resumeValues.coursesForm.length
-                      ? "."
-                      : this.lng.lang.section2.getCvInfo.frame.comma + " "
-                  }`
-                }}
+                  " "
+                }}&nbsp;.
               </span>
             </div>
           </div>
@@ -393,7 +437,9 @@
             "
             style="font-size: 16px"
           >
-            {{ this.lng.lang.section2.getCvInfo.frame.mainTitle.skills }}
+            {{
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.skills + " "
+            }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -408,7 +454,7 @@
                     this.resumeValues.skillsForm.princ.name
                       ? this.resumeValues.skillsForm.princ.name
                       : this.lng.lang.section2.getCvInfo.frame.addSkill
-                  }}
+                  }}&nbsp;
                 </span>
               </div>
               <div
@@ -416,9 +462,7 @@
                 :key="i"
               >
                 <span>- </span>
-                <span>
-                  {{ skill.name }}
-                </span>
+                <span> {{ skill.name }}&nbsp; </span>
               </div>
             </div>
           </div>
@@ -432,8 +476,9 @@
             style="font-size: 16px"
           >
             {{
-              this.lng.lang.section2.getCvInfo.frame.mainTitle.workExeperince
-            }}
+              this.lng.lang.section2.getCvInfo.frame.mainTitle.workExeperince +
+              " "
+            }}&nbsp;
           </span>
           <div
             class="body-section-div-20 flex-column element-body-txt-20"
@@ -447,16 +492,16 @@
                   style="font-size: 15px"
                 ></i>
                 <span
-                  class="txt-bolder element-body-txt-20"
+                  class="tranlate-me-20 txt-bolder element-body-txt-20"
                   style="font-size: 15px"
-                  >{{ work.jobTitle }} :</span
+                  >{{ work.jobTitle }} &nbsp;</span
                 >
                 <div class="work-body-div ms-2 me-2">
                   <div>
-                    <span> {{ work.employer }}</span>
+                    <span> {{ work.employer }}&nbsp;</span>
                   </div>
                   <div>
-                    <span> {{ work.address }}</span>
+                    <span> {{ work.address }}&nbsp;</span>
                   </div>
                   <div>
                     <span v-if="work.workDate.from.month">{{
@@ -484,7 +529,7 @@
 
 <script>
 export default {
-  props: ["photoName", "resumeValues", "lng", "corner"],
+  props: ["photoName", "resumeValues", "lng", "corner", "justPrint"],
   methods: {
     checkContainersSize() {
       const cvContainerHeight = document
@@ -605,11 +650,20 @@ export default {
   mounted() {
     this.checkContainersSize();
     this.setPhoto();
+    if (this.justPrint && this.lng.name === "arabic") {
+      const allSectionsTitle = document.querySelectorAll(".tranlate-me-20");
+      allSectionsTitle.forEach((title) => {
+        title.classList.add("section-title-txt-20-translate");
+      });
+    }
   },
 };
 </script>
 
 <style scoped>
+.section-title-txt-20-translate {
+  transform: translateY(-3px);
+}
 .flex-row {
   display: flex;
   justify-content: center;

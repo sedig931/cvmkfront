@@ -739,7 +739,8 @@
                   .continueAnchor
               }}
             </a>
-            <i class="bi bi-arrow-clockwise" v-if="!this.payLinkDone"></i>
+            <!-- <i class="bi bi-arrow-clockwise" v-if="!this.payLinkDone"></i> -->
+            <LoadingPoints v-if="!this.payLinkDone" />
           </button>
         </div>
         <div class="steps-div flex-row">
@@ -903,10 +904,14 @@
             :lng="this.lng"
             :photoName="this.setPhotoFrame(21)"
           />
+          <Frame22
+            v-if="this.cvNum === '22' && this.trick4resizeContainers"
+            :resumeValues="this.resumeValues"
+            :lng="this.lng"
+          />
         </div>
       </div>
     </div>
-    <!-- <cvViewsWindow /> -->
     <AcceptStorage
       :lng="this.lng"
       @setTermsAccepted="this.setTermsAccepted"
@@ -940,8 +945,8 @@ import Frame18 from "../cvsViews/cvView-18/cvView-18.vue";
 import Frame19 from "../cvsViews/cvView-19/cvView-19.vue";
 import Frame20 from "../cvsViews/cvView-20/cvView-20.vue";
 import Frame21 from "../cvsViews/cvView-21/cvView-21.vue";
+import Frame22 from "../cvsViews/cvView-22/cvView-22.vue";
 
-import cvViewsWindow from "./viewAllCvs.vue";
 import EduForm from "./eduForm.vue";
 import SkillsForm from "../../trashmy/skillsForm.vue";
 import LangsSkillsForm from "./langsSkillsForm.vue";
@@ -952,6 +957,7 @@ import linksForm from "./linksView.vue";
 import { cities } from "../../components/callCities.js";
 import { languages } from "../../components/languages.js";
 import AcceptStorage from "../homeViews/popUpViews/acceptStorage.vue";
+import LoadingPoints from "./loading.vue";
 
 import {
   getActiveCustomer,
@@ -986,7 +992,7 @@ export default {
     Frame19,
     Frame20,
     Frame21,
-    cvViewsWindow,
+    Frame22,
     EduForm,
     SkillsForm,
     LangsSkillsForm,
@@ -995,6 +1001,7 @@ export default {
     coursesForm,
     linksForm,
     AcceptStorage,
+    LoadingPoints,
   },
   data() {
     return {
@@ -1103,20 +1110,7 @@ export default {
       smallCvView: true,
       ppPaymentLink: "",
       days: [],
-      months: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      months: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "1", "12"],
       years: [],
       countries: [],
       searchedCountry: [],
@@ -1124,62 +1118,144 @@ export default {
       searchedCities: [],
       currentCourseForm: 0,
       currentWorkForm: 0,
-      // resumeValues: {
-      //   currentLng: "",
-      //   fullName: "",
-      //   address: {
-      //     country: "",
-      //     city: "",
-      //   },
-      //   phone: "",
-      //   email: "",
-      //   nationality: "",
-      //   placeOfBirth: "",
-      //   dateOfBirth: {},
-      //   gender: "",
-      //   relationship: "",
-      //   jobTitle: "",
-      //   introParagraph: "",
-      //   eduForm: {
-      //     eduDegree: "",
-      //     uniName: "",
-      //     cerLevel: "",
-      //     yearsStudy: {
-      //       from: {},
-      //       to: {},
-      //     },
-      //     thesis: "",
-      //     eduDiscreption: "",
-      //   },
-      //   skillsForm: {
-      //     princ: {},
-      //     childs: [],
-      //   },
-      //   langsForm: {
-      //     princ: {},
-      //     childs: [],
-      //   },
-      //   workExpForm: [
-      //     {
-      //       jobTitle: "",
-      //       address: "",
-      //       employer: "",
-      //       workDate: {
-      //         from: { month: "", year: "" },
-      //         to: { month: "", year: "" },
-      //       },
-      //     },
-      //   ],
-      //   coursesForm: [{}],
-      //   webLinks: {
-      //     princ: {
-      //       webTitle: "",
-      //       webHref: "",
-      //     },
-      //     childs: [],
-      //   },
-      // },
       resumeValues: {
+        address: {},
+        dateOfBirth: {},
+        eduForm: {
+          yearsStudy: {
+            from: {},
+            to: {},
+          },
+          photo: {},
+        },
+        skillsForm: {
+          princ: {},
+          childs: [],
+        },
+        langsForm: {
+          princ: {},
+          childs: [],
+        },
+        workExpForm: [
+          {
+            workDate: {
+              from: {},
+              to: {},
+            },
+          },
+          {
+            workDate: {
+              from: {},
+              to: {},
+            },
+          },
+        ],
+        coursesForm: [{}],
+        webLinks: {
+          princ: {
+            // webHref:
+            // "https://drive.google.com/file/d/1PGvMBadcOs05hsie1zwEQmZAwBWZfdx1/view",
+          },
+          childs: [],
+        },
+      },
+      resumeValues11: {
+        fullName: "احمد صالح البكري",
+        address: {
+          country: "الإمارات المتحدة",
+          city: "عجمان",
+        },
+        phone: "0123456789",
+        email: "ahmad@mail.com",
+        nationality: " إماراتي",
+        placeOfBirth: "الإمارات",
+        dateOfBirth: {
+          day: "16",
+          month: "3",
+          year: "1998",
+        },
+        gender: "ذكر",
+        relationship: "اعزب",
+        jobTitle: "مدير مشاريع برمجية",
+        introParagraph: `لقد اكتسبت مهارة العمل على مشاريع البرمجيات العمل الجماعي والفردي أستطيع التعامل مع الأخطاء ومشاكل البرمجيات والتكيف مع تغييرات الخطة أو تعلم أداة جديدة بسرعة إذا لزم الأمر في السنوات الأخيرة ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب لدي بعض الأعمال التي يمكنك الاطلاع عليها`,
+        eduForm: {
+          eduDegree: "بكالاريوس شرفي تقانة المعلومات",
+          uniName: "جامعة الملك فيصل",
+          cerLevel: ".",
+          yearsStudy: {
+            from: { month: "Nov", year: "2017" },
+            to: { month: "Mar", year: "2023" },
+          },
+          thesis: "عمل نظام يقوم بإدارة الشركة من حيث الأمان",
+          photo: {},
+          eduDiscreption: `وتتكيف مشكلات البرامج مع تغييرات الخطة أو تتعلم أداة جديدة بسرعة إذا لزم الأمر. في السنوات الأخيرة، ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب`,
+        },
+        skillsForm: {
+          princ: { name: "التواصل" },
+          childs: [
+            { name: "إدارة الوقت" },
+            { name: "التعاون" },
+            { name: "القيادة" },
+            { name: "المرونة" },
+            { name: "القدرة على التكيف" },
+          ],
+        },
+        langsForm: {
+          princ: { name: "العربية", level: "اللغة الأم" },
+          childs: [{ name: "الإنجليزية", level: "متقن" }],
+        },
+        workExpForm: [
+          {
+            jobTitle: "صيانة نظام",
+            address: "عجمان،الإمارات المتحدة",
+            employer: "الشركة الذهبية للتكمنولوجيبا",
+            workDate: {
+              from: { month: "jun", year: "2023" },
+              to: { month: "jun", year: "2024" },
+            },
+          },
+          {
+            jobTitle: "صيانة نظام",
+            address: "عجمان،الإمارات المتحدة",
+            employer: "الشركة الذهبية للتكمنولوجيبا",
+            workDate: {
+              from: { month: "jun", year: "2023" },
+              to: { month: "jun", year: "2024" },
+            },
+          },
+        ],
+        coursesForm: [
+          {
+            courseTitle: "دورة هندسة البرمجيات",
+            institution: "معهد العلوم التكنولوجية",
+          },
+        ],
+        webLinks: {
+          princ: {
+            webTitle: " مشروع تطوير نظام مطعم ",
+            // webHref:
+            // "https://drive.google.com/file/d/1PGvMBadcOs05hsie1zwEQmZAwBWZfdx1/view",
+          },
+          childs: [
+            {
+              webTitle: "مشروع نظام متجر إلكتروني",
+              // webHref:
+              //   "https://drive.google.com/file/d/18LBGD-PXRPzyAe0qbu-niaoXNwGfzoZy/view",
+            },
+            {
+              webTitle: "مشروع لإدارة المناهج التعليمية",
+              // webHref:
+              //   "https://drive.google.com/file/d/1NI1ueB8YwGq4W2opO_zSf4kodAiLP915/view",
+            },
+            {
+              webTitle: "نظام إستئجار سيارات",
+              // webHref:
+              //   "https://drive.google.com/file/d/1e3UoVB9y9XvO1VSaRdF34pHMwXlhiCt3/view?usp=sharing",
+            },
+          ],
+        },
+      },
+      resumeValues22: {
         fullName: "Osama Alser Nouri",
         address: {
           country: "Saudi Arabia",
@@ -1198,11 +1274,11 @@ export default {
         relationship: "Single",
         jobTitle: "Information Technology Technician",
         introParagraph: `I have acquired the skill of working on
-   software projects (group and individual work). I can deal with errors
-   and software problems adapt to plan changes or learn a new tool
-   quickly if necessary. In recent years I have focused my work on
-   developing websites, mobile applications and desktop applications
-   (fullstack). I have some work you can check out.`,
+       software projects (group and individual work). I can deal with errors
+       and software problems adapt to plan changes or learn a new tool
+       quickly if necessary. In recent years I have focused my work on
+       developing websites, mobile applications and desktop applications
+       (fullstack). I have some work you can check out.`,
         eduForm: {
           eduDegree: "Bachelor (HONOURS) OF INFORMATION TECHNOLOGY ",
           uniName: "Blue Nile University of Scince and Technology",
@@ -1214,8 +1290,8 @@ export default {
           thesis: "sgin language generation using machine learning technology.",
           photo: {},
           eduDiscreption: `and software problems adapt to plan changes or learn a new tool
-   quickly if necessary. In recent years I have focused my work on
-   developing websites, mobile applications and desktop applications`,
+       quickly if necessary. In recent years I have focused my work on
+       developing websites, mobile applications and desktop applications`,
         },
         skillsForm: {
           princ: { name: "JavaScript" },
@@ -1849,16 +1925,16 @@ export default {
               );
               sessionStorage.setItem("frameNum", JSON.stringify(this.cvNum));
               sessionStorage.setItem("lng", JSON.stringify(this.lng));
-              // this.showBuyNow = true;
-              // await this.setUpPayment();
-              // this.payLinkDone = true;
-              await addFrameToCustomer({
-                framName: "frame_" + this.cvNum,
-                frameInfo: this.resumeValues,
-              });
-              this.$router.push({
-                name: "caporder",
-              });
+              this.showBuyNow = true;
+              await this.setUpPayment();
+              this.payLinkDone = true;
+              // await addFrameToCustomer({
+              //   framName: "frame_" + this.cvNum,
+              //   frameInfo: this.resumeValues,
+              // });
+              // this.$router.push({
+              //   name: "caporder",
+              // });
             }
           } else {
             sessionStorage.setItem(
@@ -1869,12 +1945,13 @@ export default {
             sessionStorage.setItem("frameNum", JSON.stringify(this.cvNum));
             sessionStorage.setItem("lng", JSON.stringify(this.lng));
 
-            // this.showBuyNow = true;
-            // await this.setUpPayment();
-            // this.payLinkDone = true;
-            this.$router.push({
-              name: "caporder",
-            });
+            this.showBuyNow = true;
+            await this.setUpPayment();
+            this.payLinkDone = true;
+
+            // this.$router.push({
+            //   name: "caporder",
+            // });
           }
         } else {
           // shiw accepting terms wndow now
@@ -2016,8 +2093,8 @@ export default {
     this.setPageLang(this.lngname);
     if (localStorage.getItem("localResumeValues")) {
       this.resumeValues = JSON.parse(localStorage.getItem("localResumeValues"));
-      this.checkSizeWhileTyping();
     }
+    this.checkSizeWhileTyping();
   },
 };
 </script>

@@ -146,7 +146,7 @@ export default {
 }
 .accept-not-btn {
   height: 40px;
-  width: 120px;
+  width: 150px;
   font-size: 17px;
   border: none;
   border-radius: 12px;
@@ -270,7 +270,6 @@ input:checked + .slider:before {
   }
   .accept-not-btn {
     height: 30px;
-    width: 100px;
     font-size: 14px;
     border-radius: 8px;
   }
@@ -282,7 +281,7 @@ input:checked + .slider:before {
   }
   .accept-not-btn {
     height: 25px;
-    width: 95px;
+    width: 120px;
     font-size: 13px;
     border-radius: 5px;
   }

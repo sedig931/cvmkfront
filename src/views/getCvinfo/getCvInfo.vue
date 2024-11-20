@@ -2530,12 +2530,12 @@ export default {
     width: 73px;
   }
   .btn-go-next {
-    width: 100px;
+    width: 150px;
     height: 30px;
     font-size: 13px;
   }
   .btn-finish {
-    width: 115px;
+    width: 150px;
     height: 30px;
     font-size: 12.5px;
   }

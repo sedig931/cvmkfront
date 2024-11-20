@@ -395,7 +395,7 @@ export default {
     this.fixSizingProblemTick = false;
     setTimeout(() => {
       this.fixSizingProblemTick = true;
-    }, 150);
+    }, 1000);
   },
 };
 </script>

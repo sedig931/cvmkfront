@@ -10,6 +10,11 @@
       :key="i"
       v-show="this.currentCourseForm === i"
     >
+      <div class="delete-div flex-row" :id="i">
+        <div class="add-minus-div flex-row" @click="this.dropCourse">
+          <i class="bi bi-trash3-fill"></i>
+        </div>
+      </div>
       <div class="row mb-2">
         <div class="col flex-row">
           <label class="lbl text-muted p-0 m-0">
@@ -110,13 +115,16 @@ export default {
   },
   methods: {
     goLeft() {
-      // if (this.currentCourseForm + 1 > 1) this.currentCourseForm--;
       this.$emit("goLift");
     },
     goRight() {
       this.$emit("goRight");
-      // if (this.currentCourseForm < this.formInfo.length - 1)
-      //   this.currentCourseForm++;
+    },
+    dropCourse(e) {
+      this.$emit(
+        "dropSingleCourse",
+        Number(e.target.closest(".delete-div").id)
+      );
     },
   },
   mounted() {},
@@ -165,6 +173,16 @@ export default {
   font-size: 15px;
 }
 .left-right-icon {
+  cursor: pointer;
+}
+.delete-div {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+.add-minus-div {
+  font-size: 17px;
+  color: rgba(177, 38, 38, 0.6);
   cursor: pointer;
 }
 /* ---------------------------------------MEDIA QUERY FORM 2--------------------------------------------------- */

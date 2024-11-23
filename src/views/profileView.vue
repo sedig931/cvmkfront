@@ -957,6 +957,7 @@ export default {
   props: ["id", "lngname"],
   data() {
     return {
+      intervRemoveActive: {},
       customer: {
         name: "",
         frames: [],
@@ -1058,6 +1059,14 @@ export default {
     };
   },
   methods: {
+    removeFirstActive() {
+      if (document.querySelector(".active-frame")) {
+        document
+          .querySelector(".active-frame")
+          .classList.remove("active-frame-hidden");
+        clearInterval(this.intervRemoveActive);
+      }
+    },
     setPhotoFrame(frameNum) {
       return this.customer.framePhotoNames.find(
         (photo) => Number(photo.frameNum) === frameNum
@@ -1269,13 +1278,7 @@ export default {
     this.getCustomerInfo();
     localStorage.removeItem("photo");
     sessionStorage.removeItem("photoName");
-    setTimeout(() => {
-      if (document.querySelector(".active-frame")) {
-        document
-          .querySelector(".active-frame")
-          .classList.remove("active-frame-hidden");
-      }
-    }, 100);
+    this.intervRemoveActive = setInterval(this.removeFirstActive, 100);
   },
 };
 </script>

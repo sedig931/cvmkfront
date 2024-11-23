@@ -84,7 +84,7 @@ const english = {
           jobTitle: { lbl: "Job Title", holder: "eg. sales representative" },
           empName: { lbl: "Employer Name", holder: "company name" },
           address: { lbl: "Address", holder: "city/town" },
-          date: { lblb: "Work Date", from: "from", to: "to" },
+          date: { lbl: "Work Date", from: "from", to: "to" },
         },
         addLinkForm: {
           linksLbl: "Links",
@@ -427,7 +427,7 @@ const arabic = {
             holder: "قم بإدخال اسم صاحب العمل",
           },
           address: { lbl: "العنوان", holder: "عنوان العمل" },
-          date: { from: "من", to: "إلى" },
+          date: { lbl: "تاريخ العمل", from: "من", to: "إلى" },
         },
         addLinkForm: {
           linksLbl: "روابط لمواقع إلأكترونية",
@@ -762,7 +762,7 @@ const china = {
           jobTitle: { lbl: "职称", holder: "例如。销售代表" },
           empName: { lbl: "雇主名称", holder: "公司名称" },
           address: { lbl: "地址", holder: "城市/城镇" },
-          date: { lblb: "工作日期", from: "从", to: "到" },
+          date: { lbl: "工作日期", from: "从", to: "到" },
         },
         addLinkForm: {
           linksLbl: "链接",
@@ -1094,7 +1094,7 @@ const france = {
           jobTitle: { lbl: "Titre d'emploi", holder: "p.ex. représentant commercial" },
           empName: { lbl: "Nom de l'employeur", holder: "Nom de l'entreprise" },
           address: { lbl: "Nom de l'entreprise", holder: "ville/village" },
-          date: { lblb: "Date de travail", from: "depuis", to: "à" },
+          date: { lbl: "Date de travail", from: "depuis", to: "à" },
         },
         addLinkForm: {
           linksLbl: "Links",
@@ -1424,7 +1424,7 @@ const italy = {
           jobTitle: { lbl: "Titolo di lavoro", holder: "ad esempio rappresentante di vendita" },
           empName: { lbl: "Nome del datore di lavoro", holder: "nome dell'azienda" },
           address: { lbl: "Indirizzo", holder: "città/paese" },
-          date: { lblb: "Data di lavoro", from: "da", to: "a" },
+          date: { lbl: "Data di lavoro", from: "da", to: "a" },
         },
         addLinkForm: {
           linksLbl: "Collegamenti",

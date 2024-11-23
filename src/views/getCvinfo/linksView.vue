@@ -4,6 +4,11 @@
     :class="this.lng.name === 'arabic' ? 'arabic-font' : 'child-form-font'"
   >
     <div class="langs-lbl-div">
+      <div class="delete-div flex-row">
+        <div class="delete-icon-div flex-row" @click="this.$emit('dropLinks')">
+          <i class="bi bi-trash3-fill"></i>
+        </div>
+      </div>
       <label class="form-label lbl text-muted p-0 m-0 me-3">
         <div class="justify-double-dot">
           <span
@@ -193,6 +198,18 @@ export default {
 }
 .input-empty-style {
   border: 1px solid rgba(209, 64, 64, 0.7);
+}
+
+.delete-div {
+  height: 10px;
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+.delete-icon-div {
+  font-size: 17px;
+  color: rgba(177, 38, 38, 0.6);
+  cursor: pointer;
 }
 /* ---------------------------------------MEDIA QUERY FORM 2--------------------------------------------------- */
 

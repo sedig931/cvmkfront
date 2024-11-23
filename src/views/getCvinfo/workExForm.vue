@@ -8,6 +8,11 @@
       :key="i"
       v-show="this.currentWorkForm === i"
     >
+      <div class="delete-div flex-row" :id="i">
+        <div class="add-minus-div flex-row" @click="this.dropWorkExp">
+          <i class="bi bi-trash3-fill"></i>
+        </div>
+      </div>
       <div class="row mb-2">
         <div class="col flex-row">
           <label class="form-label lbl text-muted p-0 m-0">
@@ -312,6 +317,12 @@ export default {
     };
   },
   methods: {
+    dropWorkExp(e) {
+      this.$emit(
+        "dropSingleWorkExp",
+        Number(e.target.closest(".delete-div").id)
+      );
+    },
     showHideFromToSpan(e) {
       if (e.target.id === "work-from-span") {
         this.showFromSpan = false;
@@ -338,13 +349,10 @@ export default {
       }
     },
     goLeft() {
-      // if (this.currentWorkForm !== 0) this.currentWorkForm--;
       this.$emit("goLeft");
     },
     goRight() {
       this.$emit("goRight");
-      // if (this.currentWorkForm + 1 !== this.formInfo.length)
-      //   this.currentWorkForm++;
     },
   },
   mounted() {
@@ -462,6 +470,20 @@ export default {
 }
 .left-right-icon {
   cursor: pointer;
+}
+.delete-div {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+.add-minus-div {
+  /* height: 15px;
+  width: 15px; */
+  /* border-radius: 7.5px; */
+  font-size: 17px;
+  color: rgba(177, 38, 38, 0.6);
+  cursor: pointer;
+  /* background-color: rgba(177, 38, 38, 0.6); */
 }
 /* ---------------------------------------MEDIA QUERY FORM 2--------------------------------------------------- */
 

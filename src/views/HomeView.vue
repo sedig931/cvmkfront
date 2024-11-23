@@ -155,7 +155,7 @@ export default {
   data() {
     return {
       resumeValues: {
-        fullName: "SIDDIG ELHAREITH MOHAMMAD",
+        fullName: "",
         address: {
           country: "Saudi Arabia",
           city: "Madinah",
@@ -500,6 +500,7 @@ export default {
   background-color: rgb(39, 39, 39);
 
   transition: transform 1s, opacity 1s;
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 .nav-div {
   position: absolute;
@@ -609,6 +610,7 @@ export default {
   border-left: 100vw solid transparent;
   border-bottom: 9vw solid rgb(255, 255, 255);
   margin-top: -9vw;
+  border-right: none;
 }
 .change-lang-overlay {
   position: fixed;

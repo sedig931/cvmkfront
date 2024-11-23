@@ -603,6 +603,7 @@
             :workExshowToMonth="this.workExshowToMonth"
             :workExshowToYear="this.workExshowToYear"
             @showWrokDateMenus="this.showHideWorkExpMenues"
+            @dropSingleWorkExp="this.dropWorkExp"
             :currentWorkForm="this.currentWorkForm"
             @goLeft="if (this.currentWorkForm !== 0) this.currentWorkForm--;"
             @goRight="
@@ -621,6 +622,7 @@
             :allForms="this.allForms"
             :formInfo="this.resumeValues.coursesForm"
             :currentCourseForm="this.currentCourseForm"
+            @dropSingleCourse="this.dropCourse"
             @goLift="
               if (this.currentCourseForm + 1 > 1) this.currentCourseForm--;
             "
@@ -635,6 +637,11 @@
           />
           <!-- ------------------------------------------Thesis FORM---------------------------------- -->
           <div class="child-form" v-if="this.setActiveForm('form_7')">
+            <div class="delete-div flex-row">
+              <div class="add-minus-div flex-row" @click="this.dropThesis">
+                <i class="bi bi-trash3-fill"></i>
+              </div>
+            </div>
             <div class="row mb-2">
               <div class="col flex-row">
                 <label class="form-label lbl text-muted p-0 m-0">
@@ -670,6 +677,7 @@
             :links="this.resumeValues.webLinks"
             :allForms="this.allForms"
             :lng="this.lng"
+            @dropLinks="this.dropLinks"
           />
           <!-- ------------------------------------------BTNS NEXT BACK---------------------------------- -->
           <div class="next-back-div flex-row">
@@ -1118,7 +1126,7 @@ export default {
       searchedCities: [],
       currentCourseForm: 0,
       currentWorkForm: 0,
-      resumeValues: {
+      resumeValues22: {
         address: {},
         dateOfBirth: {},
         eduForm: {
@@ -1255,7 +1263,7 @@ export default {
           ],
         },
       },
-      resumeValues22: {
+      resumeValues: {
         fullName: "Osama Alser Nouri",
         address: {
           country: "Saudi Arabia",
@@ -1763,6 +1771,57 @@ export default {
           this.workExshowToYear = true;
         }
       }
+    },
+    dropWorkExp(i) {
+      if (this.currentWorkForm !== 0) {
+        this.resumeValues.workExpForm = this.resumeValues.workExpForm.filter(
+          (worl, ii) => ii !== i
+        );
+        this.currentWorkForm--;
+      } else {
+        if (this.resumeValues.workExpForm.length > 1) {
+          this.resumeValues.workExpForm = this.resumeValues.workExpForm.filter(
+            (worl, ii) => ii !== i
+          );
+        } else {
+          this.resumeValues.workExpForm[0] = {
+            jobTitle: "",
+            address: "",
+            employer: "",
+            workDate: {
+              from: { month: "", year: "" },
+              to: { month: "", year: "" },
+            },
+          };
+          this.allForms = this.allForms.filter((form) => form !== "form_5");
+        }
+      }
+    },
+    dropCourse(i) {
+      if (this.currentCourseForm !== 0) {
+        this.resumeValues.coursesForm = this.resumeValues.coursesForm.filter(
+          (course, ii) => ii !== i
+        );
+        this.currentCourseForm--;
+      } else {
+        if (this.resumeValues.coursesForm.length > 1) {
+          this.resumeValues.coursesForm = this.resumeValues.coursesForm.filter(
+            (course, ii) => ii !== i
+          );
+        } else {
+          this.resumeValues.coursesForm[0] = {};
+          this.allForms = this.allForms.filter((form) => form !== "form_6");
+        }
+      }
+    },
+    dropThesis() {
+      this.resumeValues.eduForm.thesis = "";
+      this.allForms = this.allForms.filter((form) => form !== "form_7");
+    },
+    dropLinks() {
+      this.resumeValues.webLinks.princ = {};
+      this.resumeValues.webLinks.childs = [];
+      this.allForms = this.allForms.filter((form) => form !== "form_8");
     },
     hideAllDropDownMenu() {
       this.viewCountrysMenu = false;
@@ -2440,6 +2499,16 @@ export default {
 .smaller-lines-div {
   width: 18px;
   height: 2px;
+}
+.delete-div {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+.add-minus-div {
+  font-size: 17px;
+  color: rgba(177, 38, 38, 0.6);
+  cursor: pointer;
 }
 /* ---------------------------------------MEDIA QUERY FORM 1--------------------------------------------------- */
 

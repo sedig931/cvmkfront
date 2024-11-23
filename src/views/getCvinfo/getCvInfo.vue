@@ -1126,7 +1126,7 @@ export default {
       searchedCities: [],
       currentCourseForm: 0,
       currentWorkForm: 0,
-      resumeValues22: {
+      resumeValues: {
         address: {},
         dateOfBirth: {},
         eduForm: {
@@ -1263,7 +1263,7 @@ export default {
           ],
         },
       },
-      resumeValues: {
+      resumeValues22: {
         fullName: "Osama Alser Nouri",
         address: {
           country: "Saudi Arabia",

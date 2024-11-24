@@ -602,14 +602,15 @@ export default {
   align-items: center;
 }
 .arabic-font {
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "Zain";
 }
 .cv-container-div-1 {
   height: 100%;
   width: 100%;
 }
 .cv-container-div-1-font {
-  font-family: "Tauri";
+  font-family: "Roboto";
+  /* font-family: "Tauri"; */
 }
 .section-div-1 {
   flex: 1;

@@ -688,7 +688,7 @@ export default {
   justify-content: center;
 }
 .arabic-font {
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "Zain", sans-serif;
 }
 .window-container-div-5 {
   /* height: 100vh; */
@@ -703,7 +703,7 @@ export default {
   background-color: rgb(79, 108, 161);
 }
 .cv-container-div-5-font {
-  font-family: "Tauri";
+  font-family: "Roboto";
 }
 .cv-container-div-5-corner {
   border-radius: 15px;

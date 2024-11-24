@@ -663,7 +663,8 @@ export default {
   justify-content: center;
 }
 .arabic-font {
-  font-family: "Noto Kufi Arabic", sans-serif;
+  /* font-family: "Noto Kufi Arabic", sans-serif; */
+  font-family: "Zain", sans-serif;
 }
 .window-container-div {
   /* height: 100vh; */

@@ -467,7 +467,10 @@
             </div>
           </div>
         </div>
-        <div class="right-section-div-20 flex-column">
+        <div
+          class="right-section-div-20 flex-column"
+          v-if="this.resumeValues.workExpForm[0].jobTitle"
+        >
           <span
             class="section-title-20 element-body-txt-20"
             :class="

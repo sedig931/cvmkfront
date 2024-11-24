@@ -1151,12 +1151,6 @@ export default {
               to: {},
             },
           },
-          {
-            workDate: {
-              from: {},
-              to: {},
-            },
-          },
         ],
         coursesForm: [{}],
         webLinks: {

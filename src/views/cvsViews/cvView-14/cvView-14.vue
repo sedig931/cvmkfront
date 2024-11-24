@@ -19,7 +19,7 @@
               : ''
           "
         >
-          <div class="personal-photo-div-14" style="width: 160px">
+          <div class="personal-photo-div-14" style="width: 150px" dir="rtl">
             <img
               class="personal-photo personal-photo-14"
               alt=""
@@ -546,13 +546,24 @@ export default {
         sectionsHeightsArray.push(element.getBoundingClientRect().height);
       });
 
+      let photoDivWidth = document
+        .querySelector(".photo-title-section-div-14")
+        .getBoundingClientRect().width;
+
+      let leftTitleWidth = document
+        .querySelectorAll(".title-section-div-14")[1]
+        .getBoundingClientRect().width;
+
       let sectionsHeightsSum = sectionsHeightsArray.reduce(
         (sum, el) => sum + el,
         0
       );
       sectionsHeightsSum = sectionsHeightsSum;
       let fontSizeHere = 15;
-      while (sectionsHeightsSum > cvContainerHeight) {
+      while (
+        sectionsHeightsSum > cvContainerHeight ||
+        photoDivWidth > leftTitleWidth
+      ) {
         fontSizeHere--;
         if (fontSizeHere === 1) {
           break;
@@ -599,6 +610,14 @@ export default {
         document.querySelector(
           ".personal-photo-div-14"
         ).style.width = `${pPwidth}px`;
+
+        photoDivWidth = document
+          .querySelector(".personal-photo-div-14")
+          .getBoundingClientRect().width;
+
+        leftTitleWidth = document
+          .querySelectorAll(".title-section-div-14")[1]
+          .getBoundingClientRect().width;
       }
     },
     setPhoto() {

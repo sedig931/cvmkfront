@@ -527,6 +527,16 @@ export default {
         .querySelector(".cv-container-div-21")
         .getBoundingClientRect().height;
 
+      const cvContainerWidth = document
+        .querySelector(".cv-container-div-21")
+        .getBoundingClientRect().width;
+      let leftSectionWidth =
+        document.querySelectorAll(".left-section-21")[0].getBoundingClientRect()
+          .width +
+        document
+          .querySelectorAll(".right-section-21")[0]
+          .getBoundingClientRect().width;
+
       let leftSectionsHeights = document.querySelectorAll(".left-section-21");
       let leftSectionsHeightsArray = [];
       leftSectionsHeights.forEach((element) => {
@@ -555,7 +565,8 @@ export default {
 
       while (
         rightSectionsHeightsSum > cvContainerHeight ||
-        leftSectionsHeightsSum > cvContainerHeight
+        leftSectionsHeightsSum > cvContainerHeight ||
+        leftSectionWidth > cvContainerWidth
       ) {
         fontSizeHere--;
         if (fontSizeHere === 1) {
@@ -618,6 +629,14 @@ export default {
         document.querySelector(
           ".personal-photo-div-21"
         ).style.height = `${pPwidth}px`;
+
+        leftSectionWidth =
+          document
+            .querySelectorAll(".left-section-21")[0]
+            .getBoundingClientRect().width +
+          document
+            .querySelectorAll(".right-section-21")[0]
+            .getBoundingClientRect().width;
       }
     },
     setPhoto() {

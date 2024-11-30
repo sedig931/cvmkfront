@@ -1206,8 +1206,9 @@ export default {
         this.customer.frames = this.customer.frames.filter(
           (frame) => frame.frameName !== `frame_${frameNum}`
         );
+        this.goLight();
       } catch (err) {
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     printFrame(frameNum) {
@@ -1248,7 +1249,7 @@ export default {
           verfNumber: String(this.verfNumber),
         });
       } catch (err) {
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     async deleteAccount() {
@@ -1263,7 +1264,7 @@ export default {
           this.getWrongConfirmNumber = true;
         }
       } catch (err) {
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     async logout() {

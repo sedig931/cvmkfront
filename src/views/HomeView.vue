@@ -370,13 +370,12 @@ export default {
         this.userLoggedin = true;
       } catch (err) {
         this.userLoggedin = false;
-        console.log(err.message);
-
+        // console.log(err.message);
         // console.log("no user active..");
       }
     },
     goToHomePage() {
-      console.log("here...");
+      // console.log("here...");
     },
     goToAboutPAge() {
       document

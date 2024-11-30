@@ -346,7 +346,7 @@ export default {
         //go to profile page...
       } catch (err) {
         this.showForgetPassword = true;
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     async checkEmail() {
@@ -373,26 +373,24 @@ export default {
             this.showPasswordNotMatch = true;
           }
         } catch (err) {
-          console.log(err.message);
+          // console.log(err.message);
         }
       }
     },
     async addNewCustomer() {
       try {
-        // console.log(this.verfNumber);
         if (Number(this.userVefNumber) === this.verfNumber) {
           await addNewCustomer(this.newCustomer);
           this.customer = this.newCustomer;
           this.showAccountCreatedLbl = true;
           setTimeout(() => {
             this.goToUserProfile();
-            this.showAccountCreatedLbl = false;
-          }, 2500);
+          }, 2000);
         } else {
           this.getWrongConfirmNumber = true;
         }
       } catch (err) {
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     async genVerfNumberForNewPass() {
@@ -403,7 +401,6 @@ export default {
           this.verfNumber = Math.floor(
             Math.random() * (9999 - 2000 + 1) + 2000
           );
-          // console.log(this.verfNumber);
           await sendVerfNum({
             receverMail: this.customer.email,
             verfNumber: String(this.verfNumber),
@@ -431,13 +428,12 @@ export default {
           this.showPasswordChangedLbl = true;
           setTimeout(() => {
             this.goToUserProfile();
-            this.showPasswordChangedLbl = false;
-          }, 2500);
+          }, 2000);
         } else {
           this.showNewPasswordNotMatch = true;
         }
       } catch (err) {
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     setEmailLoginRedBorder() {
@@ -457,7 +453,6 @@ export default {
       try {
         this.activeCustomer = await getActiveCustomer();
         this.userLoggedin = true;
-        console.log(this.activeCustomer);
       } catch (err) {
         this.userLoggedin = false;
         // console.log('no user active..');

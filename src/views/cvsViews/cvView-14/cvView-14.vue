@@ -530,7 +530,7 @@ export default {
   data() {
     return {
       // SERVER_URL: "http://localhost:300/uploads",
-      SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
+      SERVER_URL: "https://serve.samdtc931.com/uploads/cvmk",
     };
   },
   methods: {
@@ -688,6 +688,10 @@ export default {
   padding: 5px 15.5px 5px 10px;
   color: white;
   /* font-family: "Tilt Warp"; */
+}
+.personal-photo-div-14 {
+  min-height: 50px;
+  min-width: 50px;
 }
 .personal-photo {
   border-radius: 50%;

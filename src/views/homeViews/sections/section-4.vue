@@ -59,8 +59,7 @@
         <div
           class="single-contact-span single-service-contact-terms-span flex-row"
         >
-          <span>Devoloped By : </span>
-          <span class="devoped-by-span ms-1 me-1">Meroe Labs</span>
+          <span class="ms-1 me-1">Meroe Labs</span>
           <div class="devoloper-icon-div flex-row">
             <div class="left-devolover-icon flex-column">
               <div class="top-left-devoloer-icon"></div>
@@ -170,9 +169,6 @@ export default {
 .single-service-contact-terms-span {
   font-size: 13px;
   margin-top: 5px;
-}
-.devoped-by-span {
-  font-size: 10px;
 }
 .devoloper-icon-div {
   height: 14px;

@@ -586,8 +586,6 @@ export default {
   mounted() {
     this.checkContainersSize();
     if (this.justPrint && this.lng.name === "arabic") {
-      console.log("here 15");
-
       const allSectionsTitle = document.querySelectorAll(".tranlate-me-15");
       allSectionsTitle.forEach((title) => {
         title.classList.add("section-title-txt-15-translate");

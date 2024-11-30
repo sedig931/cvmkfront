@@ -130,7 +130,7 @@ export default {
     },
     addWebLink() {
       if (this.allForms.find((cname) => cname === "form_8")) {
-        console.log("found");
+        // console.log("found");
         this.showHideInfoMenue = false;
         this.$emit(
           "formFound",

@@ -8,22 +8,17 @@
         <div
           class="single-cv-review-div"
           @click="this.selectFrame"
-          id="frame-1"
-          v-if="this.fixSizingProblemTick"
+          id="frame-3"
         >
-          <CvOne
-            :corner="true"
-            :resumeValues="this.resumeValues"
-            :lng="this.lng"
-          />
+          <CvThree :resumeValues="this.resumeValues" :lng="this.lng" />
         </div>
         <div
           class="single-cv-review-div"
           @click="this.selectFrame"
-          id="frame-5"
-          v-if="this.fixSizingProblemTick"
+          id="frame-1"
+          v-if="this.fixSizingProblemTickFrame1"
         >
-          <CvFive
+          <CvOne
             :corner="true"
             :resumeValues="this.resumeValues"
             :lng="this.lng"
@@ -37,10 +32,16 @@
         <div
           class="single-cv-review-div"
           @click="this.selectFrame"
-          id="frame-3"
+          id="frame-5"
+          v-if="this.fixSizingProblemTick"
         >
-          <CvThree :resumeValues="this.resumeValues" :lng="this.lng" />
+          <CvFive
+            :corner="true"
+            :resumeValues="this.resumeValues"
+            :lng="this.lng"
+          />
         </div>
+
         <div
           class="single-cv-review-div"
           @click="this.selectFrame"
@@ -107,13 +108,14 @@
           id="frame-7"
         >
           <CvSeven
-            v-if="this.lng.name !== '中文'"
+            v-if="this.lng.name !== '中文' || this.frame7imgloading"
             :resumeValues="this.resumeValues"
             :lng="this.lng"
           />
           <img
-            class="const-img"
-            v-if="this.lng.name === '中文'"
+            :onload="this.frame7Loaded"
+            class="const-img fram7img"
+            v-show="this.lng.name === '中文' && !this.frame7imgloading"
             :src="`${this.SERVER_URL}/consFrames/frame7.jpg`"
             alt=""
           />
@@ -124,12 +126,13 @@
           id="frame-16"
         >
           <Frame16
-            v-if="this.lng.name !== '中文'"
+            v-if="this.lng.name !== '中文' || this.frame16imgloading"
             :lng="this.lng"
             :resumeValues="this.resumeValues"
           /><img
+            :onload="this.frame16Loaded"
             class="const-img"
-            v-if="this.lng.name === '中文'"
+            v-show="this.lng.name === '中文' && !this.frame16imgloading"
             :src="`${this.SERVER_URL}/consFrames/frame16.jpg`"
             alt=""
           />
@@ -179,13 +182,14 @@
           id="frame-10"
         >
           <CvTen
-            v-if="this.lng.name !== '中文'"
+            v-if="this.lng.name !== '中文' || this.frame10imgloading"
             :resumeValues="this.resumeValues"
             :lng="this.lng"
           />
           <img
+            :onload="this.frame10Loaded"
             class="const-img"
-            v-if="this.lng.name === '中文'"
+            v-show="this.lng.name === '中文' && !this.frame10imgloading"
             :src="`${this.SERVER_URL}/consFrames/frame10.jpg`"
             alt=""
           />
@@ -217,13 +221,16 @@
           @click="this.selectFrame"
           id="frame-17"
         >
-          <!-- <Frame17
+          <Frame17
+            v-if="this.frame17imgloading"
             :corner="true"
             :resumeValues="this.resumeValues"
             :lng="this.lng"
-          /> -->
+          />
           <img
+            :onload="this.frame17Loaded"
             class="const-img"
+            v-show="!this.frame17imgloading"
             :src="`${this.SERVER_URL}/consFrames/frame17.jpg`"
             alt=""
           />
@@ -233,8 +240,14 @@
           @click="this.selectFrame"
           id="frame-18"
         >
-          <!-- <Frame18 :resumeValues="this.resumeValues" :lng="this.lng" /> -->
+          <Frame18
+            :resumeValues="this.resumeValues"
+            :lng="this.lng"
+            v-if="this.frame18imgloading"
+          />
           <img
+            :onload="this.frame18Loaded"
+            v-show="!this.frame18imgloading"
             class="const-img"
             :src="`${this.SERVER_URL}/consFrames/frame18.jpg`"
             alt=""
@@ -320,7 +333,6 @@ import Frame19 from "../../cvsViews/cvView-19/cvView-19.vue";
 import Frame20 from "../../cvsViews/cvView-20/cvView-20.vue";
 import Frame21 from "../../cvsViews/cvView-21/cvView-21.vue";
 import Frame22 from "../../cvsViews/cvView-22/cvView-22.vue";
-import { languages } from "../../../components/languages.js";
 
 export default {
   props: ["lng", "resumeValues"],
@@ -351,9 +363,15 @@ export default {
   data() {
     return {
       // SERVER_URL: "http://localhost:300/uploads",
-      SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
+      SERVER_URL: "https://serve.samdtc931.com/uploads/cvmk",
       showHideFramesContainer: false,
       fixSizingProblemTick: true,
+      fixSizingProblemTickFrame1: true,
+      frame7imgloading: true,
+      frame16imgloading: true,
+      frame10imgloading: true,
+      frame17imgloading: true,
+      frame18imgloading: true,
     };
   },
   methods: {
@@ -390,12 +408,37 @@ export default {
         });
       }
     },
+    frame7Loaded() {
+      this.frame7imgloading = false;
+    },
+    frame16Loaded() {
+      this.frame16imgloading = false;
+    },
+    frame10Loaded() {
+      this.frame10imgloading = false;
+    },
+    frame17Loaded() {
+      this.frame17imgloading = false;
+    },
+    frame18Loaded() {
+      this.frame18imgloading = false;
+    },
   },
   mounted() {
     this.fixSizingProblemTick = false;
+    this.fixSizingProblemTickFrame1 = false;
     setTimeout(() => {
       this.fixSizingProblemTick = true;
     }, 200);
+    if (localStorage.getItem("cvMaker-lngName") === "arabic") {
+      setTimeout(() => {
+        this.fixSizingProblemTickFrame1 = true;
+      }, 3100);
+    } else {
+      setTimeout(() => {
+        this.fixSizingProblemTickFrame1 = true;
+      }, 200);
+    }
   },
 };
 </script>

@@ -105,7 +105,8 @@ const english = {
         btnFinish: "Save And Finish",
         paymentForm: {
           spanFree: "you can edit your cv FREE any time after login.",
-          continueAnchor: "continue with $3.00",
+          continueAnchor: "continue with ",
+          price: '$3.75'
         },
       },
       frame: {
@@ -448,7 +449,8 @@ const arabic = {
         btnFinish: "حفظ وإنهاء",
         paymentForm: {
           spanFree: "يمكنك تعديل البيانات مجاناً بعد تسجل الدخول",
-          continueAnchor: "$3.00 إتمام العملية مقابل",
+          continueAnchor: " إتمام العملية مقابل",
+          price: '$3.75'
         },
       },
       frame: {
@@ -783,7 +785,8 @@ const china = {
         btnFinish: "保存并完成",
         paymentForm: {
           spanFree: "登录后您可以随时免费编辑您的简历。",
-          continueAnchor: "继续 3.00 美元",
+          continueAnchor: "继续",
+          price: '$3.75'
         },
       },
       frame: {
@@ -1115,7 +1118,8 @@ const france = {
         btnFinish: "Enregistrer et terminer",
         paymentForm: {
           spanFree: "vous pouvez modifier votre CV GRATUITEMENT à tout moment après vous être connecté.",
-          continueAnchor: "continuer avec 3,00 $",
+          continueAnchor: "continuer avec ",
+          price: '$3.75'
         },
       },
       frame: {
@@ -1445,7 +1449,8 @@ const italy = {
         btnFinish: "Salva e termina",
         paymentForm: {
           spanFree: "puoi modificare il tuo CV GRATIS in qualsiasi momento dopo aver effettuato l'accesso",
-          continueAnchor: "continua con $3.00",
+          continueAnchor: "continua con ",
+          price: '$3.75'
         },
       },
       frame: {
@@ -1773,6 +1778,7 @@ const emptyOne = {
         paymentForm: {
           spanFree: "",
           continueAnchor: "",
+          price: ''
         },
       },
       frame: {

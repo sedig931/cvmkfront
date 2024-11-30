@@ -746,6 +746,9 @@
                 this.lng.lang.section2.getCvInfo.forms.paymentForm
                   .continueAnchor
               }}
+              <span class="price-span-txt" dir="ltr">
+                {{ this.lng.lang.section2.getCvInfo.forms.paymentForm.price }}
+              </span>
             </a>
             <!-- <i class="bi bi-arrow-clockwise" v-if="!this.payLinkDone"></i> -->
             <LoadingPoints v-if="!this.payLinkDone" />
@@ -1155,6 +1158,7 @@ export default {
         coursesForm: [{}],
         webLinks: {
           princ: {
+            webTitle: "",
             // webHref:
             // "https://drive.google.com/file/d/1PGvMBadcOs05hsie1zwEQmZAwBWZfdx1/view",
           },
@@ -2012,7 +2016,7 @@ export default {
           this.showAttentionWindow = true;
         }
       } catch (err) {
-        console.log(err.message);
+        // console.log(err.message);
       }
     },
     goToHomeSection() {
@@ -2101,7 +2105,7 @@ export default {
         }
         this.checkSizeWhileTyping();
       } catch (err) {
-        console.log("no customer active.");
+        // console.log("no customer active.");
       }
     },
     setPageLang(lngName) {
@@ -2503,6 +2507,9 @@ export default {
   font-size: 17px;
   color: rgba(177, 38, 38, 0.6);
   cursor: pointer;
+}
+.price-span-txt {
+  font-family: "Comfortaa";
 }
 /* ---------------------------------------MEDIA QUERY FORM 1--------------------------------------------------- */
 

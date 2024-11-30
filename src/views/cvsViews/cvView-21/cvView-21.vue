@@ -518,7 +518,7 @@ export default {
   data() {
     return {
       // SERVER_URL: "http://localhost:300/uploads",
-      SERVER_URL: "https://salesprojectb23.netlify.app/uploads/cvmk",
+      SERVER_URL: "https://serve.samdtc931.com/uploads/cvmk",
     };
   },
   methods: {

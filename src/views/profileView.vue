@@ -397,6 +397,7 @@
                 <Frame11
                   :lng="this.setSingleFrameLang(frame.frameInfo.currentLng)"
                   :resumeValues="frame.frameInfo"
+                  :corner="true"
                 />
                 <div
                   class="print-edit-div flex-row"
@@ -1075,6 +1076,8 @@ export default {
     async getCustomerInfo() {
       try {
         this.customer = await getCustomer(this.id);
+        console.log(this.customer.frames.length);
+
         // this.customer.frames = ["frame_1", "frame_2", "frame_3"];
       } catch (err) {
         //back to home..
@@ -1206,7 +1209,7 @@ export default {
         this.customer.frames = this.customer.frames.filter(
           (frame) => frame.frameName !== `frame_${frameNum}`
         );
-        this.goLight();
+        if (this.customer.frames.length > 0) this.goLight();
       } catch (err) {
         // console.log(err.message);
       }

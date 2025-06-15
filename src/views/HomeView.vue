@@ -4,6 +4,7 @@
       class="home-sections home-section-1 flex-column"
       :dir="this.lng.name === 'arabic' ? 'rtl' : 'ltr'"
     >
+      <MYSEO />
       <div
         class="nav-div flex-row"
         :class="
@@ -81,6 +82,18 @@
           </span>
         </div>
       </div>
+      <div
+        class="get-5-times-free-div"
+        v-if="this.customer.freelimit < 5 || !this.customer.freelimit"
+      >
+        <span
+          :class="
+            this.lng.name === 'arabic' ? 'arabic-font' : 'section1-txt-div-font'
+          "
+        >
+          {{ `${this.lng.lang.section1.times5free}  🎉👏` }}
+        </span>
+      </div>
     </div>
     <div class="gap-section"></div>
     <div
@@ -137,6 +150,7 @@
 import Section2 from "./homeViews/sections/section-2.vue";
 import Section3 from "./homeViews/sections/section-3.vue";
 import Section4 from "./homeViews/sections/section-4.vue";
+import MYSEO from "./seoView.vue";
 import WellIcon from "./welIcon.vue";
 import AcceptStorage from "./homeViews/popUpViews/acceptStorage.vue";
 import Terms from "./homeViews/popUpViews/termsPolicy.vue";
@@ -151,6 +165,7 @@ export default {
     WellIcon,
     AcceptStorage,
     Terms,
+    MYSEO,
   },
   data() {
     return {
@@ -406,15 +421,6 @@ export default {
           .scrollIntoView({ behavior: "smooth" });
       }
     },
-    async tryPrintOne() {
-      let doc = new jsPDF("p", "px", [1890, 1122]);
-      await html2canvas(document.querySelector(".home-section-1"), {
-        width: 1890,
-      }).then((canvas) => {
-        doc.addImage(canvas.toDataURL("image/png"), "PNG", 0, 0);
-      });
-      doc.save("Document.pdf");
-    },
     playWithText() {
       const txtPlay = this.lng.lang.section1.ready4u.split("");
       txtPlay.forEach((char, i) => {
@@ -495,9 +501,9 @@ export default {
 }
 .home-section-1 {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  justify-content: space-evenly;
   background-color: rgb(39, 39, 39);
-
   transition: transform 1s, opacity 1s;
   border-bottom: 1px solid rgb(255, 255, 255);
 }
@@ -556,7 +562,6 @@ export default {
   margin: 5px;
 }
 .section1-body-div {
-  height: 80%;
   width: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -597,18 +602,28 @@ export default {
 .now-button:hover {
   box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
 }
-.more-than-20-div {
+.more-than-20-div,
+.get-5-times-free-div {
   font-size: 30px;
   margin-top: 35px;
   color: rgb(207, 207, 207);
 }
+.get-5-times-free-div {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2px 7px 2px 7px;
+  cursor: none;
+  margin: 0 15px 0 15px;
+}
+.get-5-times-free-div:hover {
+  color: white;
+}
 .gap-section {
   height: 0;
   width: 0;
-  /* border-left: 98.9vw solid transparent; */
   border-left: 100vw solid transparent;
-  border-bottom: 9vw solid rgb(255, 255, 255);
-  margin-top: -9vw;
+  border-bottom: 8.9vw solid rgb(255, 255, 255);
+  margin-top: -8.9vw;
   border-right: none;
 }
 .change-lang-overlay {
@@ -687,7 +702,8 @@ export default {
   .now-button {
     font-size: 30px;
   }
-  .more-than-20-div {
+  .more-than-20-div,
+  .get-5-times-free-div {
     font-size: 25px;
   }
 }
@@ -702,7 +718,8 @@ export default {
   .now-button {
     font-size: 25px;
   }
-  .more-than-20-div {
+  .more-than-20-div,
+  .get-5-times-free-div {
     font-size: 20px;
   }
   .change-lang-div {
@@ -717,8 +734,8 @@ export default {
     flex-direction: column;
   }
   .change-lang-div {
-    left: 35px;
-    bottom: 30px;
+    left: 25px;
+    bottom: 20px;
   }
 }
 @media (min-width: 450px) and (max-width: 550px) {
@@ -732,7 +749,8 @@ export default {
   .now-button {
     font-size: 25px;
   }
-  .more-than-20-div {
+  .more-than-20-div,
+  .get-5-times-free-div {
     font-size: 20px;
   }
   .change-lang-div {
@@ -744,9 +762,6 @@ export default {
 }
 
 @media (min-width: 400px) and (max-width: 450px) {
-  /* .section1-body-div {
-    flex-direction: column;
-  } */
   .section1-icon-div {
     height: 350px;
     width: 280px;
@@ -757,7 +772,8 @@ export default {
   .now-button {
     font-size: 20px;
   }
-  .more-than-20-div {
+  .more-than-20-div,
+  .get-5-times-free-div {
     font-size: 15px;
   }
   .custome-now-div {
@@ -778,9 +794,6 @@ export default {
   }
 }
 @media (min-width: 50px) and (max-width: 400px) {
-  /* .section1-body-div {
-    flex-direction: column;
-  } */
   .section1-icon-div {
     height: 350px;
     width: 280px;
@@ -791,7 +804,8 @@ export default {
   .now-button {
     font-size: 20px;
   }
-  .more-than-20-div {
+  .more-than-20-div,
+  .get-5-times-free-div {
     font-size: 14px;
   }
   .custome-now-div {

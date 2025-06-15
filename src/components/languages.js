@@ -19,7 +19,8 @@ const english = {
     yourCV: "Custome CV",
     nowBtn: "Now",
     ready4u: "20+ creatively-desigend CV templets ready for you",
-    langWarning: "The chosen language will be used to create the CV file"
+    langWarning: "The chosen language will be used to create the CV file",
+    times5free: "Congratiolations ! you can make 5 Resume templates FREE"
   },
   section2: {
     showMoreBtn: "Show More",
@@ -360,7 +361,8 @@ const arabic = {
     yourCV: "سيــرتك الـذاتيـة",
     nowBtn: "الآن",
     ready4u: "أكثر من 20 نموذجًا للسيرة الذاتية مصممة بشكل إبداعي جاهزة لك",
-    langWarning: "اللغة التي يتم إختيارها ستستخدم لإنشاء ملف السيرة الذاتية"
+    langWarning: "اللغة التي يتم إختيارها ستستخدم لإنشاء ملف السيرة الذاتية",
+    times5free: "تهانينا ! يمكنك الآن إنشاء 5 قوالب سيرة ذاتية مجاناً"
   },
   section2: {
     showMoreBtn: "رؤية المزيـد",
@@ -699,7 +701,8 @@ const china = {
     yourCV: "定制简历",
     nowBtn: "现在",
     ready4u: "20多个创意设计的简历模板为您准备好了",
-    langWarning: '所选语言将用于创建 CV 文件'
+    langWarning: '所选语言将用于创建 CV 文件',
+    times5free: "恭喜！您可以免费制作5份简历模板"
   },
   section2: {
     showMoreBtn: "显示更多",
@@ -1031,7 +1034,8 @@ const france = {
     yourCV: "CV personnalisé",
     nowBtn: "Maintenant",
     ready4u: "Plus de 20 modèles de CV conçus de manière créative et prêts pour vous",
-    langWarning: "La langue choisie sera utilisée pour créer le fichier CV"
+    langWarning: "La langue choisie sera utilisée pour créer le fichier CV",
+    times5free: "Félicitations ! Vous pouvez créer 5 modèles de CV GRATUITEMENT"
 
   },
   section2: {
@@ -1363,7 +1367,8 @@ const italy = {
     yourCV: "CV personalizzato",
     nowBtn: "Ora",
     ready4u: "Oltre 20 modelli di CV dal design creativo pronti per te",
-    langWarning: "La lingua scelta verrà utilizzata per creare il file CV"
+    langWarning: "La lingua scelta verrà utilizzata per creare il file CV",
+    times5free: "Congratulazioni! Puoi creare 5 modelli di curriculum GRATIS"
   },
   section2: {
     showMoreBtn: "Mostra altro",

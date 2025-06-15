@@ -208,7 +208,7 @@
                 this.resumeValues.eduForm.eduDegree
                   ? this.resumeValues.eduForm.eduDegree
                   : this.lng.lang.section2.getCvInfo.frame.educationDegree
-              }}
+              }}&nbsp;
             </span>
             <span
               >{{
@@ -654,5 +654,8 @@ export default {
   padding: 0 15px 0 15px;
   border-bottom: 0.5px solid rgb(180, 180, 180);
   border-radius: 15px;
+}
+.anchors {
+  text-decoration: none;
 }
 </style>

@@ -3,6 +3,7 @@
     class="home-sections home-section-3 flex-column"
     :dir="this.lng.name === 'arabic' ? 'rtl' : 'ltr'"
   >
+    <MYSEO />
     <div class="no-user-login-div forms-profile-div flex-column">
       <div class="flex-column">
         <div class="section-3-header-div flex-row text-center pe-1 ps-1">
@@ -272,7 +273,11 @@ import {
   changeCustomerPassword,
   getActiveCustomer,
 } from "../../../components/modal.js";
+import MYSEO from "../../seoView.vue";
 export default {
+  components: {
+    MYSEO,
+  },
   props: ["lng", "activeCustomer"],
   data() {
     return {

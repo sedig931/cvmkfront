@@ -6,6 +6,7 @@
       this.lng.name === 'arabic' ? 'arabic-font' : 'home-section-body-font'
     "
   >
+    <MYSEO />
     <div class="top-home-section-body flex-row">
       <div class="inner-top-home-section-body"></div>
     </div>
@@ -104,7 +105,11 @@
 </template>
 
 <script>
+import MYSEO from "../../seoView.vue";
 export default {
+  components: {
+    MYSEO,
+  },
   props: ["lng"],
 };
 </script>
@@ -126,7 +131,7 @@ export default {
 }
 .home-section-4 {
   min-height: 50vh;
-  width: 100%;
+  width: 100vw;
 
   transition: transform 1s, opacity 1s;
 }

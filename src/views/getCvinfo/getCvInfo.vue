@@ -681,6 +681,12 @@
           />
           <!-- ------------------------------------------BTNS NEXT BACK---------------------------------- -->
           <div class="next-back-div flex-row">
+            <span
+              class="span-register-need ms-3 me-3"
+              v-if="this.showHideNeedRegister"
+            >
+              sorry, you need to login first
+            </span>
             <button
               class="btn-go-next"
               type="button"
@@ -1129,7 +1135,7 @@ export default {
       searchedCities: [],
       currentCourseForm: 0,
       currentWorkForm: 0,
-      resumeValues: {
+      resumeValues1: {
         address: {},
         dateOfBirth: {},
         eduForm: {
@@ -1165,202 +1171,143 @@ export default {
           childs: [],
         },
       },
-      resumeValues11: {
-        fullName: "احمد صالح البكري",
-        address: {
-          country: "الإمارات المتحدة",
-          city: "عجمان",
-        },
-        phone: "0123456789",
-        email: "ahmad@mail.com",
-        nationality: " إماراتي",
-        placeOfBirth: "الإمارات",
-        dateOfBirth: {
-          day: "16",
-          month: "3",
-          year: "1998",
-        },
-        gender: "ذكر",
-        relationship: "اعزب",
-        jobTitle: "مدير مشاريع برمجية",
-        introParagraph: `لقد اكتسبت مهارة العمل على مشاريع البرمجيات العمل الجماعي والفردي أستطيع التعامل مع الأخطاء ومشاكل البرمجيات والتكيف مع تغييرات الخطة أو تعلم أداة جديدة بسرعة إذا لزم الأمر في السنوات الأخيرة ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب لدي بعض الأعمال التي يمكنك الاطلاع عليها`,
-        eduForm: {
-          eduDegree: "بكالاريوس شرفي تقانة المعلومات",
-          uniName: "جامعة الملك فيصل",
-          cerLevel: ".",
-          yearsStudy: {
-            from: { month: "Nov", year: "2017" },
-            to: { month: "Mar", year: "2023" },
-          },
-          thesis: "عمل نظام يقوم بإدارة الشركة من حيث الأمان",
-          photo: {},
-          eduDiscreption: `وتتكيف مشكلات البرامج مع تغييرات الخطة أو تتعلم أداة جديدة بسرعة إذا لزم الأمر. في السنوات الأخيرة، ركزت عملي على تطوير مواقع الويب وتطبيقات الهاتف المحمول وتطبيقات سطح المكتب`,
-        },
-        skillsForm: {
-          princ: { name: "التواصل" },
-          childs: [
-            { name: "إدارة الوقت" },
-            { name: "التعاون" },
-            { name: "القيادة" },
-            { name: "المرونة" },
-            { name: "القدرة على التكيف" },
-          ],
-        },
-        langsForm: {
-          princ: { name: "العربية", level: "اللغة الأم" },
-          childs: [{ name: "الإنجليزية", level: "متقن" }],
-        },
-        workExpForm: [
-          {
-            jobTitle: "صيانة نظام",
-            address: "عجمان،الإمارات المتحدة",
-            employer: "الشركة الذهبية للتكمنولوجيبا",
-            workDate: {
-              from: { month: "jun", year: "2023" },
-              to: { month: "jun", year: "2024" },
-            },
-          },
-          {
-            jobTitle: "صيانة نظام",
-            address: "عجمان،الإمارات المتحدة",
-            employer: "الشركة الذهبية للتكمنولوجيبا",
-            workDate: {
-              from: { month: "jun", year: "2023" },
-              to: { month: "jun", year: "2024" },
-            },
-          },
-        ],
-        coursesForm: [
-          {
-            courseTitle: "دورة هندسة البرمجيات",
-            institution: "معهد العلوم التكنولوجية",
-          },
-        ],
-        webLinks: {
-          princ: {
-            webTitle: " مشروع تطوير نظام مطعم ",
-            // webHref:
-            // "https://drive.google.com/file/d/1PGvMBadcOs05hsie1zwEQmZAwBWZfdx1/view",
-          },
-          childs: [
-            {
-              webTitle: "مشروع نظام متجر إلكتروني",
-              // webHref:
-              //   "https://drive.google.com/file/d/18LBGD-PXRPzyAe0qbu-niaoXNwGfzoZy/view",
-            },
-            {
-              webTitle: "مشروع لإدارة المناهج التعليمية",
-              // webHref:
-              //   "https://drive.google.com/file/d/1NI1ueB8YwGq4W2opO_zSf4kodAiLP915/view",
-            },
-            {
-              webTitle: "نظام إستئجار سيارات",
-              // webHref:
-              //   "https://drive.google.com/file/d/1e3UoVB9y9XvO1VSaRdF34pHMwXlhiCt3/view?usp=sharing",
-            },
-          ],
-        },
-      },
-      resumeValues22: {
-        fullName: "Osama Alser Nouri",
+      resumeValues: {
         address: {
           country: "Saudi Arabia",
-          city: "Madinah",
+          city: "Riyadh",
         },
-        phone: "0123456789",
-        email: "osama2025@gmail.com",
-        nationality: " Arabian",
-        placeOfBirth: "North Afica",
         dateOfBirth: {
-          day: "20",
-          month: "4",
-          year: "1999",
+          year: "1998",
+          month: "3",
+          day: "16",
         },
-        gender: "Male",
-        relationship: "Single",
-        jobTitle: "Information Technology Technician",
-        introParagraph: `I have acquired the skill of working on
-       software projects (group and individual work). I can deal with errors
-       and software problems adapt to plan changes or learn a new tool
-       quickly if necessary. In recent years I have focused my work on
-       developing websites, mobile applications and desktop applications
-       (fullstack). I have some work you can check out.`,
         eduForm: {
-          eduDegree: "Bachelor (HONOURS) OF INFORMATION TECHNOLOGY ",
-          uniName: "Blue Nile University of Scince and Technology",
-          cerLevel: ".",
           yearsStudy: {
-            from: { month: "Nov", year: "2017" },
-            to: { month: "Mar", year: "2023" },
+            from: {
+              month: "Mar",
+              year: "2017",
+            },
+            to: {
+              month: "Feb",
+              year: "2023",
+            },
           },
-          thesis: "sgin language generation using machine learning technology.",
           photo: {},
-          eduDiscreption: `and software problems adapt to plan changes or learn a new tool
-       quickly if necessary. In recent years I have focused my work on
-       developing websites, mobile applications and desktop applications`,
+          eduDegree: "Bachelor (HONOURS) of Information Technology",
+          uniName: "sudan university of science and technology",
+          eduDiscreption: " ",
+          thesis: "sign language generation using machine learning technology",
         },
         skillsForm: {
-          princ: { name: "JavaScript" },
+          princ: {
+            name: "Communication",
+          },
           childs: [
-            { name: "HTML, CSS" },
-            { name: "Bootstrap5" },
-            { name: "ExpressJS, MongoDB, MySQL" },
-            { name: "Java, JavaFX" },
-            { name: "Flutter" },
+            {
+              name: "Adaptability",
+            },
+            {
+              name: "Teamwork",
+            },
+            {
+              name: "Problem solving",
+            },
+            {
+              name: "Time management",
+            },
+            {
+              name: "Data structures and algorithms",
+            },
+            {
+              name: "Web development",
+            },
+            {
+              name: "Database and SQL",
+            },
+            {
+              name: "Java - Python",
+            },
+            {
+              name: "Javascript",
+            },
+            {
+              name: "ExpressJS - MongoDB",
+            },
+            {
+              name: "HTML - CSS - VUE3",
+            },
+            {
+              name: "Flutter - Provider",
+            },
+            {
+              name: "ReactJS - Redux",
+            },
           ],
         },
         langsForm: {
-          princ: { name: "Arabic", level: "Native Speaker" },
-          childs: [{ name: "English", level: "Very good command" }],
-        },
-        workExpForm: [
-          {
-            jobTitle: "Security Approvals",
-            address: "KSA , Madinah",
-            employer: "Whites Moons",
-            workDate: {
-              from: { month: "jun", year: "2023" },
-              to: { month: "jun", year: "2024" },
-            },
-          },
-          {
-            jobTitle: "Security Approvals",
-            address: "KSA , Madinah",
-            employer: "Whites Moons",
-            workDate: {
-              from: { month: "jun", year: "2023" },
-              to: { month: "jun", year: "2024" },
-            },
-          },
-        ],
-        coursesForm: [
-          { courseTitle: "java", institution: "youtube" },
-          { courseTitle: "javaScript", institution: "youtube2" },
-        ],
-        webLinks: {
           princ: {
-            webTitle: " Buying system project ",
-            // webHref:
-            //   "https://drive.google.com/file/d/1PGvMBadcOs05hsie1zwEQmZAwBWZfdx1/view",
+            name: "Arabic",
+            level: "Native speaker",
           },
           childs: [
             {
-              webTitle: "Online buying system project",
-              // webHref:
-              //   "https://drive.google.com/file/d/18LBGD-PXRPzyAe0qbu-niaoXNwGfzoZy/view",
-            },
-            {
-              webTitle: "Educational content system",
-              // webHref:
-              //   "https://drive.google.com/file/d/1NI1ueB8YwGq4W2opO_zSf4kodAiLP915/view",
-            },
-            {
-              webTitle: "Motorcycle rental project",
-              // webHref:
-              //   "https://drive.google.com/file/d/1e3UoVB9y9XvO1VSaRdF34pHMwXlhiCt3/view?usp=sharing",
+              name: "English",
+              level: "Proficient",
             },
           ],
         },
+        workExpForm: [
+          {
+            workDate: {
+              from: {},
+              to: {},
+            },
+            jobTitle: "Adminstrator on local system",
+            employer: "AL-Amal medical group",
+            address: "KSA - AL-Wajh",
+          },
+        ],
+        coursesForm: [
+          {
+            courseTitle:
+              "computer basics, data structure, SE, AI, HCI, data mining fundamentals of database systems",
+            institution: "sudan university of science and technology ",
+          },
+        ],
+        webLinks: {
+          princ: {
+            webTitle: "Clothes shop",
+            webHref: "https://kabashishop.netlify.app/",
+          },
+          childs: [
+            {
+              webTitle: "Resume frames maker",
+              webHref: "https://samdtc931.com/",
+            },
+            {
+              webTitle: "Online sales practice project",
+              webHref: "https://samdtconlinemarket.netlify.app",
+            },
+            {
+              webHref: "https://salesfrontdashboard.netlify.app/",
+              webTitle: "sales dash-board",
+            },
+            {
+              webHref: "https://bicsrender.netlify.app",
+              webTitle: "Motorcycle rental",
+            },
+          ],
+        },
+        fullName: "Siddig Elharith Mohammed",
+        email: "sedig931@gmail.com",
+        phone: "+966536323259",
+        nationality: "sudanes",
+        placeOfBirth: "sudan",
+        gender: "Male",
+        relationship: "Single",
+        jobTitle: "IT Technican",
+        introParagraph:
+          "I am a programmer and specialist in developing and creating websites. I can create a website from scratch, including user interfaces and linking them together. I can also create a server and configure it for data retrieval, verification and login operations and linking it with the user interface. I can work on phone applications and design Interfaces and development, I have the ability of a smart programmer who can learn and master any new tool quickly and with high efficiency",
       },
       viewCountrysMenu: false,
       viewCityMenu: false,
@@ -1379,6 +1326,7 @@ export default {
       showBuyNow: false,
       payLinkDone: false,
       showAttentionWindow: false,
+      showHideNeedRegister: false,
     };
   },
   methods: {
@@ -1982,33 +1930,35 @@ export default {
               );
               sessionStorage.setItem("frameNum", JSON.stringify(this.cvNum));
               sessionStorage.setItem("lng", JSON.stringify(this.lng));
-              this.showBuyNow = true;
-              await this.setUpPayment();
-              this.payLinkDone = true;
-              // await addFrameToCustomer({
-              //   framName: "frame_" + this.cvNum,
-              //   frameInfo: this.resumeValues,
-              // });
-              // this.$router.push({
-              //   name: "caporder",
-              // });
+              // if user end limits..
+              if (this.customer.freelimit < 5) {
+                await addFrameToCustomer({
+                  framName: "frame_" + this.cvNum,
+                  frameInfo: this.resumeValues,
+                });
+                this.$router.push({
+                  name: "caporder",
+                });
+              } else {
+                this.showBuyNow = true;
+                await this.setUpPayment();
+                this.payLinkDone = true;
+              }
             }
           } else {
-            sessionStorage.setItem(
-              "resumeValues",
-              JSON.stringify(this.resumeValues)
-            );
-            sessionStorage.setItem("customerID", JSON.stringify(""));
-            sessionStorage.setItem("frameNum", JSON.stringify(this.cvNum));
-            sessionStorage.setItem("lng", JSON.stringify(this.lng));
-
-            this.showBuyNow = true;
-            await this.setUpPayment();
-            this.payLinkDone = true;
-
-            // this.$router.push({
-            //   name: "caporder",
-            // });
+            this.showHideNeedRegister = true;
+            setTimeout(() => {
+              this.$router.push({
+                name: "home",
+              });
+              setTimeout(() => {
+                if (document.querySelector(".home-section-3")) {
+                  document
+                    .querySelector(".home-section-3")
+                    .scrollIntoView({ behavior: "smooth" });
+                }
+              }, 500);
+            }, 3000);
           }
         } else {
           // shiw accepting terms wndow now
@@ -2352,11 +2302,18 @@ export default {
 .arrow-back-span {
   cursor: pointer;
 }
+.span-register-need {
+  font-size: 11px;
+  color: rgb(152, 152, 152);
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 7px;
+  padding: 0 10px 0 10px;
+}
 .next-back-div {
   width: 100%;
   justify-content: end;
   font-size: 14px;
-  align-items: end;
+  align-items: center;
 }
 .btn-go-next {
   width: 150px;

@@ -1,5 +1,6 @@
 <template>
   <div class="home-sections home-section-2 flex-column">
+    <MYSEO />
     <div class="cv-review-container-div">
       <div
         class="cv-review-div left-cv-review-div flex-column"
@@ -334,9 +335,12 @@ import Frame20 from "../../cvsViews/cvView-20/cvView-20.vue";
 import Frame21 from "../../cvsViews/cvView-21/cvView-21.vue";
 import Frame22 from "../../cvsViews/cvView-22/cvView-22.vue";
 
+import MYSEO from "../../seoView.vue";
+
 export default {
   props: ["lng", "resumeValues"],
   components: {
+    MYSEO,
     CvOne,
     CvTow,
     CvThree,

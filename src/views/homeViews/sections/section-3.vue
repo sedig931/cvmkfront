@@ -32,7 +32,7 @@
             :class="
               this.lng.name === 'arabic' ? 'arabic-font' : 'regester-btn-font'
             "
-            @click="this.setActiveFrame(1)"
+            @click="this.regesterNewUser"
           >
             {{ this.lng.lang.section3.registerBtn }}
           </button>
@@ -85,7 +85,10 @@
             class="login-btn"
             v-if="!this.activeCustomer._id"
           >
-            {{ this.lng.lang.section3.formLogin.loginBtn }}
+            <LODADING v-if="this.showLoading" />
+            <span v-if="!this.showLoading">
+              {{ this.lng.lang.section3.formLogin.loginBtn }}
+            </span>
           </button>
           <button
             type="button"
@@ -157,14 +160,17 @@
           @submit.prevent="this.addNewCustomer"
         >
           <input
-            class="input-contr form-control"
+            class="input-contr confirmation-input form-control"
             :class="this.getWrongConfirmNumber ? 'red-border' : ''"
             :placeholder="this.lng.lang.section3.formRegisterConfirm.codeInput"
             required
             v-model="this.userVefNumber"
           />
           <button type="submit" class="confirm-btn">
-            {{ this.lng.lang.section3.formRegisterConfirm.confirmBtn }}
+            <LODADING v-if="this.showLoading" />
+            <span v-if="!this.showLoading">
+              {{ this.lng.lang.section3.formRegisterConfirm.confirmBtn }}
+            </span>
           </button>
           <span
             class="dont-recive-span"
@@ -210,7 +216,10 @@
             }}</span>
           </div>
           <button type="submit" class="login-btn">
-            {{ this.lng.lang.section3.formResetPass.saveBtn }}
+            <LODADING v-if="this.showLoading" />
+            <span v-if="!this.showLoading">
+              {{ this.lng.lang.section3.formResetPass.saveBtn }}
+            </span>
           </button>
         </form>
         <!-- ------------------------RESET PASSWORD CONFIRAMTION CODE FORM--------------------------------------------- -->
@@ -220,7 +229,7 @@
           v-if="this.loginOutForms[3]"
         >
           <input
-            class="input-contr form-control"
+            class="input-contr confirmation-input form-control"
             :class="this.getWrongConfirmNumber2 ? 'red-border' : ''"
             :placeholder="
               this.lng.lang.section3.formConfirmResSetPass.codeInput
@@ -274,9 +283,11 @@ import {
   getActiveCustomer,
 } from "../../../components/modal.js";
 import MYSEO from "../../seoView.vue";
+import LODADING from "../../getCvinfo/loading.vue";
 export default {
   components: {
     MYSEO,
+    LODADING,
   },
   props: ["lng", "activeCustomer"],
   data() {
@@ -292,7 +303,9 @@ export default {
       showPasswordChangedLbl: false,
       showAccountCreatedLbl: false,
       showEmailAllreadyExist: false,
+      registring: false,
       loginOutForms: [true, false, false, false, false],
+      showLoading: false,
       customer: {
         email: "",
         password: "",
@@ -340,17 +353,22 @@ export default {
     },
     async goToUserProfile() {
       try {
-        const customerID = await checkLogin(this.customer);
-        this.showForgetPassword = false;
-        this.$router.push({
-          name: "profile",
-          params: { id: customerID, lngname: this.lng.name },
-        });
-        this.customer = {};
-        this.newCustomer = {};
-        //go to profile page...
+        // show loading vue
+        if (!this.showLoading) {
+          this.showLoading = true;
+          const customerID = await checkLogin(this.customer);
+          this.showForgetPassword = false;
+          this.$router.push({
+            name: "profile",
+            params: { id: customerID, lngname: this.lng.name },
+          });
+          this.customer = {};
+          this.newCustomer = {};
+          //go to profile page...
+        }
       } catch (err) {
         this.showForgetPassword = true;
+        this.showLoading = false;
         // console.log(err.message);
       }
     },
@@ -382,12 +400,20 @@ export default {
         }
       }
     },
+    regesterNewUser() {
+      if (!this.registring) {
+        this.setActiveFrame(1);
+      }
+    },
     async addNewCustomer() {
       try {
         if (Number(this.userVefNumber) === this.verfNumber) {
+          this.showLoading = true;
+          this.registring = true;
           await addNewCustomer(this.newCustomer);
-          this.customer = this.newCustomer;
+          this.showLoading = false;
           this.showAccountCreatedLbl = true;
+          this.customer = this.newCustomer;
           setTimeout(() => {
             this.goToUserProfile();
           }, 2000);
@@ -428,7 +454,10 @@ export default {
     async checkNewPassword() {
       try {
         if (this.newPassword === this.retypeNewPassword) {
+          this.showLoading = true;
+          this.registring = true;
           await changeCustomerPassword(this.customer.id, this.newPassword);
+          this.showLoading = false;
           this.customer.password = this.newPassword;
           this.showPasswordChangedLbl = true;
           setTimeout(() => {
@@ -547,6 +576,9 @@ export default {
 }
 .input-contr-font {
   font-family: "Comfortaa";
+}
+.confirmation-input {
+  text-align: center;
 }
 .red-border {
   border: 2px solid rgba(209, 64, 64, 0.7);

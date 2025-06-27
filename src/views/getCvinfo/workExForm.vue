@@ -362,7 +362,7 @@ export default {
     if (this.formInfo[this.currentWorkForm].workDate.from.month) {
       this.showFromSpan = false;
     }
-    for (let i = 1900; i <= 2024; i++) {
+    for (let i = 1960; i <= 2025; i++) {
       this.years.push(i);
     }
   },

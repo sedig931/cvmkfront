@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import CvInfo from "../views/getCvinfo/getCvInfo.vue";
 import Profile from "../views/profileView.vue";
-import captuerPaypalOrder from "../views/getCvinfo/payment/payment.vue";
-import { mergeProps } from "vue";
+import CaptuerPaypalOrder from "../views/getCvinfo/payment/payment.vue";
+// import { mergeProps } from "vue";
+import IntroHome from "../myIntro/motherPage.vue";
 
 const routes = [
   {
@@ -26,7 +27,12 @@ const routes = [
   {
     path: "/capPporder",
     name: "caporder",
-    component: captuerPaypalOrder,
+    component: CaptuerPaypalOrder,
+  },
+  {
+    path: "/introme",
+    name: "introduce",
+    component: IntroHome,
   },
 
   // {

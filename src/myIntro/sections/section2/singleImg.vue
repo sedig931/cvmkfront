@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       imgLoaded: false,
-      URL: "http://localhost:300/uploads/introduceImgs/rajhiAppImgs",
-      // URL: "https://serve.samdtc931.com/uploads/cvmk/introduceImgs/rajhiAppImgs",
+      // URL: "http://localhost:300/uploads/introduceImgs/rajhiAppImgs",
+      URL: "https://serve.samdtc931.com/uploads/cvmk/introduceImgs/rajhiAppImgs",
       //propreties
     };
   },

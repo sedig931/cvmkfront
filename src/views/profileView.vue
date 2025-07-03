@@ -1076,7 +1076,7 @@ export default {
     async getCustomerInfo() {
       try {
         this.customer = await getCustomer(this.id);
-        console.log(this.customer.frames.length);
+        // console.log(this.customer.frames.length);
 
         // this.customer.frames = ["frame_1", "frame_2", "frame_3"];
       } catch (err) {

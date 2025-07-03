@@ -1156,8 +1156,14 @@ export default {
         workExpForm: [
           {
             workDate: {
-              from: {},
-              to: {},
+              from: {
+                month: "",
+                year: "",
+              },
+              to: {
+                month: "",
+                year: "",
+              },
             },
           },
         ],

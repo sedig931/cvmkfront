@@ -356,7 +356,7 @@
                     <span> {{ work.address }}&nbsp;</span>
                   </div>
                   <div>
-                    <span v-if="work.workDate.from.month">{{
+                    <span v-if="work.workDate?.from?.month">{{
                       `
                     ${
                       work.workDate.from.month ? work.workDate.from.month : "mm"
@@ -567,12 +567,8 @@ export default {
   /* font-family: "Noto Naskh Arabic"; */
 }
 .window-container-div-3 {
-  /* width: 100%; */
   height: 100%;
   width: 100%;
-  /* height: 100vh; */
-  /* height: 1122px; */
-  /* padding: 5px; */
 }
 .cv-container-div-3 {
   height: 100%;

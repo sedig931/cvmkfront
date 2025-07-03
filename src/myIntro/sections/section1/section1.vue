@@ -54,6 +54,11 @@ export default {
     return {
       activePaper: 0,
       proressingInerv: null,
+      headerObserver: new IntersectionObserver(this.stickyNav, {
+        root: null,
+        threshold: 0,
+        rootMargin: "-100%",
+      }),
       //propreties
     };
   },
@@ -111,9 +116,28 @@ export default {
           .classList.add("progress-div-pused");
       }
     },
+    stickyNav(entries) {
+      const [entry] = entries;
+      //console.log(entry);
+      if (!entry.isIntersecting)
+        document
+          .querySelector(".half-moon-div-bottom")
+          .classList.add("hide-bottom-shape");
+      else
+        document
+          .querySelector(".half-moon-div-bottom")
+          .classList.remove("hide-bottom-shape");
+    },
+    hideBottomShape() {
+      this.headerObserver.observe(document.querySelector(".section--1"));
+    },
   },
   mounted() {
     this.proressingInerv = setInterval(this.proressingPar, 80);
+    this.hideBottomShape();
+  },
+  unmounted() {
+    console.log("unmounte");
   },
 };
 </script>
@@ -172,6 +196,9 @@ export default {
 }
 .progress-div-pused {
   background-image: linear-gradient(to left, #382f35, #575555);
+}
+.hide-bottom-shape {
+  opacity: 0;
 }
 @media (max-width: 850px) {
   .papers-div {

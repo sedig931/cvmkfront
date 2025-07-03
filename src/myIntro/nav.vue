@@ -39,7 +39,7 @@
       <div v-if="this.activeMenue === 0" class="menue flex-row">
         <div class="menue-element flex-row">
           <i class="bi bi-telephone flex-row menue-icon ms-2 me-2"></i>
-          <span> +966 111111111</span>
+          <span> +966 536323259</span>
         </div>
         <div class="menue-element flex-row">
           <i class="bi bi-envelope flex-row menue-icon ms-2 me-2"></i>

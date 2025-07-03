@@ -112,6 +112,8 @@ export default {
   bottom: 0;
   height: 30%;
   width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s;
   /* z-index: 0; */
 }
 .radius-container-div-bottom {

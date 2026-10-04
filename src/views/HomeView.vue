@@ -461,7 +461,12 @@ export default {
     // save language
     if (!localStorage.getItem("cvMaker-lngName"))
       localStorage.setItem("cvMaker-lngName", "eng");
-    this.setLanguage(localStorage.getItem("cvMaker-lngName"));
+    try {
+      this.setLanguage(localStorage.getItem("cvMaker-lngName"));
+    } catch (e) {
+      localStorage.removeItem("cvMaker-lngName");
+      localStorage.setItem("cvMaker-lngName", "eng");
+    }
     // show accepting terms window or not
     if (localStorage.getItem("savingApproved")) {
       this.showAttentionWindow = false;

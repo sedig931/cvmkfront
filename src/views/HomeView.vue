@@ -374,13 +374,20 @@ export default {
       this.langNames = languages.map((language) => language.name);
     },
     setLanguage(lngname) {
-      this.lng = languages.find((lang) => lang.name === lngname);
-      this.resumeValues = this.lng.lang.section2.getCvInfo.frame.resumeValues;
-      if (lngname === "Français") {
-        document.querySelector(".custome-now-div").classList.remove("flex-row");
-        document
-          .querySelector(".custome-now-div")
-          .classList.add("flex-column-custome-now");
+      try {
+        this.lng = languages.find((lang) => lang.name === lngname);
+        this.resumeValues = this.lng.lang.section2.getCvInfo.frame.resumeValues;
+        if (lngname === "Français") {
+          document
+            .querySelector(".custome-now-div")
+            .classList.remove("flex-row");
+          document
+            .querySelector(".custome-now-div")
+            .classList.add("flex-column-custome-now");
+        }
+      } catch (e) {
+        localStorage.removeItem("cvMaker-lngName");
+        localStorage.setItem("cvMaker-lngName", "eng");
       }
     },
     async checkActiveCustomer() {
@@ -461,12 +468,8 @@ export default {
     // save language
     if (!localStorage.getItem("cvMaker-lngName"))
       localStorage.setItem("cvMaker-lngName", "eng");
-    try {
-      this.setLanguage(localStorage.getItem("cvMaker-lngName"));
-    } catch (e) {
-      localStorage.removeItem("cvMaker-lngName");
-      localStorage.setItem("cvMaker-lngName", "eng");
-    }
+
+    this.setLanguage(localStorage.getItem("cvMaker-lngName"));
     // show accepting terms window or not
     if (localStorage.getItem("savingApproved")) {
       this.showAttentionWindow = false;

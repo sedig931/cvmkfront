@@ -390,7 +390,7 @@ export default {
       if (
         Number(
           e.currentTarget.id[e.currentTarget.id.length - 2] +
-            e.currentTarget.id[e.currentTarget.id.length - 1]
+            e.currentTarget.id[e.currentTarget.id.length - 1],
         ) > 0
       ) {
         this.$router.push({
@@ -489,10 +489,9 @@ export default {
   position: relative;
   height: 500px;
   width: 380px;
-  /* border: 0.5px solid rgb(210, 210, 210); */
   border-radius: 15px;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 2.5px 2.5px rgba(39, 39, 39, 0.4);
+  box-shadow: 1px 2px 7px rgb(202, 202, 202);
   cursor: pointer;
 }
 .view-more-div {
@@ -504,16 +503,19 @@ export default {
   padding: 3px 33px 3px 33px;
   background-color: rgb(39, 39, 39);
   color: white;
-  border: 2px solid rgb(39, 39, 39);
+  border: none;
   border-radius: 12px;
   transform: translateY(5%);
+  transition: background-color 0.3s;
 }
 .view-more-btn-font {
   font-family: "Comfortaa";
 }
 .view-more-btn:hover {
-  border: 2px solid white;
-  box-shadow: 0px 0px 2.5px 2.5px rgb(39, 39, 39);
+  background-color: rgb(251, 251, 251);
+  color: rgb(39, 39, 39);
+  /* border: 2px solid white; */
+  box-shadow: 0px 1px 5px rgb(188, 188, 188);
 }
 .all-frames-ats-div {
   width: 60%;
@@ -560,15 +562,16 @@ export default {
   width: 360px;
   /* margin: 10px; */
   border-radius: 15px;
-  box-shadow: 0px 0px 2.5px 2.5px rgba(63, 63, 63, 0.4);
+  /* box-shadow: 0px 0px 2.5px 2.5px rgba(63, 63, 63, 0.4); */
+  box-shadow: 1px 2px 7px rgb(202, 202, 202);
   background-color: white;
   cursor: pointer;
 }
 .single-cv-review-div-2:hover {
-  box-shadow: 0px 0px 2.5px 2.5px rgba(63, 63, 63);
+  box-shadow: 1px 2px 6px rgb(168, 168, 168);
 }
 .single-cv-review-div:hover {
-  box-shadow: 0px 0px 2.5px 2.5px rgba(63, 63, 63);
+  box-shadow: 1px 2px 6px rgb(168, 168, 168);
 }
 .add-scroll {
   overflow: scroll;

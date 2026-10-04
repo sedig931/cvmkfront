@@ -1,11 +1,13 @@
 const english = {
   attentionsTerms: {
-    mainHeader: 'by accepting this you agree for our terms and policy.',
-    firstTerm: '1. You approve for store your CV-related information, including images in your device’s storage unit and automatically delete them after you complete your CV',
-    firstTermNecessary: '(Necessary to complete the CV creation service)',
-    sec2Term: '2. You approve for storing information related to your CV permanently enables you to continue creating your CV at any time',
-    notAcceptBtn: 'Not-Accept',
-    acceptBtn: 'Accept'
+    mainHeader: "by accepting this you agree for our terms and policy.",
+    firstTerm:
+      "1. You approve for store your CV-related information, including images in your device’s storage unit and automatically delete them after you complete your CV",
+    firstTermNecessary: "(Necessary to complete the CV creation service)",
+    sec2Term:
+      "2. You approve for storing information related to your CV permanently enables you to continue creating your CV at any time",
+    notAcceptBtn: "Not-Accept",
+    acceptBtn: "Accept",
   },
   section1: {
     nav: {
@@ -20,7 +22,7 @@ const english = {
     nowBtn: "Now",
     ready4u: "20+ creatively-desigend CV templets ready for you",
     langWarning: "The chosen language will be used to create the CV file",
-    times5free: "Congratiolations ! you can make 5 Resume templates FREE"
+    times5free: "Congratiolations ! you can make 5 Resume templates FREE",
   },
   section2: {
     showMoreBtn: "Show More",
@@ -107,7 +109,7 @@ const english = {
         paymentForm: {
           spanFree: "you can edit your cv FREE any time after login.",
           continueAnchor: "continue with ",
-          price: '$3.75'
+          price: "$3.75",
         },
       },
       frame: {
@@ -160,11 +162,11 @@ const english = {
           relationship: "Single",
           jobTitle: "Information Technology Technician",
           introParagraph: `I have acquired the skill of working on
-   software projects (group and individual work). I can deal with errors
-   and software problems adapt to plan changes or learn a new tool
-   quickly if necessary. In recent years I have focused my work on
-   developing websites, mobile applications and desktop applications
-   (fullstack). I have some work you can check out.`,
+          software projects (group and individual work). I can deal with errors
+          and software problems adapt to plan changes or learn a new tool
+          quickly if necessary. In recent years I have focused my work on
+          developing websites, mobile applications and desktop applications
+          (fullstack). I have some work you can check out.`,
           eduForm: {
             eduDegree: "Bachelor (HONOURS) OF INFORMATION TECHNOLOGY ",
             uniName: "Blue Nile University of Scince and Technology",
@@ -288,46 +290,44 @@ const english = {
   },
   section4: {
     termsPolicy: {
-      title: 'Terms & Policy',
-      userPrivacy: 'User privacy',
-      conditions: 'Storing and retrieving data',
-      termsConditions: 'Terms and Conditions',
-      readMore: 'Read more'
+      title: "Terms & Policy",
+      userPrivacy: "User privacy",
+      conditions: "Storing and retrieving data",
+      termsConditions: "Terms and Conditions",
+      readMore: "Read more",
     },
     contacts: {
-      title: 'Contact Us'
+      title: "Contact Us",
     },
     services: {
-      title: 'Services',
-      makeAsome: 'Create a CV file',
-      allTimeFreeEdit: 'All time free edit',
-      freeCreateAccount: 'Free create account',
-      freePrint: 'All time free print CV file'
-    }
+      title: "Services",
+      makeAsome: "Create a CV file",
+      allTimeFreeEdit: "All time free edit",
+      freeCreateAccount: "Free create account",
+      freePrint: "All time free print CV file",
+    },
   },
   termsPolicy: {
-    termsTitle: 'Terms and policy',
-    terms:
-      [
-        "A user's personal information is stored only after he or she creates an account",
-        "Data related to the CV is stored for the purpose of re-use by the same user",
-        "Any data related to a user who has not logged into his account will not be stored",
-        "Personal data such as e-mail is only for the purpose of verifying the user’s identity, such as verification during the login process or verification when requesting a new password. It will not be used for any other purpose and will not be used for advertising and marketing purposes.",
-        "Information related to the CV, including personal photos, is kept for the purpose of serving the user and enabling him to print his CV that he had previously created, amend it, and print the modified version for free at any time, and it will not be published, tampered with, or viewed by any other party. For any other purpose.",
-        "If the user deletes any previously created CV file, the data related to the deleted file will be deleted from the database immediately, and a copy of this data will never be kept.",
-        "General data is stored in the browser's local cache for the purpose of user experience, such as data related to choosing the user's preferred language",
-        "The data used to create the CV is stored in the browser’s local memory for the purpose of quality use, such as using the data entered by the user last time in order to facilitate the process of modifying and completing the creation of his CV.",
-        "Resume data will not be stored if the user does not log in, and he will not have the ability to reprint or edit for free",
-        "After logging in, the user has the right to reprint or modify his previously created CV at any time and more than once for free.",
-        "The data entered by the user for the purpose of creating a CV is data that belongs to the user only. We do not restrict, monitor, or track it, and the user bears full responsibility for writing it on his CV.",
-        "The process of paying and receiving money takes place through a reliable financial party. We do not have the right to retain or even view any financial data related to the user for any reason whatsoever.",
-        "If the design you obtained does not match the design you chose, or there is a problem with the format, or the data is not clear due to a technical malfunction, you can contact us to review the error.",
-        "Information regarding the payment process will be stored for a temporary period after which it will be deleted",
-        "If we decide to close the site, each subscriber will be notified so that he can print his files if he wishes",
-        "Prices are subject to change and free services are for limited periods"
-
-      ],
-    close: 'Close'
+    termsTitle: "Terms and policy",
+    terms: [
+      "A user's personal information is stored only after he or she creates an account",
+      "Data related to the CV is stored for the purpose of re-use by the same user",
+      "Any data related to a user who has not logged into his account will not be stored",
+      "Personal data such as e-mail is only for the purpose of verifying the user’s identity, such as verification during the login process or verification when requesting a new password. It will not be used for any other purpose and will not be used for advertising and marketing purposes.",
+      "Information related to the CV, including personal photos, is kept for the purpose of serving the user and enabling him to print his CV that he had previously created, amend it, and print the modified version for free at any time, and it will not be published, tampered with, or viewed by any other party. For any other purpose.",
+      "If the user deletes any previously created CV file, the data related to the deleted file will be deleted from the database immediately, and a copy of this data will never be kept.",
+      "General data is stored in the browser's local cache for the purpose of user experience, such as data related to choosing the user's preferred language",
+      "The data used to create the CV is stored in the browser’s local memory for the purpose of quality use, such as using the data entered by the user last time in order to facilitate the process of modifying and completing the creation of his CV.",
+      "Resume data will not be stored if the user does not log in, and he will not have the ability to reprint or edit for free",
+      "After logging in, the user has the right to reprint or modify his previously created CV at any time and more than once for free.",
+      "The data entered by the user for the purpose of creating a CV is data that belongs to the user only. We do not restrict, monitor, or track it, and the user bears full responsibility for writing it on his CV.",
+      "The process of paying and receiving money takes place through a reliable financial party. We do not have the right to retain or even view any financial data related to the user for any reason whatsoever.",
+      "If the design you obtained does not match the design you chose, or there is a problem with the format, or the data is not clear due to a technical malfunction, you can contact us to review the error.",
+      "Information regarding the payment process will be stored for a temporary period after which it will be deleted",
+      "If we decide to close the site, each subscriber will be notified so that he can print his files if he wishes",
+      "Prices are subject to change and free services are for limited periods",
+    ],
+    close: "Close",
   },
   donePayment: {
     downloading: "Downloading..",
@@ -336,18 +336,20 @@ const english = {
   profile: {
     helloCustomer: "Hello ",
     addFrameBtn: "add new cv file",
-    deleteBtn: 'delete account',
-    deleting: 'deleting...'
+    deleteBtn: "delete account",
+    deleting: "deleting...",
   },
 };
 const arabic = {
   attentionsTerms: {
-    mainHeader: 'بقبولك هذا فإنك توافق على شروطنا وسياستنا',
-    firstTerm: '1. أنت توافق على تخزين المعلومات المتعلقة بسيرتك الذاتية، بما في ذلك الصور في وحدة تخزين جهازك وحذفها تلقائيًا بعد إكمال سيرتك الذاتية ',
-    firstTermNecessary: ' (ضرورية لإكمال خدمة إنشاء السيرة الذاتية).',
-    sec2Term: ' 2. انت توافق على تخزين المعلومات المتعلقة بسيرتك الذاتية بشكل دائم مما يتيح لك الإستمرار في إنشاء سيرتك الذاتية في أي وقت',
-    notAcceptBtn: 'لا أوافق',
-    acceptBtn: 'أوافق',
+    mainHeader: "بقبولك هذا فإنك توافق على شروطنا وسياستنا",
+    firstTerm:
+      "1. أنت توافق على تخزين المعلومات المتعلقة بسيرتك الذاتية، بما في ذلك الصور في وحدة تخزين جهازك وحذفها تلقائيًا بعد إكمال سيرتك الذاتية ",
+    firstTermNecessary: " (ضرورية لإكمال خدمة إنشاء السيرة الذاتية).",
+    sec2Term:
+      " 2. انت توافق على تخزين المعلومات المتعلقة بسيرتك الذاتية بشكل دائم مما يتيح لك الإستمرار في إنشاء سيرتك الذاتية في أي وقت",
+    notAcceptBtn: "لا أوافق",
+    acceptBtn: "أوافق",
   },
   section1: {
     nav: {
@@ -362,7 +364,7 @@ const arabic = {
     nowBtn: "الآن",
     ready4u: "أكثر من 20 نموذجًا للسيرة الذاتية مصممة بشكل إبداعي جاهزة لك",
     langWarning: "اللغة التي يتم إختيارها ستستخدم لإنشاء ملف السيرة الذاتية",
-    times5free: "تهانينا ! يمكنك الآن إنشاء 5 قوالب سيرة ذاتية مجاناً"
+    times5free: "تهانينا ! يمكنك الآن إنشاء 5 قوالب سيرة ذاتية مجاناً",
   },
   section2: {
     showMoreBtn: "رؤية المزيـد",
@@ -452,7 +454,7 @@ const arabic = {
         paymentForm: {
           spanFree: "يمكنك تعديل البيانات مجاناً بعد تسجل الدخول",
           continueAnchor: " إتمام العملية مقابل",
-          price: '$3.75'
+          price: "$3.75",
         },
       },
       frame: {
@@ -627,47 +629,44 @@ const arabic = {
   },
   section4: {
     termsPolicy: {
-      title: 'الشروط والسـياسة',
-      userPrivacy: 'خصوصية المستخدم',
-      conditions: 'تخزين واسترجاع البيانات',
-      termsConditions: 'الشروط والأحكام',
-      readMore: 'إقرأ المزيد'
-    }
-    ,
+      title: "الشروط والسـياسة",
+      userPrivacy: "خصوصية المستخدم",
+      conditions: "تخزين واسترجاع البيانات",
+      termsConditions: "الشروط والأحكام",
+      readMore: "إقرأ المزيد",
+    },
     contacts: {
-      title: 'تواصل معنا'
+      title: "تواصل معنا",
     },
     services: {
-      title: 'خدمات',
-      makeAsome: 'إنشاء سيرة ذاتية',
-      allTimeFreeEdit: 'التعديل مجانا في اي وقت',
-      freeCreateAccount: 'إنشاء حساب مجاني',
-      freePrint: 'طباعة ملف السيرة الذاتية مجانًا طوال الوقت'
-    }
-
+      title: "خدمات",
+      makeAsome: "إنشاء سيرة ذاتية",
+      allTimeFreeEdit: "التعديل مجانا في اي وقت",
+      freeCreateAccount: "إنشاء حساب مجاني",
+      freePrint: "طباعة ملف السيرة الذاتية مجانًا طوال الوقت",
+    },
   },
   termsPolicy: {
-    termsTitle: 'الشروط و الأحكام',
-    terms:
-      [
-        "يتم تخزين معلومات المستخدم الشخصية بعد أن يقوم بإنشاء حساب فقط",
-        "البيانات المتعلقة بالسيرة الذاتية يتم تخزينها لغرض إعادة استخدامها مجددا من قبل المستخدم نفسه",
-        "لن يتم تخزين اي بيانات متعلقة بمستخدم لم يقم بتسجيل الدخول إلى حسابه",
-        "البيانات الشخصية مثل البريد الإلكتروني هي فقط لغرض التحقق من هوية المستخدم مثل التحقق اثناء عملية الدخول او التحقق عند طلب كلمة سر جديدة لن يتم استخدامها لأي غرض اخر ولن يتم نشرها مطلقا و لن يتم استخدامها لأغراض الاعلان وما شابه",
-        "المعلومات المتعلقة بالسيرة الذاتية بما في ذلك الصور الشخصية يتم الإحتفاظ بها بغرض خدمة المستخدم و ان يتمكن من طباعة سيرته الذاتية التي قام بإنشائها مسبقا وان يقوم بالتعديل عليها وطباعة النسخة المعدلة مجانا في اي وقت ولن يتم نشرها او العبث بها او الإطلاع عليها من اي جهة أخرى لأي غرض آخر",
-        "ان قام المستخدم بحذف اي ملف سيرة ذاتية منشأ مسبقا سيتم حذف البيانات المتعلقة بالملف المحذوف من قاعدة البيانات مباشرة ولن يتم الإحتفاظ بنسخة من هذه البيانات مطلقا",
-        "يتم تخزين بيانات عامة على ذاكرة تخزين المتصفح المحلية بغرض جودة الاستخدام مثل البيانات المتعلقة بإختيار لغة المستخدم المفضلة",
-        " يتم تخزين البيانات المستخدمة لإنشاء السيرة الذاتية في ذاكرة المتصفح  المحلية لغرض جودة الإستخدام مثل استخدام البيانات التي تم إدخالها من المستخدم في آخر مرة حتى تسهل عليه عملية التعديل و إتمام انشاء سيرته الذاتية.",
-        "لن يتم تخزين بيانات سيرة ذاتية في حال لم يقم المستخدم بتسجيل الدخول ولن يحصل على خاصية إعادة الطباعة او التعديل مجاناً",
-        "يحق للمستخدم بعد تسجيل الدخول إعادة طباعة سيرته الذاتية التي تم إنشائها مسبقا او التعديل عليها في اي وقت ولأكثر من مرة واحدة مجانا",
-        "البيانات المدخلة من المستخدم بغرض إنشاء سيرة ذاتية هي بيانات تخص المستخدم فقط لا نقوم بتقيدها او مراقبتها او تتبعها ويتحمل المستخدم المسؤلية الكاملة بخصوص كتابتها على سيرته الذاتية",
-        "عملية الدفع واستلام النقود تتم من خلال جهة مالية موثوقة لا نمتلك أحقية الاحتفاظ او حتى الإتطلاع على اي بيانات مالية متعلقة بالمستخدم لأي سبب كان",
-        "في حال عدم تطابق التصميم الذي تحصلت عليه مع التصميم الذي قمت  بإختياره او وجود مشكلة بالتنسيق او عدم وضوح البيانات بسبب حدوث عطل فني يمكنك التواصل معنا لمراجعة الخطأ",
-        "سيتم تخزين معلومات بخصوص عملية الدفع لفترة مؤقتة بعدها سوف تحذف",
-        "في حال قررنا إغلاق الموقع سيتم إبلاغ كل مشترك ليتمكن من طباعة ملفاته في حال كان يرغب في ذلك",
-        "الأسعار قابلة للتغير و الخدمات المجانية تكون لفترات محدودة"
-      ],
-    close: 'خروج'
+    termsTitle: "الشروط و الأحكام",
+    terms: [
+      "يتم تخزين معلومات المستخدم الشخصية بعد أن يقوم بإنشاء حساب فقط",
+      "البيانات المتعلقة بالسيرة الذاتية يتم تخزينها لغرض إعادة استخدامها مجددا من قبل المستخدم نفسه",
+      "لن يتم تخزين اي بيانات متعلقة بمستخدم لم يقم بتسجيل الدخول إلى حسابه",
+      "البيانات الشخصية مثل البريد الإلكتروني هي فقط لغرض التحقق من هوية المستخدم مثل التحقق اثناء عملية الدخول او التحقق عند طلب كلمة سر جديدة لن يتم استخدامها لأي غرض اخر ولن يتم نشرها مطلقا و لن يتم استخدامها لأغراض الاعلان وما شابه",
+      "المعلومات المتعلقة بالسيرة الذاتية بما في ذلك الصور الشخصية يتم الإحتفاظ بها بغرض خدمة المستخدم و ان يتمكن من طباعة سيرته الذاتية التي قام بإنشائها مسبقا وان يقوم بالتعديل عليها وطباعة النسخة المعدلة مجانا في اي وقت ولن يتم نشرها او العبث بها او الإطلاع عليها من اي جهة أخرى لأي غرض آخر",
+      "ان قام المستخدم بحذف اي ملف سيرة ذاتية منشأ مسبقا سيتم حذف البيانات المتعلقة بالملف المحذوف من قاعدة البيانات مباشرة ولن يتم الإحتفاظ بنسخة من هذه البيانات مطلقا",
+      "يتم تخزين بيانات عامة على ذاكرة تخزين المتصفح المحلية بغرض جودة الاستخدام مثل البيانات المتعلقة بإختيار لغة المستخدم المفضلة",
+      " يتم تخزين البيانات المستخدمة لإنشاء السيرة الذاتية في ذاكرة المتصفح  المحلية لغرض جودة الإستخدام مثل استخدام البيانات التي تم إدخالها من المستخدم في آخر مرة حتى تسهل عليه عملية التعديل و إتمام انشاء سيرته الذاتية.",
+      "لن يتم تخزين بيانات سيرة ذاتية في حال لم يقم المستخدم بتسجيل الدخول ولن يحصل على خاصية إعادة الطباعة او التعديل مجاناً",
+      "يحق للمستخدم بعد تسجيل الدخول إعادة طباعة سيرته الذاتية التي تم إنشائها مسبقا او التعديل عليها في اي وقت ولأكثر من مرة واحدة مجانا",
+      "البيانات المدخلة من المستخدم بغرض إنشاء سيرة ذاتية هي بيانات تخص المستخدم فقط لا نقوم بتقيدها او مراقبتها او تتبعها ويتحمل المستخدم المسؤلية الكاملة بخصوص كتابتها على سيرته الذاتية",
+      "عملية الدفع واستلام النقود تتم من خلال جهة مالية موثوقة لا نمتلك أحقية الاحتفاظ او حتى الإتطلاع على اي بيانات مالية متعلقة بالمستخدم لأي سبب كان",
+      "في حال عدم تطابق التصميم الذي تحصلت عليه مع التصميم الذي قمت  بإختياره او وجود مشكلة بالتنسيق او عدم وضوح البيانات بسبب حدوث عطل فني يمكنك التواصل معنا لمراجعة الخطأ",
+      "سيتم تخزين معلومات بخصوص عملية الدفع لفترة مؤقتة بعدها سوف تحذف",
+      "في حال قررنا إغلاق الموقع سيتم إبلاغ كل مشترك ليتمكن من طباعة ملفاته في حال كان يرغب في ذلك",
+      "الأسعار قابلة للتغير و الخدمات المجانية تكون لفترات محدودة",
+    ],
+    close: "خروج",
   },
   donePayment: {
     downloading: "جاري التنزيل",
@@ -676,18 +675,20 @@ const arabic = {
   profile: {
     helloCustomer: " مرحباً ",
     addFrameBtn: "إنشاء سيرة ذاتية جديدة",
-    deleteBtn: 'حذف الحساب',
-    deleting: 'جاري حذف الحساب...'
+    deleteBtn: "حذف الحساب",
+    deleting: "جاري حذف الحساب...",
   },
 };
 const china = {
   attentionsTerms: {
-    mainHeader: '接受这一点即表示您同意我们的条款和政策。',
-    firstTerm: '1. 您同意将您的简历相关信​​息（包括图片）存储在您设备的存储单元中，并在您完成简历后自动删除它们',
-    firstTermNecessary: '（完成简历制作服务所必需的）',
-    sec2Term: '您同意永久存储与您的简历相关的信息，以便您可以随时继续创建您的简历',
-    notAcceptBtn: '不接受',
-    acceptBtn: '接受'
+    mainHeader: "接受这一点即表示您同意我们的条款和政策。",
+    firstTerm:
+      "1. 您同意将您的简历相关信​​息（包括图片）存储在您设备的存储单元中，并在您完成简历后自动删除它们",
+    firstTermNecessary: "（完成简历制作服务所必需的）",
+    sec2Term:
+      "您同意永久存储与您的简历相关的信息，以便您可以随时继续创建您的简历",
+    notAcceptBtn: "不接受",
+    acceptBtn: "接受",
   },
   section1: {
     nav: {
@@ -701,8 +702,8 @@ const china = {
     yourCV: "定制简历",
     nowBtn: "现在",
     ready4u: "20多个创意设计的简历模板为您准备好了",
-    langWarning: '所选语言将用于创建 CV 文件',
-    times5free: "恭喜！您可以免费制作5份简历模板"
+    langWarning: "所选语言将用于创建 CV 文件",
+    times5free: "恭喜！您可以免费制作5份简历模板",
   },
   section2: {
     showMoreBtn: "显示更多",
@@ -789,7 +790,7 @@ const china = {
         paymentForm: {
           spanFree: "登录后您可以随时免费编辑您的简历。",
           continueAnchor: "继续",
-          price: '$3.75'
+          price: "$3.75",
         },
       },
       frame: {
@@ -849,8 +850,7 @@ const china = {
               from: { month: "六月", year: "2013" },
               to: { month: "六月", year: "2016" },
             },
-            thesis:
-              "",
+            thesis: "",
             photo: {},
             eduDiscreption: `软件问题会适应计划更改或在必要时快速学习新工具。近年来我的工作重点是开发网站、移动应用程序和桌面应用程序`,
           },
@@ -962,45 +962,44 @@ const china = {
   },
   section4: {
     termsPolicy: {
-      title: '条款与政策',
-      userPrivacy: '用户隐私',
-      conditions: '存储和检索数据',
-      termsConditions: '条款和条件',
-      readMore: '阅读更多'
+      title: "条款与政策",
+      userPrivacy: "用户隐私",
+      conditions: "存储和检索数据",
+      termsConditions: "条款和条件",
+      readMore: "阅读更多",
     },
     contacts: {
-      title: '联系我们'
+      title: "联系我们",
     },
     services: {
-      title: '服务',
-      makeAsome: '创建简历文件',
-      allTimeFreeEdit: '全程免费编辑',
-      freeCreateAccount: '免费创建帐户',
-      freePrint: '随时免费打印简历文件'
-    }
+      title: "服务",
+      makeAsome: "创建简历文件",
+      allTimeFreeEdit: "全程免费编辑",
+      freeCreateAccount: "免费创建帐户",
+      freePrint: "随时免费打印简历文件",
+    },
   },
   termsPolicy: {
-    termsTitle: '条款和政策',
-    terms:
-      ["用户的个人信息仅在他或她创建帐户后才会被存储",
-        "存储与简历相关的数据供同一用户重复使用",
-        "与未登录其帐户的用户相关的任何数据都不会被存储",
-        "电子邮件等个人数据仅用于验证用户身份的目的，例如登录过程中的验证或请求新密码时的验证。它不会用于任何其他目的，也不会用于广告和营销目的。",
-        "保留与简历相关的信息，包括个人照片，是为了服务用户，以便用户可以随时免费打印、修改和打印修改后的简历，并且不会被任何其他方发布、篡改或查看。出于任何其他目的。",
-        "如果用户删除任何先前创建的 CV 文件，则与已删除文件相关的数据将立即从数据库中删除，并且永远不会保留该数据的副本。",
-        "一般数据出于用户体验的目的而存储在浏览器的本地缓存中，例如与选择用户首选语言相关的数据",
-        "用于创建简历的数据存储在浏览器的本地内存中，目的是为了高质量使用，例如使用用户上次输入的数据，以便于修改和完成其简历的创建过程。",
-        "如果用户未登录，简历数据将不会被存储，并且无法免费转载或编辑",
-        "登录后，用户有权随时、多次免费重新打印或修改自己之前创建的简历。",
-        "用户为创建简历而输入的数据仅属于该用户。我们不限制、监控或跟踪它，用户对将其写入简历承担全部责任。",
-        "付款和收款过程是通过可靠的金融机构进行的。我们无权以任何理由保留甚至查看与用户相关的任何财务数据。",
-        "如果您获得的设计与您选择的设计不符，或者格式有问题，或者由于技术故障导致数据不清楚，您可以联系我们查看错误。",
-        "有关付款流程的信息将被暂时存储一段时间，之后将被删除",
-        "如果我们决定关闭该网站，每个订阅者都会收到通知，以便他可以根据需要打印他的文件",
-        "价格可能会发生变化，并且免费服务是有期限的"
-
-      ],
-    close: '关闭'
+    termsTitle: "条款和政策",
+    terms: [
+      "用户的个人信息仅在他或她创建帐户后才会被存储",
+      "存储与简历相关的数据供同一用户重复使用",
+      "与未登录其帐户的用户相关的任何数据都不会被存储",
+      "电子邮件等个人数据仅用于验证用户身份的目的，例如登录过程中的验证或请求新密码时的验证。它不会用于任何其他目的，也不会用于广告和营销目的。",
+      "保留与简历相关的信息，包括个人照片，是为了服务用户，以便用户可以随时免费打印、修改和打印修改后的简历，并且不会被任何其他方发布、篡改或查看。出于任何其他目的。",
+      "如果用户删除任何先前创建的 CV 文件，则与已删除文件相关的数据将立即从数据库中删除，并且永远不会保留该数据的副本。",
+      "一般数据出于用户体验的目的而存储在浏览器的本地缓存中，例如与选择用户首选语言相关的数据",
+      "用于创建简历的数据存储在浏览器的本地内存中，目的是为了高质量使用，例如使用用户上次输入的数据，以便于修改和完成其简历的创建过程。",
+      "如果用户未登录，简历数据将不会被存储，并且无法免费转载或编辑",
+      "登录后，用户有权随时、多次免费重新打印或修改自己之前创建的简历。",
+      "用户为创建简历而输入的数据仅属于该用户。我们不限制、监控或跟踪它，用户对将其写入简历承担全部责任。",
+      "付款和收款过程是通过可靠的金融机构进行的。我们无权以任何理由保留甚至查看与用户相关的任何财务数据。",
+      "如果您获得的设计与您选择的设计不符，或者格式有问题，或者由于技术故障导致数据不清楚，您可以联系我们查看错误。",
+      "有关付款流程的信息将被暂时存储一段时间，之后将被删除",
+      "如果我们决定关闭该网站，每个订阅者都会收到通知，以便他可以根据需要打印他的文件",
+      "价格可能会发生变化，并且免费服务是有期限的",
+    ],
+    close: "关闭",
   },
   donePayment: {
     downloading: "正在下载..",
@@ -1009,18 +1008,22 @@ const china = {
   profile: {
     helloCustomer: "你好 ",
     addFrameBtn: "添加新的简历文件",
-    deleteBtn: '删除帐户',
-    deleting: '删除...'
+    deleteBtn: "删除帐户",
+    deleting: "删除...",
   },
 };
 const france = {
   attentionsTerms: {
-    mainHeader: 'en acceptant ceci, vous acceptez nos conditions et notre politique.',
-    firstTerm: "1. Vous autorisez le stockage des informations relatives à votre CV, y compris les images dans l'unité de stockage de votre appareil, et vous les supprimez automatiquement une fois votre CV terminé.",
-    firstTermNecessary: '(Nécessaire pour compléter le service de création de CV)',
-    sec2Term: '2. Vous acceptez que les informations relatives à votre CV soient stockées de manière permanente, ce qui vous permet de continuer à créer votre CV à tout moment',
-    notAcceptBtn: 'Ne pas accepter',
-    acceptBtn: 'Accepter'
+    mainHeader:
+      "en acceptant ceci, vous acceptez nos conditions et notre politique.",
+    firstTerm:
+      "1. Vous autorisez le stockage des informations relatives à votre CV, y compris les images dans l'unité de stockage de votre appareil, et vous les supprimez automatiquement une fois votre CV terminé.",
+    firstTermNecessary:
+      "(Nécessaire pour compléter le service de création de CV)",
+    sec2Term:
+      "2. Vous acceptez que les informations relatives à votre CV soient stockées de manière permanente, ce qui vous permet de continuer à créer votre CV à tout moment",
+    notAcceptBtn: "Ne pas accepter",
+    acceptBtn: "Accepter",
   },
   section1: {
     nav: {
@@ -1033,14 +1036,16 @@ const france = {
     makeYourTxt: "Faites votre",
     yourCV: "CV personnalisé",
     nowBtn: "Maintenant",
-    ready4u: "Plus de 20 modèles de CV conçus de manière créative et prêts pour vous",
+    ready4u:
+      "Plus de 20 modèles de CV conçus de manière créative et prêts pour vous",
     langWarning: "La langue choisie sera utilisée pour créer le fichier CV",
-    times5free: "Félicitations ! Vous pouvez créer 5 modèles de CV GRATUITEMENT"
-
+    times5free:
+      "Félicitations ! Vous pouvez créer 5 modèles de CV GRATUITEMENT",
   },
   section2: {
     showMoreBtn: "Afficher plus",
-    allDesATSchecked: "Toutes les conceptions ont été testées sur le système ATS",
+    allDesATSchecked:
+      "Toutes les conceptions ont été testées sur le système ATS",
     getCvInfo: {
       forms: {
         form1: {
@@ -1098,7 +1103,10 @@ const france = {
           ifNotSave: "sinon, appuyez simplement sur Enregistrer",
         },
         addWorkForm: {
-          jobTitle: { lbl: "Titre d'emploi", holder: "p.ex. représentant commercial" },
+          jobTitle: {
+            lbl: "Titre d'emploi",
+            holder: "p.ex. représentant commercial",
+          },
           empName: { lbl: "Nom de l'employeur", holder: "Nom de l'entreprise" },
           address: { lbl: "Nom de l'entreprise", holder: "ville/village" },
           date: { lbl: "Date de travail", from: "depuis", to: "à" },
@@ -1121,9 +1129,10 @@ const france = {
         btnGoNextLbl: "Aller au suivant",
         btnFinish: "Enregistrer et terminer",
         paymentForm: {
-          spanFree: "vous pouvez modifier votre CV GRATUITEMENT à tout moment après vous être connecté.",
+          spanFree:
+            "vous pouvez modifier votre CV GRATUITEMENT à tout moment après vous être connecté.",
           continueAnchor: "continuer avec ",
-          price: '$3.75'
+          price: "$3.75",
         },
       },
       frame: {
@@ -1140,7 +1149,8 @@ const france = {
         country: "pays",
         fullName: "Nom et prénom",
         jobTitle: "Titre d'emploi",
-        intro: "mentionnez vos objectifs et ce que vous recherchez, parlez également de vos réalisations et de vos ambitions",
+        intro:
+          "mentionnez vos objectifs et ce que vous recherchez, parlez également de vos réalisations et de vos ambitions",
         nationality: "Nationalité",
         placeBirth: "Lieu de naissance",
         birthDate: "Date de naissance",
@@ -1174,9 +1184,11 @@ const france = {
           gender: "Mâle",
           relationship: "Célibataire",
           jobTitle: "Technicien en technologies de l'information",
-          introParagraph: "J'ai acquis la compétence de travailler sur des projets logiciels (travail de groupe et individuel). Je peux gérer les erreurs et les problèmes logiciels, m'adapter aux changements de plan ou apprendre rapidement un nouvel outil si nécessaire. Ces dernières années, j'ai concentré mon travail sur le développement de sites Web, d'applications mobiles et d'applications de bureau (fullstack). J'ai du travail que vous pouvez consulter.",
+          introParagraph:
+            "J'ai acquis la compétence de travailler sur des projets logiciels (travail de groupe et individuel). Je peux gérer les erreurs et les problèmes logiciels, m'adapter aux changements de plan ou apprendre rapidement un nouvel outil si nécessaire. Ces dernières années, j'ai concentré mon travail sur le développement de sites Web, d'applications mobiles et d'applications de bureau (fullstack). J'ai du travail que vous pouvez consulter.",
           eduForm: {
-            eduDegree: "Baccalauréat (avec distinction) en technologies de l'information ",
+            eduDegree:
+              "Baccalauréat (avec distinction) en technologies de l'information ",
             uniName: "Université des sciences et technologies du Nil Bleu",
             cerLevel: ".",
             yearsStudy: {
@@ -1186,7 +1198,8 @@ const france = {
             thesis:
               "génération de la langue des signes à l'aide de la technologie d'apprentissage automatique.",
             photo: {},
-            eduDiscreption: "et les problèmes de logiciels s'adaptent aux changements de plan ou apprennent rapidement un nouvel outil si nécessaire. Ces dernières années, j'ai concentré mon travail sur le développement de sites Web, d'applications mobiles et d'applications de bureau",
+            eduDiscreption:
+              "et les problèmes de logiciels s'adaptent aux changements de plan ou apprennent rapidement un nouvel outil si nécessaire. Ces dernières années, j'ai concentré mon travail sur le développement de sites Web, d'applications mobiles et d'applications de bureau",
           },
           skillsForm: {
             princ: { name: "JavaScript" },
@@ -1296,44 +1309,43 @@ const france = {
   },
   section4: {
     termsPolicy: {
-      title: 'Conditions et politique',
-      userPrivacy: 'Confidentialité des utilisateurs',
-      conditions: 'Stockage et récupération de données',
-      termsConditions: 'Termes et conditions',
-      readMore: 'En savoir plus'
+      title: "Conditions et politique",
+      userPrivacy: "Confidentialité des utilisateurs",
+      conditions: "Stockage et récupération de données",
+      termsConditions: "Termes et conditions",
+      readMore: "En savoir plus",
     },
     contacts: {
-      title: 'Contactez-nous'
+      title: "Contactez-nous",
     },
     services: {
-      title: 'Services',
-      makeAsome: 'Créer un fichier CV',
-      allTimeFreeEdit: 'Modification gratuite à tout moment',
-      freeCreateAccount: 'Créer un compte gratuitement',
-      freePrint: 'Fichier CV imprimé gratuit à tout moment'
-    }
+      title: "Services",
+      makeAsome: "Créer un fichier CV",
+      allTimeFreeEdit: "Modification gratuite à tout moment",
+      freeCreateAccount: "Créer un compte gratuitement",
+      freePrint: "Fichier CV imprimé gratuit à tout moment",
+    },
   },
   termsPolicy: {
-    termsTitle: 'Conditions et politique',
-    terms:
-      [
-        "Les informations personnelles d'un utilisateur ne sont stockées qu'après la création d'un compte.",
-        "Les données liées au CV sont conservées dans le but d'être réutilisées par le même utilisateur",
-        "Aucune donnée relative à un utilisateur qui ne s'est pas connecté à son compte ne sera stockée",
-        "Les données personnelles telles que l’e-mail sont uniquement destinées à vérifier l’identité de l’utilisateur, comme la vérification lors du processus de connexion ou la vérification lors de la demande d’un nouveau mot de passe. Il ne sera utilisé à aucune autre fin et ne sera pas utilisé à des fins publicitaires et marketing.",
-        "Les informations relatives au CV, y compris les photos personnelles, sont conservées dans le but de servir l'utilisateur et de lui permettre d'imprimer son CV qu'il avait préalablement créé, de le modifier et d'imprimer gratuitement à tout moment la version modifiée, et elles ne seront pas être publié, falsifié ou consulté par toute autre partie. Pour tout autre but.",
-        "Si l'utilisateur supprime un fichier CV précédemment créé, les données liées au fichier supprimé seront immédiatement supprimées de la base de données et une copie de ces données ne sera jamais conservée.",
-        "Les données générales sont stockées dans le cache local du navigateur à des fins d'expérience utilisateur, telles que les données liées au choix de la langue préférée de l'utilisateur.",
-        "Les données utilisées pour créer le CV sont stockées dans la mémoire locale du navigateur dans un but d'utilisation de qualité, comme par exemple l'utilisation des données saisies la dernière fois par l'utilisateur afin de faciliter le processus de modification et de finalisation de la création de son CV.",
-        "Les données de reprise ne seront pas stockées si l'utilisateur ne se connecte pas et il n'aura pas la possibilité de réimprimer ou de modifier gratuitement",
-        "Après s'être connecté, l'utilisateur a le droit de réimprimer ou de modifier à tout moment et plusieurs fois gratuitement son CV précédemment créé.",
-        "Les données saisies par l'utilisateur dans le but de créer un CV sont des données qui appartiennent uniquement à l'utilisateur. Nous ne le limitons pas, ne le surveillons pas et ne le suivons pas, et l'utilisateur assume l'entière responsabilité de l'écrire sur son CV.",
-        "Le processus de paiement et de réception d’argent s’effectue par l’intermédiaire d’un organisme financier fiable. Nous n'avons pas le droit de conserver ni même de consulter les données financières relatives à l'utilisateur pour quelque raison que ce soit.",
-        "Les informations concernant le processus de paiement seront stockées pendant une période temporaire, après quoi elles seront supprimées.",
-        "Si nous décidons de fermer le site, chaque abonné en sera informé afin qu'il puisse imprimer ses fichiers s'il le souhaite",
-        "Les prix sont sujets à changement et les services gratuits sont pour des périodes limitées"
-      ],
-    close: 'Fermer'
+    termsTitle: "Conditions et politique",
+    terms: [
+      "Les informations personnelles d'un utilisateur ne sont stockées qu'après la création d'un compte.",
+      "Les données liées au CV sont conservées dans le but d'être réutilisées par le même utilisateur",
+      "Aucune donnée relative à un utilisateur qui ne s'est pas connecté à son compte ne sera stockée",
+      "Les données personnelles telles que l’e-mail sont uniquement destinées à vérifier l’identité de l’utilisateur, comme la vérification lors du processus de connexion ou la vérification lors de la demande d’un nouveau mot de passe. Il ne sera utilisé à aucune autre fin et ne sera pas utilisé à des fins publicitaires et marketing.",
+      "Les informations relatives au CV, y compris les photos personnelles, sont conservées dans le but de servir l'utilisateur et de lui permettre d'imprimer son CV qu'il avait préalablement créé, de le modifier et d'imprimer gratuitement à tout moment la version modifiée, et elles ne seront pas être publié, falsifié ou consulté par toute autre partie. Pour tout autre but.",
+      "Si l'utilisateur supprime un fichier CV précédemment créé, les données liées au fichier supprimé seront immédiatement supprimées de la base de données et une copie de ces données ne sera jamais conservée.",
+      "Les données générales sont stockées dans le cache local du navigateur à des fins d'expérience utilisateur, telles que les données liées au choix de la langue préférée de l'utilisateur.",
+      "Les données utilisées pour créer le CV sont stockées dans la mémoire locale du navigateur dans un but d'utilisation de qualité, comme par exemple l'utilisation des données saisies la dernière fois par l'utilisateur afin de faciliter le processus de modification et de finalisation de la création de son CV.",
+      "Les données de reprise ne seront pas stockées si l'utilisateur ne se connecte pas et il n'aura pas la possibilité de réimprimer ou de modifier gratuitement",
+      "Après s'être connecté, l'utilisateur a le droit de réimprimer ou de modifier à tout moment et plusieurs fois gratuitement son CV précédemment créé.",
+      "Les données saisies par l'utilisateur dans le but de créer un CV sont des données qui appartiennent uniquement à l'utilisateur. Nous ne le limitons pas, ne le surveillons pas et ne le suivons pas, et l'utilisateur assume l'entière responsabilité de l'écrire sur son CV.",
+      "Le processus de paiement et de réception d’argent s’effectue par l’intermédiaire d’un organisme financier fiable. Nous n'avons pas le droit de conserver ni même de consulter les données financières relatives à l'utilisateur pour quelque raison que ce soit.",
+      "Les informations concernant le processus de paiement seront stockées pendant une période temporaire, après quoi elles seront supprimées.",
+      "Si nous décidons de fermer le site, chaque abonné en sera informé afin qu'il puisse imprimer ses fichiers s'il le souhaite",
+      "Les prix sont sujets à changement et les services gratuits sont pour des périodes limitées",
+    ],
+    close: "Fermer",
   },
   donePayment: {
     downloading: "Téléchargement..",
@@ -1342,18 +1354,22 @@ const france = {
   profile: {
     helloCustomer: "Bonjour ",
     addFrameBtn: "ajouter un nouveau fichier CV",
-    deleteBtn: 'supprimer le compte',
-    deleting: 'suppression...'
+    deleteBtn: "supprimer le compte",
+    deleting: "suppression...",
   },
 };
 const italy = {
   attentionsTerms: {
-    mainHeader: 'accettando questo accetti i nostri termini e la nostra politica.',
-    firstTerm: "1. Acconsenti all'archiviazione delle informazioni relative al tuo CV, comprese le immagini, nell'unità di archiviazione del tuo dispositivo e all'eliminazione automatica delle stesse dopo aver completato il tuo CV",
-    firstTermNecessary: '(Necessario per completare il servizio di creazione CV)',
-    sec2Term: "2. L'accettazione della memorizzazione permanente delle informazioni relative al tuo CV ti consente di continuare a creare il tuo CV in qualsiasi momento",
-    notAcceptBtn: 'Non accettare',
-    acceptBtn: 'Accettare'
+    mainHeader:
+      "accettando questo accetti i nostri termini e la nostra politica.",
+    firstTerm:
+      "1. Acconsenti all'archiviazione delle informazioni relative al tuo CV, comprese le immagini, nell'unità di archiviazione del tuo dispositivo e all'eliminazione automatica delle stesse dopo aver completato il tuo CV",
+    firstTermNecessary:
+      "(Necessario per completare il servizio di creazione CV)",
+    sec2Term:
+      "2. L'accettazione della memorizzazione permanente delle informazioni relative al tuo CV ti consente di continuare a creare il tuo CV in qualsiasi momento",
+    notAcceptBtn: "Non accettare",
+    acceptBtn: "Accettare",
   },
   section1: {
     nav: {
@@ -1368,7 +1384,7 @@ const italy = {
     nowBtn: "Ora",
     ready4u: "Oltre 20 modelli di CV dal design creativo pronti per te",
     langWarning: "La lingua scelta verrà utilizzata per creare il file CV",
-    times5free: "Congratulazioni! Puoi creare 5 modelli di curriculum GRATIS"
+    times5free: "Congratulazioni! Puoi creare 5 modelli di curriculum GRATIS",
   },
   section2: {
     showMoreBtn: "Mostra altro",
@@ -1391,7 +1407,10 @@ const italy = {
           },
         },
         form11: {
-          gender: { lbl: "Genere", holder: { male: "Maschia", female: "Femmina" } },
+          gender: {
+            lbl: "Genere",
+            holder: { male: "Maschia", female: "Femmina" },
+          },
           materialStatus: {
             lbl: "Stato del materiale",
             holder: { single: "Singola", marred: "Rovinato" },
@@ -1400,8 +1419,14 @@ const italy = {
           intro: { lbl: "Introduzione", holder: "Introduzione" },
         },
         form2: {
-          eduDegree: { lbl: "Laurea in Istruzione", holder: "laurea in Istruzione" },
-          schoolName: { lbl: "Nome della scuola", holder: "nome dell'università" },
+          eduDegree: {
+            lbl: "Laurea in Istruzione",
+            holder: "laurea in Istruzione",
+          },
+          schoolName: {
+            lbl: "Nome della scuola",
+            holder: "nome dell'università",
+          },
           yearsStudy: {
             lbl: "Anni di studio",
             holder: { from: "da", to: "a" },
@@ -1430,8 +1455,14 @@ const italy = {
           ifNotSave: "in caso contrario premi semplicemente salva",
         },
         addWorkForm: {
-          jobTitle: { lbl: "Titolo di lavoro", holder: "ad esempio rappresentante di vendita" },
-          empName: { lbl: "Nome del datore di lavoro", holder: "nome dell'azienda" },
+          jobTitle: {
+            lbl: "Titolo di lavoro",
+            holder: "ad esempio rappresentante di vendita",
+          },
+          empName: {
+            lbl: "Nome del datore di lavoro",
+            holder: "nome dell'azienda",
+          },
           address: { lbl: "Indirizzo", holder: "città/paese" },
           date: { lbl: "Data di lavoro", from: "da", to: "a" },
         },
@@ -1453,9 +1484,10 @@ const italy = {
         btnGoNextLbl: "Vai Avanti",
         btnFinish: "Salva e termina",
         paymentForm: {
-          spanFree: "puoi modificare il tuo CV GRATIS in qualsiasi momento dopo aver effettuato l'accesso",
+          spanFree:
+            "puoi modificare il tuo CV GRATIS in qualsiasi momento dopo aver effettuato l'accesso",
           continueAnchor: "continua con ",
-          price: '$3.75'
+          price: "$3.75",
         },
       },
       frame: {
@@ -1507,9 +1539,11 @@ const italy = {
           gender: "Maschia",
           relationship: "Singola",
           jobTitle: "Tecnico informatico",
-          introParagraph: "Ho acquisito la capacità di lavorare su progetti software(lavoro di gruppo e individuale).Sono in grado di gestire errori e problemi software, adattarmi ai cambiamenti di piano o imparare rapidamente un nuovo strumento se necessario.Negli ultimi anni ho concentrato il mio lavoro sullo sviluppo di siti web, applicazioni mobili e applicazioni desktop(fullstack).Ho alcuni lavori che puoi controllare.",
+          introParagraph:
+            "Ho acquisito la capacità di lavorare su progetti software(lavoro di gruppo e individuale).Sono in grado di gestire errori e problemi software, adattarmi ai cambiamenti di piano o imparare rapidamente un nuovo strumento se necessario.Negli ultimi anni ho concentrato il mio lavoro sullo sviluppo di siti web, applicazioni mobili e applicazioni desktop(fullstack).Ho alcuni lavori che puoi controllare.",
           eduForm: {
-            eduDegree: "Laurea triennale (con lode) in tecnologie dell'informazione ",
+            eduDegree:
+              "Laurea triennale (con lode) in tecnologie dell'informazione ",
             uniName: "Università di scienza e tecnologia del Nilo Azzurro",
             cerLevel: ".",
             yearsStudy: {
@@ -1519,7 +1553,8 @@ const italy = {
             thesis:
               "generazione del linguaggio dei segni mediante tecnologia di apprendimento automatico.",
             photo: {},
-            eduDiscreption: "e i problemi software si adattano ai cambiamenti di piano o imparano rapidamente un nuovo strumento se necessario.Negli ultimi anni ho concentrato il mio lavoro sullo sviluppo di siti web, applicazioni mobili e applicazioni desktop",
+            eduDiscreption:
+              "e i problemi software si adattano ai cambiamenti di piano o imparano rapidamente un nuovo strumento se necessario.Negli ultimi anni ho concentrato il mio lavoro sullo sviluppo di siti web, applicazioni mobili e applicazioni desktop",
           },
           skillsForm: {
             princ: { name: "JavaScript" },
@@ -1629,45 +1664,44 @@ const italy = {
   },
   section4: {
     termsPolicy: {
-      title: 'Termini e politica',
+      title: "Termini e politica",
       userPrivacy: "Privacy dell'utente",
-      conditions: 'Memorizzazione e recupero dei dati',
-      termsConditions: 'Termini e Condizioni',
-      readMore: 'Per saperne di più'
+      conditions: "Memorizzazione e recupero dei dati",
+      termsConditions: "Termini e Condizioni",
+      readMore: "Per saperne di più",
     },
     contacts: {
-      title: 'Contattaci'
+      title: "Contattaci",
     },
     services: {
-      title: 'Servizi',
-      makeAsome: 'Crea un file CV',
-      allTimeFreeEdit: 'Modifica gratuita in ogni momento',
-      freeCreateAccount: 'Crea un account gratuitamente',
-      freePrint: 'File CV stampato gratuitamente in qualsiasi momento'
-    }
+      title: "Servizi",
+      makeAsome: "Crea un file CV",
+      allTimeFreeEdit: "Modifica gratuita in ogni momento",
+      freeCreateAccount: "Crea un account gratuitamente",
+      freePrint: "File CV stampato gratuitamente in qualsiasi momento",
+    },
   },
   termsPolicy: {
-    termsTitle: 'Termini e politica',
-    terms:
-      [
-        "Le informazioni personali di un utente vengono memorizzate solo dopo che lui o lei ha creato un account ",
-        "I dati relativi al CV vengono archiviati ai fini del riutilizzo da parte dello stesso utente",
-        "Tutti i dati relativi a un utente che non ha effettuato l'accesso al proprio account non verranno archiviati",
-        "I dati personali come l'e-mail servono solo allo scopo di verificare l'identità dell'utente, come la verifica durante il processo di accesso o la verifica quando si richiede una nuova password. Non verranno utilizzati per nessun altro scopo e non verranno utilizzati per la pubblicità e finalità di marketing.",
-        "Le informazioni relative al CV, comprese le foto personali, vengono conservate allo scopo di servire l'utente e consentirgli di stampare il suo CV precedentemente creato, modificarlo e stampare gratuitamente la versione modificata in qualsiasi momento, e sarà non essere pubblicato, manomesso o visualizzato da terzi per qualsiasi altro scopo.",
-        "Se l'utente elimina qualsiasi file CV creato in precedenza, i dati relativi al file eliminato verranno immediatamente eliminati dal database e una copia di questi dati non verrà mai conservata.",
-        "I dati generali vengono archiviati nella cache locale del browser ai fini dell'esperienza dell'utente, come i dati relativi alla scelta della lingua preferita dell'utente",
-        "I dati utilizzati per creare il CV vengono archiviati nella memoria locale del browser ai fini di un utilizzo di qualità, ad esempio utilizzando i dati inseriti dall'utente l'ultima volta per facilitare il processo di modifica e completamento della creazione del suo CV.",
-        "I dati del curriculum non verranno archiviati se l'utente non effettua l'accesso e non avrà la possibilità di ristamparlo o modificarlo gratuitamente",
-        "Dopo aver effettuato l'accesso, l'utente ha il diritto di ristampare o modificare in qualsiasi momento e più di una volta gratuitamente il proprio CV precedentemente creato.",
-        "I dati inseriti dall'utente allo scopo di creare un CV sono dati che appartengono solo all'utente. Non li limitiamo, non li monitoriamo o non li tracciamo e l'utente si assume la piena responsabilità di scriverli sul suo CV.",
-        "Il processo di pagamento e ricezione di denaro avviene tramite un soggetto finanziario affidabile. Non abbiamo il diritto di conservare o visualizzare alcun dato finanziario relativo all'utente per nessun motivo.",
-        "Se il disegno che hai ottenuto non corrisponde al disegno che hai scelto, o c'è un problema con il formato, o i dati non sono chiari a causa di un malfunzionamento tecnico, puoi contattarci per verificare l'errore.",
-        "Le informazioni relative al processo di pagamento verranno conservate per un periodo temporaneo, dopodiché verranno cancellate",
-        "Se decidiamo di chiudere il sito, ogni iscritto verrà avvisato in modo che possa stampare i suoi file se lo desidera",
-        "I prezzi sono soggetti a modifiche e i servizi gratuiti sono per periodi limitati"
-      ],
-    close: 'Vicina'
+    termsTitle: "Termini e politica",
+    terms: [
+      "Le informazioni personali di un utente vengono memorizzate solo dopo che lui o lei ha creato un account ",
+      "I dati relativi al CV vengono archiviati ai fini del riutilizzo da parte dello stesso utente",
+      "Tutti i dati relativi a un utente che non ha effettuato l'accesso al proprio account non verranno archiviati",
+      "I dati personali come l'e-mail servono solo allo scopo di verificare l'identità dell'utente, come la verifica durante il processo di accesso o la verifica quando si richiede una nuova password. Non verranno utilizzati per nessun altro scopo e non verranno utilizzati per la pubblicità e finalità di marketing.",
+      "Le informazioni relative al CV, comprese le foto personali, vengono conservate allo scopo di servire l'utente e consentirgli di stampare il suo CV precedentemente creato, modificarlo e stampare gratuitamente la versione modificata in qualsiasi momento, e sarà non essere pubblicato, manomesso o visualizzato da terzi per qualsiasi altro scopo.",
+      "Se l'utente elimina qualsiasi file CV creato in precedenza, i dati relativi al file eliminato verranno immediatamente eliminati dal database e una copia di questi dati non verrà mai conservata.",
+      "I dati generali vengono archiviati nella cache locale del browser ai fini dell'esperienza dell'utente, come i dati relativi alla scelta della lingua preferita dell'utente",
+      "I dati utilizzati per creare il CV vengono archiviati nella memoria locale del browser ai fini di un utilizzo di qualità, ad esempio utilizzando i dati inseriti dall'utente l'ultima volta per facilitare il processo di modifica e completamento della creazione del suo CV.",
+      "I dati del curriculum non verranno archiviati se l'utente non effettua l'accesso e non avrà la possibilità di ristamparlo o modificarlo gratuitamente",
+      "Dopo aver effettuato l'accesso, l'utente ha il diritto di ristampare o modificare in qualsiasi momento e più di una volta gratuitamente il proprio CV precedentemente creato.",
+      "I dati inseriti dall'utente allo scopo di creare un CV sono dati che appartengono solo all'utente. Non li limitiamo, non li monitoriamo o non li tracciamo e l'utente si assume la piena responsabilità di scriverli sul suo CV.",
+      "Il processo di pagamento e ricezione di denaro avviene tramite un soggetto finanziario affidabile. Non abbiamo il diritto di conservare o visualizzare alcun dato finanziario relativo all'utente per nessun motivo.",
+      "Se il disegno che hai ottenuto non corrisponde al disegno che hai scelto, o c'è un problema con il formato, o i dati non sono chiari a causa di un malfunzionamento tecnico, puoi contattarci per verificare l'errore.",
+      "Le informazioni relative al processo di pagamento verranno conservate per un periodo temporaneo, dopodiché verranno cancellate",
+      "Se decidiamo di chiudere il sito, ogni iscritto verrà avvisato in modo che possa stampare i suoi file se lo desidera",
+      "I prezzi sono soggetti a modifiche e i servizi gratuiti sono per periodi limitati",
+    ],
+    close: "Vicina",
   },
   donePayment: {
     downloading: "Download in corso..",
@@ -1677,15 +1711,15 @@ const italy = {
     helloCustomer: "Ciao ",
     addFrameBtn: "aggiungi un nuovo file cv",
   },
-}
+};
 const emptyOne = {
   attentionsTerms: {
-    mainHeader: '',
-    firstTerm: '',
-    firstTermNecessary: '',
-    sec2Term: '',
-    notAcceptBtn: '',
-    acceptBtn: ''
+    mainHeader: "",
+    firstTerm: "",
+    firstTermNecessary: "",
+    sec2Term: "",
+    notAcceptBtn: "",
+    acceptBtn: "",
   },
   section1: {
     nav: {
@@ -1783,7 +1817,7 @@ const emptyOne = {
         paymentForm: {
           spanFree: "",
           continueAnchor: "",
-          price: ''
+          price: "",
         },
       },
       frame: {
@@ -1843,8 +1877,7 @@ const emptyOne = {
               from: { month: "", year: "" },
               to: { month: "", year: "" },
             },
-            thesis:
-              "",
+            thesis: "",
             photo: {},
             eduDiscreption: ``,
           },
@@ -1954,30 +1987,27 @@ const emptyOne = {
   },
   section4: {
     termsPolicy: {
-      title: '',
-      userPrivacy: '',
-      conditions: '',
-      termsConditions: '',
-      readMore: ''
+      title: "",
+      userPrivacy: "",
+      conditions: "",
+      termsConditions: "",
+      readMore: "",
     },
     contacts: {
-      title: ''
+      title: "",
     },
     services: {
-      title: '',
-      makeAsome: '',
-      allTimeFreeEdit: '',
-      freeCreateAccount: '',
-      freePrint: ''
-    }
+      title: "",
+      makeAsome: "",
+      allTimeFreeEdit: "",
+      freeCreateAccount: "",
+      freePrint: "",
+    },
   },
   termsPolicy: {
-    termsTitle: '',
-    terms:
-      [
-
-      ],
-    close: ''
+    termsTitle: "",
+    terms: [],
+    close: "",
   },
   donePayment: {
     downloading: "",
@@ -1990,13 +2020,11 @@ const emptyOne = {
 };
 export const languages = [
   { name: "arabic", lang: arabic },
-  { name: "english", lang: english },
+  { name: "eng", lang: english },
   { name: "中文", lang: china },
   { name: "Français", lang: france },
   { name: "Italiano", lang: italy },
 ];
-
-
 
 /*
 A user's personal information is stored only after he or she creates an account 

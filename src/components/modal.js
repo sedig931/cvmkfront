@@ -1,6 +1,5 @@
-
-// const SERVER_URL = 'http://localhost:300';
-const SERVER_URL = 'https://serve.samdtc931.com/api';
+const SERVER_URL = "http://localhost:300";
+// const SERVER_URL = "https://serve.samdtc931.com/api";
 
 export const addNewCustomer = async function (newCustomer) {
   try {
@@ -34,8 +33,6 @@ export const deleteCustomer = async function (customerID) {
     throw err;
   }
 };
-
-
 export const checkLogin = async function (customer) {
   try {
     // 192.168.43.142
@@ -148,7 +145,7 @@ export const deleteFrame = async function (frameNum) {
   } catch (err) {
     throw err;
   }
-}
+};
 
 export const searchFrame = async function (frameName) {
   try {

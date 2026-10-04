@@ -385,7 +385,7 @@ export default {
         try {
           if (this.newCustomer.password === this.retypePassword) {
             this.verfNumber = Math.floor(
-              Math.random() * (9999 - 2000 + 1) + 2000
+              Math.random() * (9999 - 2000 + 1) + 2000,
             );
             this.setActiveFrame(2);
             await sendVerfNum({
@@ -430,7 +430,7 @@ export default {
           this.customer.id = await getCustomerByEmail(this.customer.email);
 
           this.verfNumber = Math.floor(
-            Math.random() * (9999 - 2000 + 1) + 2000
+            Math.random() * (9999 - 2000 + 1) + 2000,
           );
           await sendVerfNum({
             receverMail: this.customer.email,
@@ -535,23 +535,23 @@ export default {
   font-family: "Archivo Black", sans-serif;
 }
 .regester-btn {
-  background-color: white;
-  color: rgb(39, 39, 39);
-  border: 2px solid rgb(39, 39, 39);
+  background-color: rgb(39, 39, 39);
+  color: white;
+  border: none;
   border-radius: 12px;
   padding: 1px 10px 1px 10px;
   font-size: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 1px 5px rgb(188, 188, 188);
 }
 .regester-btn-font {
   font-family: "Comfortaa";
 }
 .regester-btn:hover {
-  background-color: rgb(39, 39, 39);
-  color: white;
-  border-color: white;
-  box-shadow: 0px 0px 2.5px 2.5px rgb(39, 39, 39);
+  background-color: rgb(251, 251, 251);
+  color: rgb(39, 39, 39);
 }
 .login-container-div {
   width: 100%;
@@ -591,16 +591,20 @@ export default {
   width: 100%;
   height: 35px;
   background-color: rgb(39, 39, 39);
-  border: 2px solid white;
+  border: none;
   border-radius: 12px;
   color: white;
   /* font-family: "Comfortaa"; */
   font-size: 18px;
   margin-top: 15px;
+  transition: background-color 0.3s;
 }
 .login-btn:hover,
 .confirm-btn:hover {
-  box-shadow: 0px 0px 2.5px 2.5px rgb(39, 39, 39);
+  /* box-shadow: 0px 0px 2.5px 2.5px rgb(39, 39, 39); */
+  background-color: rgb(251, 251, 251);
+  color: rgb(39, 39, 39);
+  box-shadow: 0px 1px 5px rgb(188, 188, 188);
 }
 .password-email-notcorrect-div {
   color: rgb(230, 36, 36);

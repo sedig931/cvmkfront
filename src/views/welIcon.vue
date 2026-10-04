@@ -102,7 +102,7 @@ export default {
 }
 .left-sqr-div {
   height: 30px;
-  width: 70px;
+  width: 100%;
   background-color: rgb(88, 88, 88);
   border-radius: 6px;
 }
@@ -116,46 +116,32 @@ export default {
 }
 .right-mother-div {
   width: 100%;
+  min-width: 90px;
   justify-content: space-evenly;
   align-items: start;
   margin: 15px;
 }
 .right-child-div {
   width: 100%;
-  height: 13px;
+  height: 11px;
   border-radius: 5px;
   background-color: rgb(88, 88, 88);
   margin-top: 5px;
 }
 
-@media (min-width: 702px) and (max-width: 1060px) {
+@media (min-width: 700px) and (max-width: 1060px) {
   .left-sqr-div {
     height: 25px;
     border-radius: 6px;
   }
   .right-child-div {
-    height: 10px;
-  }
-  .right-mother-div {
-    width: 120px;
-  }
-}
-@media (min-width: 470px) and (max-width: 702px) {
-  .prifile-icon {
-    font-size: 50px;
-  }
-  .left-sqr-div {
-    height: 25px;
-    border-radius: 5px;
-  }
-  .right-child-div {
     height: 9px;
   }
   .right-mother-div {
-    width: 130px;
+    width: 90%;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 700px) {
   .prifile-icon {
     font-size: 50px;
   }
@@ -164,10 +150,25 @@ export default {
     border-radius: 5px;
   }
   .right-child-div {
-    height: 10px;
+    height: 6px;
   }
   .right-mother-div {
-    width: 130px;
+    width: 95%;
   }
 }
+/* @media (max-width: 500px) {
+  .prifile-icon {
+    font-size: 50px;
+  }
+  .left-sqr-div {
+    height: 25px;
+    border-radius: 5px;
+  }
+  .right-child-div {
+    height: 7px;
+  }
+  .right-mother-div {
+    width: 100px;
+  }
+} */
 </style>

@@ -12,6 +12,16 @@
         "
       >
         <div class="home-about-nav-div flex-row">
+          <div
+            class="change-lang-div flex-row"
+            @click="this.chagingLangs = true"
+          >
+            <i class="bi bi-translate"></i>
+            <span class="lang-name-span">
+              {{ this.lng.name[0].toUpperCase() + this.lng.name.slice("1") }}
+            </span>
+          </div>
+          <span> | </span>
           <button class="home-about-btn home-btn" @click="this.goToHomePage">
             {{ this.lng.lang.section1.nav.homeBtn }}
           </button>
@@ -75,12 +85,6 @@
             </span>
           </div>
         </div>
-        <div class="change-lang-div flex-row" @click="this.chagingLangs = true">
-          <i class="bi bi-translate"></i>
-          <span class="lang-name-span">
-            {{ this.lng.name[0].toUpperCase() + this.lng.name.slice("1") }}
-          </span>
-        </div>
       </div>
       <div
         class="get-5-times-free-div"
@@ -113,7 +117,7 @@
           >{{ lngname[0].toUpperCase() + lngname.slice("1") }}</span
         >
         <span
-          class="lang-warry text-muted text-center"
+          class="lang-warry text-center"
           :class="
             this.lng.name === 'arabic' ? 'arabic-font' : 'lang-warry-font'
           "
@@ -272,7 +276,7 @@ export default {
       },
       customer: {},
       lng: {
-        name: "english",
+        name: "eng",
         lang: {
           attentionsTerms: {},
           section1: {
@@ -456,7 +460,7 @@ export default {
     localStorage.removeItem("photo");
     // save language
     if (!localStorage.getItem("cvMaker-lngName"))
-      localStorage.setItem("cvMaker-lngName", "english");
+      localStorage.setItem("cvMaker-lngName", "eng");
     this.setLanguage(localStorage.getItem("cvMaker-lngName"));
     // show accepting terms window or not
     if (localStorage.getItem("savingApproved")) {
@@ -517,7 +521,6 @@ export default {
   border-radius: 15px;
   margin: 10px;
   justify-content: space-between;
-
   font-size: 19px;
   /* font-weight: bolder; */
 }
@@ -527,8 +530,7 @@ export default {
 .home-about-nav-div {
   /* flex: 0.1; */
   color: white;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px 0 10px;
   justify-content: space-between;
 }
 .home-about-btn {
@@ -538,8 +540,7 @@ export default {
 }
 .log-in-div {
   /* flex: 0.06; */
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 0 10px 0 10px;
 }
 .login-btn {
   background-color: white;
@@ -549,16 +550,10 @@ export default {
   padding: 2px 10px 2px 10px;
 }
 .change-lang-div {
-  position: absolute;
-  left: 50px;
-  bottom: 50px;
-  font-size: 25px;
   color: white;
   cursor: pointer;
 }
 .lang-name-span {
-  font-size: 15px;
-  font-family: "Comfortaa";
   margin: 5px;
 }
 .section1-body-div {
@@ -569,7 +564,7 @@ export default {
 }
 .section1-icon-div {
   height: 400px;
-  width: 360px;
+  width: 380px;
   margin: 12px;
 }
 .section1-txt-div {
@@ -607,9 +602,10 @@ export default {
   font-size: 30px;
   margin-top: 35px;
   color: rgb(207, 207, 207);
+  background-color: rgb(39, 39, 39);
 }
 .get-5-times-free-div {
-  border: 2px solid white;
+  border: 2px solid rgb(207, 207, 207);
   border-radius: 10px;
   padding: 2px 7px 2px 7px;
   cursor: none;
@@ -642,15 +638,20 @@ export default {
   padding: 10px 0px 10px 0px;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0px 0px 2.5px 2.5px rgb(116, 116, 116);
+  box-shadow: 0px 1px 5px rgb(96, 96, 96);
 }
 .change-lngName-span {
   font-size: 20px;
   cursor: pointer;
+  border: 1px solid transparent;
   font-family: "Comfortaa";
+  padding: 0 13px 0 13px;
 }
 .change-lngName-span:hover {
   color: rgb(48, 48, 48);
+  background-color: rgb(238, 238, 238);
+  border-color: rgb(215, 215, 215);
+  border-radius: 13px;
 }
 .close-btn {
   position: absolute;
@@ -663,6 +664,8 @@ export default {
   position: absolute;
   bottom: -50px;
   font-size: 12px;
+  font-weight: bold;
+  color: rgb(29, 29, 29);
 }
 .lang-warry-font {
   font-family: "Comfortaa";
@@ -709,8 +712,10 @@ export default {
 }
 @media (min-width: 550px) and (max-width: 700px) {
   .section1-icon-div {
-    height: 330px;
+    height: 300px;
     width: 300px;
+    /* width: 100px; */
+    background-color: aqua;
   }
   .section1-txt-div {
     font-size: 25px;
@@ -740,8 +745,8 @@ export default {
 }
 @media (min-width: 450px) and (max-width: 550px) {
   .section1-icon-div {
-    height: 350px;
-    width: 280px;
+    height: 300px;
+    width: 230px;
   }
   .section1-txt-div {
     font-size: 20px;
@@ -793,7 +798,7 @@ export default {
     width: 90px;
   }
 }
-@media (min-width: 50px) and (max-width: 400px) {
+@media (max-width: 400px) {
   .section1-icon-div {
     height: 350px;
     width: 280px;

@@ -1,5 +1,5 @@
-const SERVER_URL = "http://localhost:300";
-// const SERVER_URL = "https://serve.samdtc931.com/api";
+// const SERVER_URL = "http://localhost:300";
+const SERVER_URL = "https://serve.samdtc931.com/api";
 
 export const addNewCustomer = async function (newCustomer) {
   try {

@@ -2,6 +2,7 @@
 node_modules
 /dist
 
+/src/needtoUpdate
 trashmy
 # local env files
 .env.local

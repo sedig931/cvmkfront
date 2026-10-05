@@ -388,6 +388,7 @@ export default {
       } catch (e) {
         localStorage.removeItem("cvMaker-lngName");
         localStorage.setItem("cvMaker-lngName", "eng");
+        window.location.reload();
       }
     },
     async checkActiveCustomer() {

@@ -62,7 +62,8 @@ export default {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgb(229, 229, 229), white);
+  /* background-image: linear-gradient(to bottom, rgb(229, 229, 229), white); */
+  background-color: var(--col-pro-prim);
 }
 .main-setion2-div {
   position: absolute;
@@ -74,14 +75,14 @@ export default {
 .texts-div {
   flex: 0.3;
   width: 100%;
-  color: rgb(45, 62, 80);
+  color: rgb(187, 187, 187);
 }
 .mobile-appa-span {
   font-size: 50px;
   font-family: "Tilt Warp";
 }
 .devolopment-span {
-  font-size: 30px;
+  font-size: 27px;
   font-family: "Comfortaa";
 }
 .inner-texts-div {
@@ -106,9 +107,10 @@ export default {
   border-radius: 4px;
   margin: 0 3px 0 3px;
   cursor: pointer;
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
 }
 .active-dot {
-  background-color: rgb(123, 157, 226);
+  background-color: #e5624e;
 }
 @media (max-width: 1200px) {
   .imgs-div {

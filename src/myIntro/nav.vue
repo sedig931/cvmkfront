@@ -12,7 +12,7 @@
         >
           <span class="button-span">Contacts</span>
           <i
-            class="bi bi-chevron-down top-down-icon flex-row ms-3"
+            class="bi bi-chevron-down top-down-icon flex-row ms-2"
             :class="this.activeMenue === 0 ? 'rotate-me' : ''"
           ></i>
         </div>
@@ -26,7 +26,7 @@
         >
           <span class="button-span">Content</span>
           <i
-            class="bi bi-chevron-down top-down-icon flex-row ms-3"
+            class="bi bi-chevron-down top-down-icon flex-row ms-2"
             :class="this.activeMenue === 1 ? 'rotate-me' : ''"
           ></i>
         </div>
@@ -35,18 +35,18 @@
         <Brand />
       </div>
     </div>
-    <div class="minues-div text-muted">
+    <div class="minues-div">
       <div v-if="this.activeMenue === 0" class="menue flex-row">
         <div class="menue-element flex-row">
-          <i class="bi bi-telephone flex-row menue-icon ms-2 me-2"></i>
+          <i class="bi bi-telephone-fill flex-row menue-icon me-1"></i>
           <span> +966 536323259</span>
         </div>
         <div class="menue-element flex-row">
-          <i class="bi bi-envelope flex-row menue-icon ms-2 me-2"></i>
+          <i class="bi bi-envelope-fill flex-row menue-icon me-1"></i>
           <span> samdtc931@gmail.com </span>
         </div>
         <div class="menue-element flex-row">
-          <i class="bi bi-geo-alt flex-row menue-icon ms-2 me-2"></i>
+          <i class="bi bi-geo-alt-fill flex-row menue-icon me-1"></i>
           <span> location </span>
         </div>
       </div>
@@ -107,44 +107,50 @@ export default {
   transition: rotate 0.5s;
 }
 .nav-div {
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0; */
   padding: 0 10px 0 10px;
   width: 100%;
-  min-height: 90px;
+  min-height: 60px;
   backdrop-filter: blur(2px);
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--col-pro-border);
+  background-color: var(--col-pro-sec);
+  /* box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2); */
   /* border-bottom: 1px solid rgb(192, 192, 192); */
+
   font-family: "Comfortaa";
   z-index: 1;
 }
 .inner-nav-div {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  /* background: #474747; */
 }
 .buttons-div {
   flex: 0.4;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 90px;
-  font-weight: bold;
-  font-size: 18px;
+  height: 100%;
+  font-size: 16px;
 }
 .nav-button {
   margin: 0 10px 0 0;
-  padding: 2px 5px 2px 5px;
-  color: rgb(94, 94, 94);
+  padding: 1px 12px 1px 12px;
+  color: var(--col-pro-sec);
   cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  /* color: #000000; */
-  background-color: white;
+  border: 1px solid var(--col-pro-btns);
+  border-radius: 17px;
+  background-color: var(--col-pro-btns);
+  transition: background-color 0.3s, border-color 0.3s;
 }
-.nav-button:hover {
-  color: rgb(164, 164, 164);
+.nav-button:hover,
+.menue-element:hover {
+  color: var(--col-pro-btns);
+  background-color: var(--col-pro-prim);
 }
 .brand-div {
   flex: 1;
@@ -158,17 +164,22 @@ export default {
   width: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 1px 1px 15px 1px;
+  padding: 3px 1px 3px 1px;
 }
 .menue-element {
-  background-color: rgb(240, 240, 240);
-  padding: 2px 10px 2px 10px;
-  margin: 5px;
-  border-radius: 10px;
   justify-content: space-evenly;
-  font-size: 13px;
+  color: var(--col-pro-sec);
+  font-size: 14px;
+  margin: 5px;
+  border-radius: 17px;
+  /* padding: 2px 10px 2px 10px; */
+  padding: 1px 12px 1px 12px;
+  background-color: var(--col-pro-btns);
+  border: 1px solid var(--col-pro-btns);
+  transition: background-color 0.3s, border-color 0.3s;
   cursor: pointer;
 }
+
 /* input[type="text"] {
   width: 90px;
   height: 25px;
@@ -187,12 +198,26 @@ input[type="text"]:focus {
 } */
 @media ((min-width: 500px) and (max-width: 840px)) {
   .buttons-div {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  .nav-button {
+    margin: 0 6px 0 0;
+    padding: 1px 10px 1px 10px;
+  }
+  .menue-element {
+    font-size: 13px;
   }
 }
 @media (max-width: 500px) {
   .buttons-div {
     font-size: 13px;
+  }
+  .nav-button {
+    margin: 0 6px 0 0;
+    padding: 1px 10px 1px 10px;
+  }
+  .menue-element {
+    font-size: 11px;
   }
 }
 </style>

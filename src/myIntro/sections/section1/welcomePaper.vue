@@ -1,6 +1,6 @@
 <template>
   <div
-    class="welcome-div flex-row"
+    class="welcome-div protfolio-section1-card flex-row"
     @mouseenter="this.$emit('pusePlayProgress', 'mouseenter')"
     @mouseleave="this.$emit('pusePlayProgress', 'mouseleave')"
   >
@@ -8,7 +8,7 @@
       <div class="top-sqr-transition right-border-div"></div>
       <div class="top-sqr-transition top-border-div flex-row"></div>
       <div class="dowon-sqr-transition down-border-div flex-row">
-        <span class="span-welcome"> Welcome To Morei Lab 🎉💻 </span>
+        <span class="span-welcome"> Welcome To My Protfolio 🎉💻 </span>
       </div>
     </div>
   </div>
@@ -69,17 +69,17 @@ export default {
 .dowon-sqr-transition {
   transform: translateY(5px) translateX(5px);
 }
-.welcome-div {
-  height: 100%;
-  width: 100%;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
-    0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  padding: 15px 0 15px 0;
-  margin: 0 0 20px 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  transition: transform 1s, opacity 1s;
-}
+/* .welcome-div { */
+/* height: 100%; */
+/* width: 100%; */
+/* box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.2); */
+/* backdrop-filter: blur(2px); */
+/* padding: 15px 0 15px 0; */
+/* margin: 0 0 20px 0; */
+/* background-color: rgba(255, 255, 255, 0.6); */
+/* transition: transform 1s, opacity 1s; */
+/* } */
 .top-down-border-div {
   position: relative;
   width: 100%;
@@ -89,39 +89,42 @@ export default {
   position: absolute;
   transition: transform 1s, opacity 1s;
   width: 70%;
-  height: 75px;
-  border-top: 3px solid rgb(232, 219, 34);
-  border-left: 3px solid rgb(232, 219, 34);
-  border-bottom: 3px solid rgb(232, 219, 34);
-  border-right: 3px solid none;
+  height: 70%;
+  /* border-top: 2px solid rgb(232, 219, 34); */
+  border-top: 2px solid var(--col-pro-btns);
+  border-left: 2px solid var(--col-pro-btns);
+  border-bottom: 2px solid var(--col-pro-btns);
+  border-right: 2px solid none;
   border-radius: 5px;
   z-index: 0;
 }
 .right-border-div {
   transition: transform 1s, opacity 1s;
   position: absolute;
-  height: 75px;
+  height: 70%;
   width: 70%;
   /* width: 100%; */
-  border-right: 3px solid rgb(232, 219, 34);
+  border-right: 2px solid var(--col-pro-btns);
   border-radius: 5px;
   z-index: 2;
 }
 .down-border-div {
   position: absolute;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   transition: transform 1.5s;
   width: 70%;
-  height: 70px;
-  border: 3px solid #e5624e;
+  height: 70%;
+  border: 2px solid #e5624e;
+  /* border: 2px solid var(--col-pro-prim); */
   border-radius: 5px;
   z-index: 1;
 }
 .span-welcome {
   font-size: 25px;
-  padding: 3px 0 0 8px;
+  font-weight: bold;
+  /* padding: 3px 0 0 8px; */
   font-family: "Tilt Warp";
-  /* color: #e5624e; */
+  color: rgb(187, 187, 187);
 }
 @media (min-width: 565px) and (max-width: 700px) {
   .span-welcome {
@@ -132,8 +135,8 @@ export default {
   .span-welcome {
     font-size: 17px;
   }
-  .down-border-div {
+  /* .down-border-div {
     justify-content: start;
-  }
+  } */
 }
 </style>

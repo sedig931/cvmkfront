@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sections-div">
     <Nav />
     <Section1 />
     <Section2 />
@@ -35,5 +35,9 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.sections-div {
+  display: flex;
+  flex-direction: column;
 }
 </style>

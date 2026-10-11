@@ -30,7 +30,7 @@ const routes = [
     component: CaptuerPaypalOrder,
   },
   {
-    path: "/introme",
+    path: "/protfolio",
     name: "introduce",
     component: IntroHome,
   },

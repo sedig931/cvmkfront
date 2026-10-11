@@ -45,7 +45,7 @@
         </div>
         <div class="single-contact-span single-service-contact-terms-span">
           <i class="bi bi-whatsapp ms-2 me-2"></i>
-          <span>+249 962992439</span>
+          <span>+966 536323259</span>
         </div>
         <!-- <div class="single-contact-span single-service-contact-terms-span">
           <i class="bi bi-facebook m-2"></i>
@@ -55,7 +55,7 @@
         </div> -->
         <div class="single-contact-span single-service-contact-terms-span">
           <i class="bi bi-geo-alt-fill ms-2 me-2"></i>
-          <span>SDN</span>
+          <span>Dammam</span>
         </div>
         <div
           class="single-contact-span single-service-contact-terms-span flex-row"

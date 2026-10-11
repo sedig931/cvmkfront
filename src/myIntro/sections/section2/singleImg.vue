@@ -64,7 +64,7 @@ export default {
 }
 .single-img-div {
   margin: 10px;
-  border: 3px solid rgb(123, 157, 226);
+  border: 3px solid rgb(187, 187, 187);
   border-radius: 8px;
 }
 /* input[type="text"] {

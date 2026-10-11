@@ -8,11 +8,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
-  color: #2c3e50;
+  /* color: #2c3e50; */
   margin: 0px;
   padding: 0px;
 }
 :root {
+  --col-pro-prim: rgb(11, 20, 27);
+  --col-pro-sec: rgb(29, 31, 30);
+  --col-pro-btns: rgb(22, 198, 99);
+  --col-pro-border: rgb(45, 45, 45);
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
@@ -68,5 +72,18 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+/* class for protfolio slides section */
+.protfolio-section1-card {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(45, 45, 45);
+  border-radius: 15px;
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
+  /* backdrop-filter: blur(2px); */
+  padding: 15px 0 15px 0;
+  margin: 0 0 20px 0;
+  background-color: var(--col-pro-sec);
+  transition: transform 1s, opacity 1s;
 }
 </style>

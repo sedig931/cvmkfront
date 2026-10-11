@@ -1,38 +1,36 @@
 <template>
-  <div class="section">
-    <HalfMoon :moonPosi="'top'" />
+  <!-- <HalfMoon :moonPosi="'top'" />
     <HalfMoon :moonPosi="'right'" />
     <HalfMoon :moonPosi="'bottom'" />
-    <HalfMoon :moonPosi="'left'" />
-    <div class="section--1 flex-row">
-      <div class="papers-div flex-column">
-        <WellPaper
-          v-if="this.activePaper === 0"
-          @pusePlayProgress="this.pusePlayProgress"
-        />
-        <Paper2
-          v-if="this.activePaper === 1"
-          @pusePlayProgress="this.pusePlayProgress"
-        />
-        <Paper3
-          v-if="this.activePaper === 2"
-          @pusePlayProgress="this.pusePlayProgress"
-        />
-        <!-- </div> -->
-        <div class="shift-buttons-div flex-row">
+    <HalfMoon :moonPosi="'left'" /> -->
+  <div class="section--1one flex-row">
+    <div class="papers-div flex-column">
+      <WellPaper
+        v-if="this.activePaper === 0"
+        @pusePlayProgress="this.pusePlayProgress"
+      />
+      <Paper2
+        v-if="this.activePaper === 1"
+        @pusePlayProgress="this.pusePlayProgress"
+      />
+      <Paper3
+        v-if="this.activePaper === 2"
+        @pusePlayProgress="this.pusePlayProgress"
+      />
+      <!-- </div> -->
+      <div class="shift-buttons-div flex-row">
+        <div
+          v-for="(none, i) in new Array(3)"
+          :key="i"
+          class="single-shift-btn"
+          :class="this.activePaper === i ? 'active-single-shift-btn' : ''"
+          @click="this.togglePapers(i)"
+        >
           <div
-            v-for="(none, i) in new Array(3)"
-            :key="i"
-            class="single-shift-btn"
-            :class="this.activePaper === i ? 'active-single-shift-btn' : ''"
-            @click="this.togglePapers(i)"
-          >
-            <div
-              class="progress-div"
-              :class="`single-progrres-div-${i}`"
-              style="width: 0%; border-radius: 10px 0 0 10px"
-            ></div>
-          </div>
+            class="progress-div"
+            :class="`single-progrres-div-${i}`"
+            style="width: 0%"
+          ></div>
         </div>
       </div>
     </div>
@@ -67,28 +65,28 @@ export default {
       let activeProgressParDiv = Number(
         document
           .querySelector(`.single-progrres-div-${this.activePaper}`)
-          .style.width.split("%")[0]
+          .style.width.split("%")[0],
       );
-      if (activeProgressParDiv > 97) {
-        document.querySelector(
-          `.single-progrres-div-${this.activePaper}`
-        ).style.borderRadius = "10px 10px 10px 10px";
-      } else {
-        document.querySelector(
-          `.single-progrres-div-${this.activePaper}`
-        ).style.borderRadius = "10px 0 0 10px";
-      }
+      // if (activeProgressParDiv > 97) {
+      //   document.querySelector(
+      //     `.single-progrres-div-${this.activePaper}`,
+      //   ).style.borderRadius = "10px 10px 10px 10px";
+      // } else {
+      //   document.querySelector(
+      //     `.single-progrres-div-${this.activePaper}`,
+      //   ).style.borderRadius = "10px 0 0 10px";
+      // }
       if (activeProgressParDiv < 100) {
         if (activeProgressParDiv === 0) {
           activeProgressParDiv += 8;
         }
         activeProgressParDiv += 1;
         document.querySelector(
-          `.single-progrres-div-${this.activePaper}`
+          `.single-progrres-div-${this.activePaper}`,
         ).style.width = activeProgressParDiv + "%";
       } else {
         document.querySelector(
-          `.single-progrres-div-${this.activePaper}`
+          `.single-progrres-div-${this.activePaper}`,
         ).style.width = "0%";
         if (this.activePaper < 2) {
           this.activePaper++;
@@ -99,7 +97,7 @@ export default {
     },
     togglePapers(shiftBtnIndex) {
       document.querySelector(
-        `.single-progrres-div-${this.activePaper}`
+        `.single-progrres-div-${this.activePaper}`,
       ).style.width = "0%";
       this.activePaper = shiftBtnIndex;
     },
@@ -129,12 +127,12 @@ export default {
           .classList.remove("hide-bottom-shape");
     },
     hideBottomShape() {
-      this.headerObserver.observe(document.querySelector(".section--1"));
+      this.headerObserver.observe(document.querySelector(".section--1one"));
     },
   },
   mounted() {
-    this.proressingInerv = setInterval(this.proressingPar, 80);
-    this.hideBottomShape();
+    // this.proressingInerv = setInterval(this.proressingPar, 80);
+    // this.hideBottomShape();
   },
   unmounted() {
     console.log("unmounte");
@@ -153,37 +151,34 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.section {
-  height: 100vh;
+.section--1one {
   width: 100%;
-  background-image: linear-gradient(to bottom, white, rgb(229, 229, 229));
-}
-.section--1 {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* z-index: 1; */
+  height: 80vh;
+  padding: 0px 15px 0 15px;
+  background-color: var(--col-pro-prim);
+  /* background-color: #4d494c; */
 }
 .papers-div {
-  height: 600px;
+  height: 80%;
+  /* max-height: 460px; */
   width: 100%;
-  max-width: 950px;
+  max-width: 600px;
   justify-content: space-between;
-  margin: 0 20px 0 20px;
 }
 .shift-buttons-div {
   width: 100%;
+  /* overflow: hidden; */
 }
 .single-shift-btn {
+  overflow: hidden;
   height: 12px;
-  width: 15px;
+  width: 25px;
   margin: 0 8px 0 8px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 0px 3px 1px rgba(81, 81, 81, 0.6);
-  border: 1px solid white;
-  border-radius: 10px;
+  background-color: rgba(187, 187, 187);
+  /* box-shadow: 0px 0px 3px 1px rgba(81, 81, 81, 0.6); */
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
+  border: 1px solid rgba(187, 187, 187);
+  border-radius: 6px;
   cursor: pointer;
 }
 .active-single-shift-btn {
@@ -192,23 +187,25 @@ export default {
 .progress-div {
   height: 100%;
   border: none;
-  background-image: linear-gradient(to left, #c55f9e, #e5624e);
+  /* border-radius: none; */
+  /* background-image: linear-gradient(to left, #c55f9e, #e5624e); */
+  background-color: var(--col-pro-btns);
 }
 .progress-div-pused {
-  background-image: linear-gradient(to left, #382f35, #575555);
+  background-color: var(--col-pro-sec);
 }
 .hide-bottom-shape {
   opacity: 0;
 }
 @media (max-width: 850px) {
-  .papers-div {
+  /* .papers-div {
     height: 500px;
-  }
+  } */
 }
 @media (max-height: 700px) {
-  .section--1 {
+  /* .section--1 {
     align-items: flex-end;
     padding-bottom: 50px;
-  }
+  } */
 }
 </style>

@@ -91,8 +91,11 @@ export default {
   height: 25px;
   margin: 10px 0 10px 0;
   border-radius: 15px;
-  background-color: rgb(45, 62, 80);
+  /* background-color: rgb(45, 62, 80); */
+  background-color: var(--col-pro-sec);
   /* opacity: 1; */
+  border: 1px solid rgb(45, 45, 45);
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
   transition: opacity 0.8s, transform 0.5s;
 }
 /* .center-shape-div {
@@ -104,9 +107,10 @@ export default {
 .left-top-border-div {
   height: 100%;
   width: 50%;
-  border-top: 3px solid rgb(187, 187, 187);
-  border-right: 3px solid rgb(187, 187, 187);
+  border-top: 3px solid var(--col-pro-sec);
+  border-right: 3px solid var(--col-pro-sec);
   border-radius: 0 15px 0 0;
+  /* background-color: var(--col-pro-sec); */
   /* background-image: linear-gradient(to bottom, rgb(45, 62, 80), white); */
 }
 </style>

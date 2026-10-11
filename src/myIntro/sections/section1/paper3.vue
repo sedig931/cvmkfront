@@ -1,11 +1,11 @@
 <template>
   <div
-    class="paper3-div paper-transition"
+    class="paper3-div protfolio-section1-card paper-transition"
     @mouseenter="this.$emit('pusePlayProgress', 'mouseenter')"
     @mouseleave="this.$emit('pusePlayProgress', 'mouseleave')"
   >
     <div class="img-div flex-row">
-      <i class="bi bi-motherboard-fill flex-row"></i>
+      <i class="bi bi-motherboard-fill paper3-icon flex-row"></i>
     </div>
     <div class="texts-div flex-column">
       <div class="orgnize-div flex-row">
@@ -92,22 +92,25 @@ export default {
   align-items: center;
 }
 .paper3-div {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  margin: 0 0 20px 0;
-  transition: opacity 1s;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* padding: 20px; */
+  /* margin: 0 0 20px 0; */
+  /* transition: opacity 1s; */
   opacity: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
-    0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.6);
+  /* box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.2); */
+  /* backdrop-filter: blur(2px); */
+  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 .paper-transition {
   opacity: 0;
+}
+.img-div {
+  color: rgb(183, 183, 183);
 }
 .img-div,
 .texts-div {
@@ -127,6 +130,7 @@ export default {
   flex-wrap: wrap;
   align-items: flex-end;
   font-family: "Archivo Black", sans-serif;
+  color: rgb(183, 183, 183);
 }
 .ornize-span {
   font-size: 35px;
@@ -157,7 +161,7 @@ export default {
   width: 100%;
   justify-content: start;
   padding: 5px;
-  color: white;
+  color: var(--col-pro-sec);
   transform: scale(1.07, 1.05) skewX(-15deg);
   position: relative;
 }
@@ -165,7 +169,8 @@ export default {
 .efficient-span {
   font-size: 20px;
   padding: 10px;
-  background-image: linear-gradient(to left, #bc3d8c, #e5624e);
+  /* background-image: linear-gradient(to left, #bc3d8c, #e5624e); */
+  background-color: var(--col-pro-btns);
   transition: transform 0.5s, opacity 1s;
   opacity: 1;
   font-family: "Tauri";
@@ -215,6 +220,10 @@ export default {
   .reduce-span,
   .efficient-span {
     font-size: 16px;
+  }
+  .reduce-div,
+  .efficient-div {
+    width: 70%;
   }
 }
 </style>

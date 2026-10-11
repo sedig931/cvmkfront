@@ -40,31 +40,31 @@ export default {
 .devoloper-icon-div {
   height: 30px;
   width: 30px;
-  background-image: linear-gradient(to top, #bc3d8c, #e5624e);
+  background-color: rgb(187, 187, 187);
   border-radius: 50%;
+  cursor: pointer;
 }
 .beam-div {
   height: 10px;
-  width: 2.5px;
-  background-color: white;
+  width: 3px;
+  background-color: var(--col-pro-prim);
   border-radius: 0px 5px 0px 5px;
 }
 .circle-div {
-  width: 2.5px;
-  height: 2.5px;
+  width: 3px;
+  height: 3px;
   margin-top: 2px;
   margin-bottom: 2px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--col-pro-prim);
 }
 .brand-span {
   font-size: 14px;
-  color: rgb(94, 94, 94);
-  padding: 0px 3px 0px 3px;
+  color: rgb(187, 187, 187);
+  padding: 5px 10px 5px 15px;
   border: none;
   border-radius: 10px;
-  /* color: #000000; */
-  background-color: white;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
   .devoloper-icon-div {

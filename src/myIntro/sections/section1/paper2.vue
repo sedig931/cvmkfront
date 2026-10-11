@@ -1,6 +1,6 @@
 <template>
   <div
-    class="paper2-div paper-transition"
+    class="paper2-div protfolio-section1-card paper-transition"
     @mouseenter="this.$emit('pusePlayProgress', 'mouseenter')"
     @mouseleave="this.$emit('pusePlayProgress', 'mouseleave')"
   >
@@ -32,11 +32,11 @@ export default {
       // URL: "http://localhost:300/uploads/introduceImgs",
       URL: "https://serve.samdtc931.com/uploads/cvmk/introduceImgs",
       texts: [
-        "Make your Modern Website 📟",
-        "Hunt Pugs 🔧🔨",
-        "Appgrade Mobile App 📱",
-        "Take Templates 📦",
-        "Add Secure 🔒🔑",
+        "I can Build Modern Website",
+        "Fix Pugs 🔨",
+        "Upgrade Mobile App 📱",
+        "Create Templates 📦",
+        "Add Secure 🔒",
       ],
       //propreties
     };
@@ -78,19 +78,19 @@ export default {
   align-items: center;
 }
 .paper2-div {
-  height: 100%;
-  width: 100%;
-  padding: 0 15px 0 15px;
-  margin: 0 0 20px 0;
-  transition: opacity 1s;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* padding: 0 15px 0 15px; */
+  /* margin: 0 0 20px 0; */
+  /* transition: opacity 1s; */
   opacity: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
-    0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.6);
+  /* box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.2); */
+  /* backdrop-filter: blur(2px); */
+  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 .paper-transition {
   opacity: 0;
@@ -119,8 +119,8 @@ export default {
 }
 .img {
   height: 100%;
-  max-height: 200px;
-  border: 3px solid rgb(255, 255, 255);
+  max-height: 150px;
+  border: 3px solid rgb(187, 187, 187);
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
     0px 0px 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -132,7 +132,7 @@ export default {
   height: 20px;
   width: 10px;
   margin-top: 20px;
-  background-color: white;
+  background-color: rgb(187, 187, 187);
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
   border: none;
 }
@@ -148,11 +148,14 @@ export default {
   margin: 5px;
   transition: transform 0.5s, opacity 1s;
   opacity: 1;
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
-    0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
   border-radius: 15px;
-  background-image: linear-gradient(to left, #bc3d8c, #e5624e);
-  color: white;
+  /* background-image: linear-gradient(to left, #bc3d8c, #e5624e); */
+  /* background-image: linear-gradient(to left, var(--col-pro-btns), #e5624e); */
+  background-color: var(--col-pro-btns);
+  color: var(--col-pro-sec);
   font-family: "Comfortaa";
 }
 .txt-transition {

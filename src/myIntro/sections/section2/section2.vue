@@ -7,7 +7,7 @@
           <span class="mobile-appa-span">Mobile App 📱</span>
           <span class="devolopment-span">Responsive Designs</span>
         </div>
-        <div class="dots flex-row">
+        <div class="dots flex-row mt-3 mb-3">
           <div
             class="single-dot"
             v-for="(dot, i) in this.dotsArray"
@@ -17,7 +17,7 @@
           ></div>
         </div>
       </div>
-      <div class="imgs-div flex-row">
+      <div class="imgs-div">
         <SingleImg
           :imgName="`rajhiApp-${i}.jpg`"
           v-for="(img, i) in new Array(5)"
@@ -42,8 +42,48 @@ export default {
       //propreties
     };
   },
-  methods: {},
-  mounted() {},
+  methods: {
+    imgsContainerMove() {
+      const slider = document.querySelector(".imgs-div");
+      let isDown = false;
+      let hasDragged = false;
+      let startX;
+      let scrollLeft;
+      slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        hasDragged = false;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener("mouseleave", () => (isDown = false));
+      slider.addEventListener("mouseup", () => (isDown = false));
+      slider.addEventListener(
+        "click",
+        (e) => {
+          if (hasDragged) {
+            e.preventDefault();
+            e.stopPropagation();
+            hasDragged = false;
+          }
+        },
+        true,
+      );
+      slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1; // scroll speed
+        if (Math.abs(x - startX) > 5) {
+          hasDragged = true;
+        }
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    },
+  },
+  mounted() {
+    this.imgsContainerMove();
+  },
 };
 </script>
 <style scoped>
@@ -91,13 +131,21 @@ export default {
   align-items: flex-start;
 }
 .imgs-div {
-  flex: 1;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  /* justify-content: start; */
-  align-self: flex-end;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: thin;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.imgs-div::-webkit-scrollbar {
+  display: none;
+}
+.imgs-div * {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .single-dot {
@@ -114,7 +162,7 @@ export default {
 }
 @media (max-width: 1200px) {
   .imgs-div {
-    flex: 1;
+    /* flex: 1; */
     width: 100%;
     justify-content: start;
     padding-left: 20px;

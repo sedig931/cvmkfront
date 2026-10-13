@@ -32,12 +32,22 @@ export default {
   components: {},
   data() {
     return {
+      timers: new Set(),
       //propreties
     };
   },
   methods: {
+    safeSetTimeout(callback, delay) {
+      const timer = setTimeout(() => {
+        this.timers.delete(timer);
+        callback();
+      }, delay);
+
+      this.timers.add(timer);
+      return timer;
+    },
     slowMotion() {
-      setTimeout(() => {
+      this.safeSetTimeout(() => {
         document
           .querySelector(".paper3-div")
           .classList.remove("paper-transition");
@@ -52,17 +62,17 @@ export default {
       document.querySelector(".efficient-span").classList.add("effi-trans");
     },
     slowTexts() {
-      setTimeout(() => {
+      this.safeSetTimeout(() => {
         document
           .querySelector(".ornize-span")
           .classList.remove("orgnize-trans");
       }, 500);
-      setTimeout(() => {
+      this.safeSetTimeout(() => {
         document
           .querySelector(".your-time-span")
           .classList.remove("your-time-trans");
       }, 600);
-      setTimeout(() => {
+      this.safeSetTimeout(() => {
         document.querySelector(".reduce-span").classList.remove("reduce-trans");
         document
           .querySelector(".efficient-span")
@@ -73,9 +83,13 @@ export default {
   mounted() {
     this.slowMotion();
     this.manpulateTexts();
-    setTimeout(() => {
+    this.safeSetTimeout(() => {
       this.slowTexts();
     }, 50);
+  },
+  unmounted() {
+    this.timers.forEach((timer) => clearTimeout(timer));
+    this.timers.clear();
   },
 };
 </script>

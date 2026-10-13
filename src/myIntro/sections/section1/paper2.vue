@@ -38,22 +38,32 @@ export default {
         "Create Templates 📦",
         "Add Secure 🔒",
       ],
+      timers: new Set(),
       //propreties
     };
   },
   methods: {
+    safeSetTimeout(callback, delay) {
+      const timer = setTimeout(() => {
+        this.timers.delete(timer);
+        callback();
+      }, delay);
+
+      this.timers.add(timer);
+      return timer;
+    },
     slowMotionText() {
-      setTimeout(() => {
+      this.safeSetTimeout(() => {
         document
           .querySelector(".paper2-div")
           .classList.remove("paper-transition");
       }, 10);
-      setTimeout(() => {
+      this.safeSetTimeout(() => {
         document
           .querySelector(".img-div")
           .classList.remove("img-div-transition");
         document.querySelectorAll(".single-text-span").forEach((txt, i) => {
-          setTimeout(() => {
+          this.safeSetTimeout(() => {
             txt.classList.remove("txt-transition");
           }, 1200 * i);
         });
@@ -62,6 +72,10 @@ export default {
   },
   mounted() {
     this.slowMotionText();
+  },
+  unmounted() {
+    this.timers.forEach((timer) => clearTimeout(timer));
+    this.timers.clear();
   },
 };
 </script>

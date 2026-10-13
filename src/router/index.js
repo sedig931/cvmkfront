@@ -4,7 +4,7 @@ import CvInfo from "../views/getCvinfo/getCvInfo.vue";
 import Profile from "../views/profileView.vue";
 import CaptuerPaypalOrder from "../views/getCvinfo/payment/payment.vue";
 // import { mergeProps } from "vue";
-import IntroHome from "../myIntro/motherPage.vue";
+import IntroHome from "../myIntro/sections.vue";
 
 const routes = [
   {

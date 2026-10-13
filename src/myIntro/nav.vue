@@ -43,16 +43,16 @@
         </div>
         <div class="menue-element flex-row">
           <i class="bi bi-envelope-fill flex-row menue-icon me-1"></i>
-          <span> samdtc931@gmail.com </span>
+          <span> sedig931@gmail.com </span>
         </div>
         <div class="menue-element flex-row">
           <i class="bi bi-geo-alt-fill flex-row menue-icon me-1"></i>
-          <span> location </span>
+          <span> KSA, Dammam </span>
         </div>
       </div>
       <div v-if="this.activeMenue === 1" class="menue flex-row">
         <div class="menue-element flex-row">
-          <span> Resume Maker </span>
+          <span> CV Maker </span>
         </div>
       </div>
     </div>

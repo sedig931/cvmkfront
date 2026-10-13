@@ -8,7 +8,7 @@
       <div class="top-sqr-transition right-border-div"></div>
       <div class="top-sqr-transition top-border-div flex-row"></div>
       <div class="dowon-sqr-transition down-border-div flex-row">
-        <span class="span-welcome"> Welcome To My Protfolio 🎉💻 </span>
+        <span class="span-welcome">Welcome To My Protfolio 💻</span>
       </div>
     </div>
   </div>
@@ -64,10 +64,10 @@ export default {
 }
 .top-sqr-transition {
   opacity: 1;
-  transform: translateY(-20px) translateX(-30px);
+  transform: translateY(-20px) translateX(-20px);
 }
 .dowon-sqr-transition {
-  transform: translateY(5px) translateX(5px);
+  transform: translateY(10px) translateX(5px);
 }
 /* .welcome-div { */
 /* height: 100%; */

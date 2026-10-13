@@ -67,6 +67,7 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
+  /* overflow: hidden; */
   /* background-color: red; */
 }
 .sec2-shape-div {
@@ -83,7 +84,6 @@ export default {
   right: 0;
   height: 50%;
   width: 40%;
-  /* background-color: aqua; */
   align-items: flex-end;
   rotate: -40deg;
 }
@@ -109,7 +109,8 @@ export default {
   width: 50%;
   border-top: 3px solid var(--col-pro-sec);
   border-right: 3px solid var(--col-pro-sec);
-  border-radius: 0 15px 0 0;
+  border-bottom: 3px solid var(--col-pro-sec);
+  /* border-radius: 0 15px 0 0; */
   /* background-color: var(--col-pro-sec); */
   /* background-image: linear-gradient(to bottom, rgb(45, 62, 80), white); */
 }

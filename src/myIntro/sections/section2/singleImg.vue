@@ -45,7 +45,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.imgs-div {
+/* .imgs-div {
   flex: 1;
   width: 100%;
   justify-content: start;
@@ -53,19 +53,26 @@ export default {
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
-}
+} */
 .file-image-icon {
   font-size: 55px;
   margin: 50px 25px 50px 25px;
 }
 .single-img-img {
-  height: 450px;
-  border-radius: inherit;
+  height: 100%;
 }
 .single-img-div {
   margin: 10px;
-  border: 3px solid rgb(187, 187, 187);
-  border-radius: 8px;
+  border: 3px solid var(--col-pro-sec);
+  border-radius: 15px;
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
+  overflow: hidden;
+  height: 450px;
+  min-width: 207px;
+  @media (max-width: 630px) {
+    height: 400px;
+    min-width: 186px;
+  }
 }
 /* input[type="text"] {
   width: 90px;

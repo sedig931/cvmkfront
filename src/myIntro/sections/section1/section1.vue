@@ -52,11 +52,11 @@ export default {
     return {
       activePaper: 0,
       proressingInerv: null,
-      headerObserver: new IntersectionObserver(this.stickyNav, {
-        root: null,
-        threshold: 0,
-        rootMargin: "-100%",
-      }),
+      // headerObserver: new IntersectionObserver(this.stickyNav, {
+      //   root: null,
+      //   threshold: 0,
+      //   rootMargin: "-100%",
+      // }),
       //propreties
     };
   },
@@ -96,10 +96,14 @@ export default {
       }
     },
     togglePapers(shiftBtnIndex) {
+      // try {
       document.querySelector(
         `.single-progrres-div-${this.activePaper}`,
       ).style.width = "0%";
       this.activePaper = shiftBtnIndex;
+      // } catch (e) {
+      //   console.log("do nothing..");
+      // }
     },
     pusePlayProgress(mouseEventType) {
       if (mouseEventType === "mouseleave") {
@@ -114,28 +118,28 @@ export default {
           .classList.add("progress-div-pused");
       }
     },
-    stickyNav(entries) {
-      const [entry] = entries;
-      //console.log(entry);
-      if (!entry.isIntersecting)
-        document
-          .querySelector(".half-moon-div-bottom")
-          .classList.add("hide-bottom-shape");
-      else
-        document
-          .querySelector(".half-moon-div-bottom")
-          .classList.remove("hide-bottom-shape");
-    },
-    hideBottomShape() {
-      this.headerObserver.observe(document.querySelector(".section--1one"));
-    },
+    // stickyNav(entries) {
+    //   const [entry] = entries;
+    //   //console.log(entry);
+    //   if (!entry.isIntersecting)
+    //     document
+    //       .querySelector(".half-moon-div-bottom")
+    //       .classList.add("hide-bottom-shape");
+    //   else
+    //     document
+    //       .querySelector(".half-moon-div-bottom")
+    //       .classList.remove("hide-bottom-shape");
+    // },
+    // hideBottomShape() {
+    //   this.headerObserver.observe(document.querySelector(".section--1one"));
+    // },
   },
   mounted() {
-    // this.proressingInerv = setInterval(this.proressingPar, 80);
+    this.proressingInerv = setInterval(this.proressingPar, 80);
     // this.hideBottomShape();
   },
   unmounted() {
-    console.log("unmounte");
+    // console.log("unmounte");
   },
 };
 </script>

@@ -25,7 +25,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-/* input[type="text"] {
+input[type="text"] {
   width: 90px;
   height: 25px;
   border-radius: 8px;
@@ -40,5 +40,18 @@ export default {
 }
 input[type="text"]:focus {
   border: 1px solid #555;
-} */
+}
+.back-to-me {
+  flex-wrap: wrap;
+  overflow: hidden;
+  transform: translateY(-15px);
+  transform: rotate(-40deg) scale(1);
+  background-image: linear-gradient(to top, #f38f8f, #fdeead);
+  filter: drop-shadow(10px 10px 5px #818181);
+  box-shadow: 0 3px 10px rgb(213, 213, 213);
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
+  font-family: "Almarai";
+  background-color: #368185;
+  backdrop-filter: blur(2px);
+}
 </style>
